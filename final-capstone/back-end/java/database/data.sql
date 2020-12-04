@@ -1,53 +1,28 @@
--- BEGIN;
-
--- DROP TABLE IF EXISTS reviews;
--- DROP TABLE IF EXISTS beers;
--- DROP TABLE IF EXISTS breweries;
--- DROP TABLE IF EXISTS roles;
+ROLLBACK;
+BEGIN;
 
 
-CREATE TABLE roles {
-    role_id serial,
-    role_name varchar(30),
-    PRIMARY KEY (role_id)
-};
 
-CREATE TABLE breweries {
-    brewery_id serial,
-    name varchar(255) NOT NULL,
-    address varchar(255) NOT NULL,
-    city varchar(50) NOT NULL,
-    zipcode varchar(15) NOT NULL,
-    phone_number varchar(15),
-    description text NOT NULL,
-    user_id bigint,
-    brewery_logo_url varchar(255),
-    hours  varchar(255),
-    PRIMARY KEY (brewery_id),
-    FOREIGN KEY (user_id)
-};
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, hours, user_id, lat, lng)
+VALUES ('Great Lakes Brewery', '2516 Market Ave.', 'Cleveland', 44113, '(216) 771-4404',
+'Iconic microbrewery with house suds, an updated American menu, free tours & a patio.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511722746/gret_lakes_brewery_logo_black_uw5ech.jpg',
+'Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays', 1, 41.484312, -81.704461);
 
-CREATE TABLE beers {
-    beer_id serial,
-    user_id integer,
-    name varchar(255) NOT NULL,
-    abv decimal,
-    ibu integer,
-    PRIMARY KEY (beer_id),
-    FOREIGN KEY (user_id)
-};
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, hours, user_id, lat, lng)
+VALUES ('Test Brewery', '1361 E 55th St.', 'Cleveland', 44103,'(216) 465-1352',
+'Nice place', 
+'http://test.com.png','Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays', 1, 0, 0);
 
-CREATE TABLE reviews {
-    reviews_id serial,
-    user_id integer,
-    beer_id integer,
-    name varchar(255) NOT NULL,
-    PRIMARY KEY (review_id),
-    FOREIGN KEY (user_id),
-    FOREIGN KEY (beer_id)
-};
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Blue Moon', 4.8, 11,
+'Wheat', 'Just okay', 'example.url', true, 1);
 
-CREATE TABLE brewery_beer {
+INSERT INTO reviews (name, description, rating, create_date, beer_id) 
+VALUES ('Christmas magic in a a bottle',
+'Just okay',
+5,now(),1);
 
-}
--- COMMIT;
+
+
+COMMIT;
