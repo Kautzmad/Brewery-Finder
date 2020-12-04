@@ -1,4 +1,4 @@
-package com.techelevator.dao;
+package com.techelevator.security.dao;
 
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.techelevator.model.User;
+import com.techelevator.security.model.User;
 
 @Service
 public class UserSqlDAO implements UserDAO {

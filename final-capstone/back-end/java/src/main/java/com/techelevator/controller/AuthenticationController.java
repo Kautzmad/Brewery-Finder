@@ -1,3 +1,9 @@
+/************************************************************************************************
+ * This contains all the authentication controllers
+ * 
+ * DO NOT ADD OR CHANGE ANYTHING IN THIS CODE _ YOU MAY RENDER AUTHENTICATION USELESS!
+ ************************************************************************************************/
+
 package com.techelevator.controller;
 
 import java.sql.Timestamp;
@@ -15,13 +21,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.techelevator.dao.UserDAO;
-import com.techelevator.model.LoginDTO;
-import com.techelevator.model.RegisterUserDTO;
-import com.techelevator.model.User;
-import com.techelevator.model.UserAlreadyExistsException;
+import com.techelevator.security.dao.UserDAO;
 import com.techelevator.security.jwt.JWTFilter;
 import com.techelevator.security.jwt.TokenProvider;
+import com.techelevator.security.model.LoginDTO;
+import com.techelevator.security.model.RegisterUserDTO;
+import com.techelevator.security.model.User;
+import com.techelevator.security.model.UserAlreadyExistsException;
 
 @RestController
 @CrossOrigin

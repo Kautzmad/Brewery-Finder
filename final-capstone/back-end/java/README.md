@@ -2,49 +2,44 @@
 
 ## Database
 
-Inside the `<project-root>/database/` directory, you'll find an executable Bash script (`.sh` file) and several SQL scripts (`.sql` files). These can be used to build and rebuild a PostgreSQL database for the capstone project.
+Inside the `<project-root>/database/` directory, you'll find an SQL scripts (`.sql` file). These can be used to build and rebuild the authentication tables and users in a PostgreSQL database for the capstone project.
 
-From a terminal session, execute the following commands:
+From a Windows terminal session (NOT GitBase), execute the following command to create ```final-capstone``` database:
 
 ```
-cd <project-root>/database/
-./create.sh
+createdb -U postgres final-capstone
 ```
+When prompted for a password, enter ```postgres1```
 
-This Bash script drops the existing database, if necessary, creates a new database named `final_capstone`, and runs the various SQL scripts in the correct order. You don't need to modify the Bash script unless you want to change the database name.
+You should create a database connection in dbVisualizer for the ```final-capstone``` database.
 
-Each SQL script has a specific purpose as described below:
-
-| File Name | Description |
-| --------- | ----------- |
-| `data.sql` | This script populates the database with any static setup data or test/demo data. The project team should modify this script. |
-| `dropdb.sql` | This script destroys the database so that it can be recreated. It drops the database and associated users. The project team shouldn't have to modify this script. |
-| `schema.sql` | This script creates all of the database objects, such as tables and sequences. The project team should modify this script. |
-| `user.sql` | This script creates the database application users and grants them the appropriate privileges. The project team shouldn't have to modify this script. <br /> See the next section for more information on these users. |
-
-### Database users
-
-The database superuser—meaning `postgres`—must only be used for database administration. It must not be used by applications. As such, two database users are created for the capstone application to use as described below:
-
-| Username | Description |
-| -------- | ----------- |
-| `final_capstone_owner` | This user is the schema owner. It has full access—meaning granted all privileges—to all database objects within the `capstone` schema and also has privileges to create new schema objects. This user can be used to connect to the database from PGAdmin for administrative purposes. |
-| `final_capstone_appuser` | The application uses this user to make connections to the database. This user is granted `SELECT`, `INSERT`, `UPDATE`, and `DELETE` privileges for all database tables and can `SELECT` from all sequences. The application datasource has been configured to connect using this user. |
-
+Any SQL associated with your project, including the SQL mentioned above to set up the authentication tables should be run in dbVisualizer.
 
 ## Spring Boot
 
 ### Datasource
 
-A Datasource has been configured for you in `/src/resources/application.properties`. It connects to the database using the `capstone_appuser` database user. You can change the name of this database if you want, but remember to change it here and in the `create.sh` script in the database folder:
+A Datasource has been configured for you in `/src/resources/application.properties`. It connects to a database named ```final-capstone```. You can use a different database name if you want, but remember to change it here so the server can find the database:
 
 ```
 # datasource connection properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/final_capstone
 spring.datasource.name=final_capstone
-spring.datasource.username=final_capstone_appuser
-spring.datasource.password=finalcapstone
+spring.datasource.username=postgres
+spring.datasource.password=postgres1
 ```
+
+Put all your application in the ```final-capstone``` data base.
+
+```
+DO NOT MAKE ANY CHANGES TO THE AUTHENTICATION TABLES PROVIDED!
+
+DOING SO MAY RENDER THE AUTHENTICATION CODE GIVEN UNUSABLE.
+
+IF YOU NEED TO STORE USER INFORMATION FOR YOUR APPLICATION CONSIDER CREATING A NEW TABLE AND LINKING IT TO THE AUTHENTICATION USERS TABLE IF YOU NEED THE USER NAME.
+ ```
+
+<div style="page-break-after: always;"></div>
 
 ### JdbcTemplate
 
@@ -87,20 +82,21 @@ This controller contains the `/login` and `/register` routes and works with the 
 
 The authentication controller uses the `UserSqlDAO` to read and write data from the users table.
 
+<div style="page-break-after: always;"></div>
 
 ## Testing
 
 
 ### DAO integration tests
 
-`com.techelevator.dao.DAOIntegrationTest` has been provided for you to use as a base class for any DAO integration test. It initializes a Datasource for testing and manages rollback of database changes between tests.
+`com.techelevator.security.dao.DAOIntegrationTest` has been provided for you to use as a base class for any DAO integration test. It initializes a Datasource for testing and manages rollback of database changes between tests.
 
 The following is an example of extending this class for writing your own DAO integration tests:
 
 ```
-package com.techelevator.dao;
+package com.techelevator.security.dao;
 
-import com.techelevator.model.User;
+import com.techelevator.security.model.User;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

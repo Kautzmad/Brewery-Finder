@@ -1,6 +1,8 @@
 package com.techelevator.dao;
 
-import com.techelevator.model.User;
+import com.techelevator.security.dao.UserSqlDAO;
+import com.techelevator.security.model.User;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
