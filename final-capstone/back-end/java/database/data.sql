@@ -31,6 +31,8 @@ CREATE TABLE beers {
     beer_id serial,
     user_id integer,
     name varchar(255) NOT NULL,
+    abv decimal,
+    ibu integer,
     PRIMARY KEY (beer_id),
     FOREIGN KEY (user_id)
 };
@@ -45,4 +47,7 @@ CREATE TABLE reviews {
     FOREIGN KEY (beer_id)
 };
 
+CREATE TABLE brewery_beer {
+
+}
 -- COMMIT;
