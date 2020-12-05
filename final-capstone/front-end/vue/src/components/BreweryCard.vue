@@ -11,7 +11,7 @@ export default {
 </script>
 <style scoped>
 img.company-logo {
-    width: 125px;
+    width: 200px;
 }
 
 </style>
