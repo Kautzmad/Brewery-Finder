@@ -28,10 +28,11 @@ public class jdbcBeerDao implements beerDao {
 	public List<Beer> getAllBeer() {
 		List<Beer> allBeers = new ArrayList<>();
 		String sqlSelectAllBeers = "SELECT * FROM beers";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllBeers, true);
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllBeers);
 		
 		while(results.next()) {
-			allBeers.add(mapRowToBeer(results));
+			Beer aBeer = mapRowToBeer(results);
+			allBeers.add(aBeer);
 		}
 		return allBeers;
 	}

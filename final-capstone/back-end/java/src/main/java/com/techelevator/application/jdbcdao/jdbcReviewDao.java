@@ -23,10 +23,10 @@ public class jdbcReviewDao implements reviewDao{
 	
 	//GET REVIEWS
 	@Override
-	public List<Review> getReviews(Long beer_id){
+	public List<Review> getReviews(Long beerId){
 		 List<Review> reviews = new ArrayList<>();
 		 String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE beer_id = ?";
-		 SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId);
+		 SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId, beerId);
 		 
 		 while(results.next()) {
 			 Review aReview = mapRowToReview(results);
@@ -41,7 +41,7 @@ public class jdbcReviewDao implements reviewDao{
 	private Review mapRowToReview(SqlRowSet row) {
 		Review review = new Review();
 		
-		review.setId(row.getLong("review_id"));
+		review.setId(row.getLong("reviews_id"));
 		review.setName(row.getString("name"));
 		review.setDescription(row.getString("description"));
 		review.setRating(row.getInt("rating"));
