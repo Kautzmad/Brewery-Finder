@@ -3,16 +3,30 @@
     <div id="body">
     <h1>Popular Breweries</h1>
     <div class="brewery-list">
-        <p><img src="@/img/image-not-available.jpg"/><br>Brewery 1</p>
-        <p><img src="@/img/image-not-available.jpg"/><br>Brewery 2</p>
-        <p><img src="@/img/image-not-available.jpg"/><br>Brewery 3</p>
+        <brewery-card v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
     </div>
     </div>
   </div>
 </template>
 <script>
+import BreweryCard from './BreweryCard.vue'
+import applicationServices from "../services/ApplicationServices"
 export default {
-    
+    name: 'home',
+    props: ["brewery"],
+    components: { 
+        BreweryCard,
+    },
+    data() {
+        return {
+            breweries: []
+        }
+    },
+    created() {
+        applicationServices.getBreweries().then(response => {
+            this.breweries = response.data
+    })
+    }
 }
 </script>
 <style scoped>
