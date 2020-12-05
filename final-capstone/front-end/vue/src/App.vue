@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="@/img/brew-logo.png"/></router-link>
-      <router-link class="nav-link" id="browse-beers" v-bind:to="{ name: 'home' }">Browse Breweries</router-link>&nbsp;|&nbsp;
-      <router-link class="nav-link" id="browse-beers" v-bind:to="{ name: 'home' }">Browse Beers</router-link>&nbsp;|&nbsp;
-      <router-link class="nav-link" id="browse-beers" v-bind:to="{ name: 'home' }">Random Beer</router-link>&nbsp;|&nbsp;
-      <router-link class="nav-link" id="browse-beers" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
-      <router-link class="nav-link" id="browse-beers" v-bind:to="{ name: 'login' }" v-if="$store.state.token === ''">Login</router-link>
+      <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="@/img/BrewNewUSETHISONE.png"/></router-link>
+      <router-link class="nav-link" id="browse-brewery" v-bind:to="{ name: 'home' }">Browse<br>Breweries</router-link>&nbsp;|&nbsp;
+      <router-link class="nav-link" id="browse-beer" v-bind:to="{ name: 'home' }">Browse<br>Beers</router-link>&nbsp;|&nbsp;
+      <router-link class="nav-link" id="browse-random" v-bind:to="{ name: 'home' }">Random<br>Beer</router-link>&nbsp;|&nbsp;
+      <router-link class="nav-link" id="logout-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
+      <router-link class="nav-link" id="login-link" v-bind:to="{ name: 'login' }" v-if="$store.state.token === ''">Login</router-link>
     </div>
     <router-view />
   </div>
@@ -14,22 +14,29 @@
 <style scoped>
 #app {
     background-color: black;
-    color: white;
+    color: black;
     font-family: 'Arial';
 }
 #logo {
     width: 250px;
-    margin-bottom: -90px;
-    float: left;
+    margin-bottom: -110px;
+    margin-top: -50px;
 }
 #nav {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding-bottom: 25px;
 }
 .nav-link {
   color: #FFDE59;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+}
+#browse-beer, #logout-link, #login-link {
+  color: #38B6FF;
 }
 
 </style>
