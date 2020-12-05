@@ -13,6 +13,9 @@
 </template>
 <style scoped>
 #app {
+    border-color: black;
+    border-width: 10px;
+    border-style: solid;
     background-color: black;
     color: black;
     font-family: 'Arial';
@@ -20,7 +23,7 @@
 #logo {
     width: 250px;
     margin-bottom: -110px;
-    margin-top: -50px;
+    margin-top: -35px;
 }
 #nav {
     display: flex;
