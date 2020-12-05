@@ -1,7 +1,7 @@
 package com.techelevator.application.model;
 
 public class Brewery {
-	private long breweryId;
+	private Long breweryId;
 	private String name;
 	private String address;
 	private String city;
@@ -14,7 +14,7 @@ public class Brewery {
 	private String lat;
 	private String lng;
 	
-	public long getBreweryId() {
+	public Long getBreweryId() {
 		return breweryId;
 	}
 	public void setBreweryId(long breweryId) {
