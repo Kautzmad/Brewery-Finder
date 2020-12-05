@@ -4,12 +4,13 @@ import java.time.LocalDateTime;
 
 public class Review {
 	// Instance Variables
-	private String id;
+	private Long id;
 	private String description;
 	private int rating;
 	private LocalDateTime createTime;
 	private long beerId;
 	private long userId;
+	private String name;
 	
 
 	/****************************************
@@ -17,11 +18,11 @@ public class Review {
 	 *
 	 ***/
 	
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 	
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	
@@ -61,6 +62,14 @@ public class Review {
 	
 	public void setUserId(long userId) {
 		this.userId = userId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	
