@@ -8,8 +8,8 @@ public class Review {
 	private String description;
 	private int rating;
 	private LocalDateTime createTime;
-	private long beerId;
-	private long userId;
+	private Long beerId;
+	private Long userId;
 	private String name;
 	
 
@@ -52,7 +52,7 @@ public class Review {
 		return beerId;
 	}
 	
-	public void setBeerId(long beerId) {
+	public void setBeerId(Long beerId) {
 		this.beerId = beerId;
 	}
 	
@@ -60,7 +60,7 @@ public class Review {
 		return userId;
 	}
 	
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
