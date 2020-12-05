@@ -22,13 +22,14 @@ public class jdbcReviewDao implements reviewDao{
 	}
 	
 	//GET REVIEWS
+	@Override
 	public List<Review> getReviews(Long beer_id){
 		 List<Review> reviews = new ArrayList<>();
 		 String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE beer_id = ?";
 		 SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId);
 		 
 		 while(results.next()) {
-			 Review aReview = new Review();
+			 Review aReview = mapRowToReview(results);
 			 reviews.add(aReview);
 		 }return reviews;
 	}
