@@ -23,13 +23,17 @@ public class BeerController {
 	@Autowired
 	private reviewDao reviewDAO;
 	
+	public BeerController(beerDao beerDAO) {
+		this.beerDAO = beerDAO;
+	}
+	
 	@RequestMapping(path="/beers", method=RequestMethod.GET)
-	public String showAllBeers(ModelMap modelHolder) {
-		List<Beer> beerList = beerDAO.getAllBeer();
-		List<Brewery> breweries = breweryDAO.getAllBreweries();
+	public List<Beer> showAllBeers(ModelMap modelHolder) {
+		return beerDAO.getAllBeer();
+		/* List<Brewery> breweries = breweryDAO.getAllBreweries();
 		
 		modelHolder.put("allBeers", beerList);
 		modelHolder.put("allBreweries", breweries);
-		return "beers";
+		return "beers";*/
 	}
 }
