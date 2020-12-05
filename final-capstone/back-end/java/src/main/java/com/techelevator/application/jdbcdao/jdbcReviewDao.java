@@ -31,7 +31,8 @@ public class jdbcReviewDao implements reviewDao{
 		 while(results.next()) {
 			 Review aReview = mapRowToReview(results);
 			 reviews.add(aReview);
-		 }return reviews;
+		 }
+		 return reviews;
 	}
 	
 	
