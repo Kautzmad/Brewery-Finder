@@ -82,15 +82,20 @@ div#login {
     margin-left: 65px; margin-right: 65px;
     align-content: center;
 }
+
+form.form-signin {
+    background: white;
+    margin-left: 65px; margin-right: 65px;
+    align-content: center;
+}
+
 .h3 {
     font-size: 2rem;
-    margin-left: 1%;
     margin: 1;
 }
 
 .sr-only {
     font-size: 50;
-    margin-left: 1%;
     margin-right: 1%;
 }
 </style>
