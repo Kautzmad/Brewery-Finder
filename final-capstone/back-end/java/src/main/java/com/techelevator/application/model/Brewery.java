@@ -8,6 +8,7 @@ public class Brewery {
 	private String zipcode;
 	private String phoneNumber;
 	private String description;
+	private String breweryLogoUrl;
 	private int userId;
 	private String hours;
 	private String lat;
@@ -78,6 +79,12 @@ public class Brewery {
 	}
 	public void setLng(String lng) {
 		this.lng = lng;
+	}
+	public String getBreweryLogoUrl() {
+		return breweryLogoUrl;
+	}
+	public void setBreweryLogoUrl(String breweryLogoUrl) {
+		this.breweryLogoUrl = breweryLogoUrl;
 	}
 	
 	
