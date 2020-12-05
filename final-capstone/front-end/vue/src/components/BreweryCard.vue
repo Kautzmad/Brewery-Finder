@@ -1,15 +1,17 @@
 <template>
     <div id="card">
-        <!-- <img src="{{brewery.breweryLogoUrl}}"/> -->
-        <h1>{{brewery.name}}</h1>
+        <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>
+        <h2>{{this.brewery.name}}</h2>
     </div>
 </template>
 <script>
 export default {
-    props: ["brewery"]
-
+    props: ["brewery"], 
 }
 </script>
 <style scoped>
+img.company-logo {
+    width: 125px;
+}
 
 </style>

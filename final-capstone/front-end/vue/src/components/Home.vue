@@ -3,7 +3,7 @@
     <div id="body">
     <h1>Popular Breweries</h1>
     <div class="brewery-list">
-        <brewery-card v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
+        <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
     </div>
     </div>
   </div>
@@ -46,9 +46,13 @@ div.brewery-list {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    align-items: baseline;
 }
 img {
     width: 125px
+}
+brewery-card.card-space {
+
 }
 
 </style>
