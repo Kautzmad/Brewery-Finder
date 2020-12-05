@@ -18,11 +18,21 @@ public class jdbcBeerDao implements beerDao {
 	// Initialize the JDBC template
 	private JdbcTemplate jdbcTemplate;
 	
+	/****************************************
+	 * Constructor
+	 *
+	 ***/
+	
 	@Autowired
 	public jdbcBeerDao(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
+	
+	/****************************************
+	 * get all the beers
+	 *
+	 ***/
 	
 	@Override
 	public List<Beer> getAllBeer() {
@@ -36,6 +46,22 @@ public class jdbcBeerDao implements beerDao {
 		}
 		return allBeers;
 	}
+	
+	/****************************************
+	 * Save a newBeer object
+	 *
+	 ***/
+	
+	@Override
+	public void saveBeer(Beer newBeer) {
+		jdbcTemplate.update("INSERT INTO beers(name, abv, ibu, type, info, img_url, brewery_id, is_active) VALUES (?,?,?,?,?,?,?,?)",
+				newBeer.getName(), newBeer.getAbv(), newBeer.getIbu(), newBeer.getType(), newBeer.getInfo(), newBeer.getImgUrl(), newBeer.getBreweryId(), newBeer.isActive());
+	}
+	
+	/****************************************
+	 * SQL row set for Beer Pojo
+	 *
+	 ***/
 	
 	private Beer mapRowToBeer(SqlRowSet row) {
 		Beer newBeer = new Beer();

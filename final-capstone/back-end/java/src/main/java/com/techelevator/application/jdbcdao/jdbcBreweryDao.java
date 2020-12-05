@@ -41,6 +41,17 @@ public class jdbcBreweryDao implements breweryDao{
 // GET BREWERY BY ID
 	
 // CREATE A BREWERY
+	@Override
+	public void addNewBrewery(Brewery aBrewery) {
+		String sqlAddBrewery = "INSERT INTO breweries (name, address, city,"
+				+ "zipcode, phone_number, description, brewery_logo_url,"
+				+ "user_id, hours, lat, lng) VALUES (?, ?, ?, ?, ?, ?, ?, ?,"
+				+ "?, ?, ?)";
+		jdbcTemplate.update(sqlAddBrewery, aBrewery.getName(), aBrewery.getAddress(),
+				aBrewery.getCity(), aBrewery.getZipcode(), aBrewery.getPhoneNumber(),
+				aBrewery.getDescription(), aBrewery.getBreweryLogoUrl(), aBrewery.getUserId(),
+				aBrewery.getHours(), aBrewery.getLat(), aBrewery.getLng());
+	}
 	
 // UPDATE A BREWERY
 	
