@@ -7,6 +7,7 @@ public class Beer {
 	private Long id;
 	private String name;
 	private float abv;
+	private int ibu;
 	private String type;
 	private String info;
 	private String imgUrl;
@@ -42,6 +43,15 @@ public class Beer {
 	public void setAbv(float abv) {
 		this.abv = abv;
 	}
+	
+	public int getIbu() {
+		return ibu;
+	}
+
+	public void setIbu(int ibu) {
+		this.ibu = ibu;
+	}
+	
 	
 	public String getType() {
 		return type;
