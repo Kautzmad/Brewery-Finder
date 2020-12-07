@@ -11,7 +11,7 @@ import BreweryCard from "../components/BreweryCard"
 import applicationServices from "../services/ApplicationServices"
 export default {
     props: ["brewery"],
-    components: { 
+    components: {
         BreweryCard,
     },
     data() {
