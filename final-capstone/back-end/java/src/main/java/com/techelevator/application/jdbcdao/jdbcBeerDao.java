@@ -48,9 +48,14 @@ public class jdbcBeerDao implements beerDao {
 	}
 	
 	/****************************************
-	 * get all the beers
+	 * Delete a beer
 	 *
 	 ***/
+	@Override
+	public void deleteBeer(Long beerId) {
+		String sqlDeleteABeer = "DELETE FROM beers WHERE beer_id = ?";
+		jdbcTemplate.update(sqlDeleteABeer, beerId);
+	}
 	
 	/****************************************
 	 * Save a newBeer object

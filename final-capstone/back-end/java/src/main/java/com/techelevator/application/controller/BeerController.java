@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -64,6 +65,16 @@ public class BeerController {
 	@RequestMapping(path="/addBeer", method=RequestMethod.GET)
 	public String showAddBeer() {
 		return "addBeer";
+	}
+	
+	/****************************************
+	 * Request Mapping, delete Beer
+	 *
+	 ***/
+	
+	@RequestMapping(path = "/beers/{beerId}", method = RequestMethod.DELETE)
+	public void deleteABeer(@PathVariable Long beerId) {
+		beerDAO.deleteBeer(beerId);
 	}
 	
 }
