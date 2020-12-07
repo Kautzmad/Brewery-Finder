@@ -10,5 +10,8 @@ export default {
     },
     getBeers() {
         return http.get('/beers')
+    },
+    getBreweryByID(id) {
+        return http.get(`/breweries/${id}`)
     }
 }
