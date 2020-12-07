@@ -48,6 +48,11 @@ public class jdbcBeerDao implements beerDao {
 	}
 	
 	/****************************************
+	 * get all the beers
+	 *
+	 ***/
+	
+	/****************************************
 	 * Save a newBeer object
 	 *
 	 ***/

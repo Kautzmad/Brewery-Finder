@@ -39,6 +39,18 @@ public class jdbcBreweryDao implements breweryDao{
 	}
 	
 // GET BREWERY BY ID
+	@Override
+	public Brewery getBreweryById(int breweryId) {
+		Brewery aBrewery = new Brewery();
+		String sqlGetABrewery = "SELECT * FROM breweries WHERE brewery_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetABrewery, breweryId);
+		
+		while(results.next()) {
+			aBrewery = mapRowToBrewery(results);
+		}
+		
+		return aBrewery;
+	}
 	
 // CREATE A BREWERY
 	@Override
