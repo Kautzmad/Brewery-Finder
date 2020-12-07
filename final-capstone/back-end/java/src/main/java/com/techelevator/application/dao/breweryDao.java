@@ -10,6 +10,10 @@ public interface breweryDao {
 
 	void addNewBrewery(Brewery aBrewery);
 
-	Brewery getBreweryById(int breweryId);
+	Brewery getBreweryById(Long breweryId);
+
+	void updateBrewery(Brewery aBrewery);
+
+	void deleteBrewery(Long breweryId);
 
 }

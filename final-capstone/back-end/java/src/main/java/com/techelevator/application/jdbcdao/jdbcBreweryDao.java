@@ -40,7 +40,7 @@ public class jdbcBreweryDao implements breweryDao{
 	
 // GET BREWERY BY ID
 	@Override
-	public Brewery getBreweryById(int breweryId) {
+	public Brewery getBreweryById(Long breweryId) {
 		Brewery aBrewery = new Brewery();
 		String sqlGetABrewery = "SELECT * FROM breweries WHERE brewery_id = ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetABrewery, breweryId);
@@ -67,7 +67,27 @@ public class jdbcBreweryDao implements breweryDao{
 	
 // UPDATE A BREWERY
 	
+	@Override
+	public void updateBrewery(Brewery aBrewery) {
+		String sqlUpdateBrewery = "UPDATE breweries SET name = ?, address = ?,"
+				+ " city = ?, zipcode = ?, phone_number = ?, description = ?, "
+				+ "brewery_logo_url = ?, user_id = ?, hours = ?, lat = ?, lng = ?"
+				+ "WHERE brewery_id = ?";
+		jdbcTemplate.update(sqlUpdateBrewery, aBrewery.getName(), aBrewery.getAddress(),
+				aBrewery.getCity(), aBrewery.getZipcode(), aBrewery.getPhoneNumber(),
+				aBrewery.getDescription(), aBrewery.getBreweryLogoUrl(), aBrewery.getUserId(),
+				aBrewery.getHours(), aBrewery.getLat(), aBrewery.getLng(), aBrewery.getBreweryId());
+	}
+	
 // DELETE A BREWERY
+	
+	
+	  @Override 
+	  public void deleteBrewery(Long breweryId) {
+		  String sqlDeleteBrewery = "DELETE FROM breweries WHERE brewery_id = ?";
+		  jdbcTemplate.update(sqlDeleteBrewery, breweryId);
+	  }
+	 
 	
 	// MAP ROW TO BREWERY
 	
