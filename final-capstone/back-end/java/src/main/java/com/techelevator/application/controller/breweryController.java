@@ -3,6 +3,7 @@ package com.techelevator.application.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,12 +24,14 @@ public class breweryController {
 	}
 	
 	// Get all breweries
+	@PreAuthorize("permitAll")
 	@RequestMapping(path = "/breweries", method = RequestMethod.GET)
 	public List<Brewery> getAllBreweries(){
 		return breweryDao.getAllBreweries();
 	}
 	
 	// Get Brewery by ID
+	@PreAuthorize("permitAll")
 	@RequestMapping(path = "/breweries/{breweryId}", method = RequestMethod.GET)
 	public Brewery getBrewerybyBreweryID(@PathVariable Long breweryId) {
 		return breweryDao.getBreweryById(breweryId);
@@ -36,6 +39,7 @@ public class breweryController {
 	
 	// Add a new brewery
 	// This needs to limited to just "Brewer" users
+	@PreAuthorize("hasRole('ADMIN')")
 	@RequestMapping(path = "/breweries", method = RequestMethod.POST)
 	public void addNewBrewery(@RequestBody Brewery aBrewery) {
 		breweryDao.addNewBrewery(aBrewery);
@@ -50,6 +54,7 @@ public class breweryController {
 	
 	// Delete a brewery
 	// Should be limited to Admin
+	@PreAuthorize("hasRole('ADMIN')")
 	@RequestMapping(path = "/breweries/{breweryId}", method = RequestMethod.DELETE)
 	public void deleteBrewery(@PathVariable Long breweryId) {
 		breweryDao.deleteBrewery(breweryId);
