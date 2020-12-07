@@ -48,6 +48,24 @@ public class jdbcBeerDao implements beerDao {
 	}
 	
 	/****************************************
+	 * get beer by id
+	 *
+	 ***/
+	
+	@Override
+	public Beer getBeerbyID(Long beerId) {
+		Beer aBeer = new Beer();
+		String sqlGetABeer = "SELECT * FROM beers WHERE beer_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetABeer, beerId);
+		
+		while(results.next()) {
+			aBeer = mapRowToBeer(results);
+		}
+		
+		return aBeer;
+	}
+	
+	/****************************************
 	 * Delete a beer
 	 *
 	 ***/

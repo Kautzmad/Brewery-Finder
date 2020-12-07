@@ -58,6 +58,16 @@ public class BeerController {
 	}
 	
 	/****************************************
+	 * Request Mapping, show a beer by beerId
+	 *
+	 ***/
+	
+	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
+	public Beer getBeerByID(@PathVariable Long beerId) {
+		return beerDAO.getBeerbyID(beerId);
+		}
+	
+	/****************************************
 	 * Request Mapping, add Beer
 	 *
 	 ***/

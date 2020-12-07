@@ -11,5 +11,7 @@ public interface beerDao {
 	void saveBeer(Beer newBeer);
 
 	void deleteBeer(Long beerId);
+
+	Beer getBeerbyID(Long beerId);
 	
 }
