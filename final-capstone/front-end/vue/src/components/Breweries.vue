@@ -1,22 +1,15 @@
 <template>
-  <div class="home">
-    <div id="body">
-        <h1 class="heading">Welcome to Brew Finder!</h1>
-        <h3 class="subheading">A beer-lover's favorite website</h3>
-    <img id="beer-glass-bg" src='../img/beer-glass-style-background.jpg'/>
-    
-    <h1>Popular Breweries</h1>
+<div class="breweries">
+    <h1 class="heading">All Our Breweries</h1>
     <div class="brewery-list">
         <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
     </div>
-    </div>
-  </div>
+</div>
 </template>
 <script>
-import BreweryCard from './BreweryCard.vue'
+import BreweryCard from "../components/BreweryCard"
 import applicationServices from "../services/ApplicationServices"
 export default {
-    name: 'home',
     props: ["brewery"],
     components: { 
         BreweryCard,
@@ -34,7 +27,13 @@ export default {
 }
 </script>
 <style scoped>
-div.home {
+div.brewery-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: baseline;
+}
+div.breweries {
     margin-top: 150px;
     background: white;
     margin-left: 65px; margin-right: 65px;
@@ -46,23 +45,10 @@ div#body {
     text-align: center;
 }
 h1 {
+    color: black;
     text-align: center;
 }
 h1.heading {
     padding-top:25px;
 }
-div.brewery-list {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: baseline;
-}
-img {
-    width: 125px
-}
-img#beer-glass-bg {
-    width: 65%;
-    padding-top: 25px;
-}
-
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="register" class="text-center">
     <form class="form-register" @submit.prevent="register">
-      <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
+      <h1 class="h3 mb-3 font-weight-normal heading">Create Account</h1>
       <br>
       <div class="alert alert-danger" role="alert" v-if="registrationErrors">
         {{ registrationErrorMsg }}
@@ -100,6 +100,7 @@ div#register {
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
+    margin-top: 150px;
 }
 
 form.form-register {
@@ -124,5 +125,9 @@ input#confirmPassword {
 .sr-only {
     font-size: 50;
     margin-right: 1%;
+}
+
+h1.heading {
+    padding-top:25px;
 }
 </style>

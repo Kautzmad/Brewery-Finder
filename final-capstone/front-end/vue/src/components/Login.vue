@@ -1,7 +1,7 @@
 <template>
     <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
-      <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+      <h1 class="h3 mb-3 font-weight-normal heading">Please Sign In</h1>
       <br>
       <div
         class="alert alert-danger"
@@ -91,6 +91,7 @@ div#login {
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
+    margin-top: 150px;
 }
 
 form.form-signin {
@@ -109,5 +110,9 @@ form.form-signin {
 .sr-only {
     font-size: 50;
     margin-right: 1%;
+}
+
+h1.heading {
+    padding-top:25px;
 }
 </style>
