@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,6 +48,7 @@ public class BeerController {
 	 *
 	 ***/
 	
+	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers", method=RequestMethod.GET)
 	public List<Beer> showAllBeers(ModelMap modelHolder) {
 		List<Beer> beerList = beerDAO.getAllBeer();
@@ -62,6 +64,7 @@ public class BeerController {
 	 *
 	 ***/
 	
+	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
 	public Beer getBeerByID(@PathVariable Long beerId) {
 		return beerDAO.getBeerbyID(beerId);
