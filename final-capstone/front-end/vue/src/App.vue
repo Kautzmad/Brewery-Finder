@@ -24,9 +24,10 @@
   font-family: 'Arial';
 }
 #logo {
-  width: 250px;
+  width: 250px; 
   margin-bottom: -110px;
   margin-top: -35px;
+  overflow: hidden;
 }
 #nav {
   background-image: url('./img/cle-sign-bg.jpg');
