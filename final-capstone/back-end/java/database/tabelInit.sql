@@ -15,6 +15,7 @@ CREATE TABLE breweries (
     phone_number varchar(15),
     description text NOT NULL,
     brewery_logo_url varchar(255),
+    website_url varchar(255),
     user_id bigint,
     hours  varchar(255),
     lat varchar(20),
