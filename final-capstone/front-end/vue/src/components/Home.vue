@@ -39,6 +39,7 @@ div.home {
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
+    margin-bottom: 50px;
 }
 div#body {
     margin-left: 25px; margin-right: 25px; margin-bottom: 50px;
@@ -65,7 +66,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 1150px;
+    padding-top: 1150px; padding-bottom: 150px;
     top: -10px;
 }
 

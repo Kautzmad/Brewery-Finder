@@ -103,6 +103,7 @@ div#register {
     margin-left: 65px; margin-right: 65px;
     align-content: center;
     padding-top: 150px;
+    margin-bottom: 50px;
 }
 
 form.form-register {
@@ -140,5 +141,6 @@ div#background {
     background-size: cover;
     background-attachment: fixed;
     top: -10px;
+    padding-bottom: 150px;
 }
 </style>

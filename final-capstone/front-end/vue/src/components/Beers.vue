@@ -59,7 +59,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-
+    padding-bottom: 150px;
     top: -10px;
 }
 </style>
