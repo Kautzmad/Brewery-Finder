@@ -56,6 +56,7 @@ div.brewery-list {
     justify-content: space-around;
     text-align: center;
     align-items: baseline;
+    flex-wrap: wrap;
 }
 
 div#background {

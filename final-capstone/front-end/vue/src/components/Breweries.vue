@@ -31,6 +31,7 @@ export default {
 <style scoped>
 div.brewery-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
     align-items: baseline;
