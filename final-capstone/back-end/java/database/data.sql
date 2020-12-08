@@ -9,12 +9,12 @@ VALUES ('Great Lakes Brewery', '2516 Market Ave.', 'Cleveland', 44113, '(216) 77
 'https://www.greatlakesbrewing.com',
 'Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays', 1, 41.484312, -81.704461);
 
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, user_id, lat, lng)
-VALUES ('Test Brewery', '1361 E 55th St.', 'Cleveland', 44103,'(216) 465-1352',
-'Nice place', 
-'https://www.indiaspora.org/wp-content/uploads/2018/10/image-not-available.jpg',
-'https://www.testbrewing.com',
-'Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays', 1, 0, 0);
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+VALUES ('Platform Beer Co.', '4125 Lorain Ave.', 'Cleveland', 44113,'(216) 202-1386',
+'Opened in 2014, 100+ seat tasting room and patio offers 20+ house beers and food options. 10BBL brewhouse creates constantly changing selection of styles. Head R&D brewer Danny Monnot leads the way at our flagship location.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511302719/brewery_images/pnozkgiqhblcydhtllru.jpg',
+'https://platformbeer.co/',
+'Monday - Thursday: 03:00 PM - 12:00 AM Friday: 03:00 AM - 02:00 AM Saturday: 10:00 PM - 02:00 AM Sunday: 10:00 PM - 10:00 PM', 1 ,41.4795909, -81.7138139);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Blue Moon', 4.8, 11,
