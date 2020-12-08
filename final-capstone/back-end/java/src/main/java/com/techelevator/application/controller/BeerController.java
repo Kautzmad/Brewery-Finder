@@ -68,7 +68,7 @@ public class BeerController {
 	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
 	public Beer getBeerByID(@PathVariable Long beerId) {
 		return beerDAO.getBeerbyID(beerId);
-		}
+	}
 	
 	/****************************************
 	 * Request Mapping, add Beer
@@ -90,4 +90,14 @@ public class BeerController {
 		beerDAO.deleteBeer(beerId);
 	}
 	
+	/****************************************
+	 * For Beads, getBeerByBreweryId 
+	 *
+	 ***/
+	
+	@PreAuthorize("permitAll")
+	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
+	public Beer getBeerByBreweryID(@PathVariable Long breweryId) {
+		return beerDAO.getBeerByBreweryID(breweryId);
+	}
 }

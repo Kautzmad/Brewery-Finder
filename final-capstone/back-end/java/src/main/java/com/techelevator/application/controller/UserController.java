@@ -29,9 +29,9 @@ public class UserController {
 		return "changePassword";
 	}
 	
-	@RequestMapping(path="/users/{userName}/changePassword", method=RequestMethod.POST)
+	/* @RequestMapping(path="/users/{userName}/changePassword", method=RequestMethod.POST)
 	public String changePassword(@PathVariable String userName, @RequestParam String password) {
 		userDAO.updatePassword(userName, password);
 		return "userDashboard";
-	}
+	}*/
 }

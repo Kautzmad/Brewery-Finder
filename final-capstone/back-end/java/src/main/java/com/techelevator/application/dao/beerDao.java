@@ -13,5 +13,7 @@ public interface beerDao {
 	void deleteBeer(Long beerId);
 
 	Beer getBeerbyID(Long beerId);
+
+	Beer getBeerByBreweryID(Long breweryId);
 	
 }

@@ -106,4 +106,22 @@ public class jdbcBeerDao implements beerDao {
 
 		return newBeer;
 	}
+	
+	/****************************************
+	 * For Beads, getBeerByBreweryID
+	 *
+	 ***/
+
+	@Override
+	public Beer getBeerByBreweryID(Long breweryId) {
+		Beer beers = new Beer();
+		String sqlGetBeerById = "SELECT * FROM beers WHERE brewery_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetBeerById, breweryId);
+		
+		while(results.next()) {
+			beers = mapRowToBeer(results);
+		}
+		
+		return beers;
+	}
 }
