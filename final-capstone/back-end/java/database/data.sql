@@ -29,30 +29,38 @@ VALUES ('Masthead Brewing Co.', '1261 Superior Ave.', 'Cleveland', 44144,'(216) 
 'http://mastheadbrewingco.com/',
 'Tuesday - Friday: 11:00 AM - 10:00 PM  Saturday: 11:00 PM - 01:00 AM Sunday: 11:00 PM - 05:00 PM Closed on Mondays', 1, 41.504100, -81.685403);
 
-INSERT INTO beers (name, abv, type, info, img_url, is_active) VALUES 
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('Original Lager', 5.2, 'German Lager',
 'A traditional full flavored German Lager with a crisp finish. The bier Hofbrauhaus has been famous for since 1589.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511649200/hofbrau_lager_puc_h8or43.jpg', true);
-INSERT INTO beers (name, abv, type, info, img_url, is_active) VALUES 
+'http://res.cloudinary.com/teclebrew/image/upload/v1511649200/hofbrau_lager_puc_h8or43.jpg', true, 1);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('Hefeweizen', 5.4, 'Hefeweizen',
 'A specialty born in Munich – loved by the world. A fairly sweet old-style Wheat bier brewed to create a wonderful combination banana and clove flavor and aroma.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511649351/hofbrau_heffwiz_pic_uz7nlz.jpg', true);
-INSERT INTO beers (name, abv, type, info, img_url, is_active) VALUES 
+'http://res.cloudinary.com/teclebrew/image/upload/v1511649351/hofbrau_heffwiz_pic_uz7nlz.jpg', true, 1);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('Dunkel', 5.5, 'Dunkel',
 'For centuries Munich’s favorite bier. Dunkel translates to “Dark” lager. It is medium bodied, easy to drink, with simple roasted malt flavor and slight caramel undertones.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511649546/Hofbrauhaus_dunkel_pic_w5bxhw.jpg', true);
-INSERT INTO beers (name, abv, type, info, img_url, is_active) VALUES 
+'http://res.cloudinary.com/teclebrew/image/upload/v1511649546/Hofbrauhaus_dunkel_pic_w5bxhw.jpg', true, 1);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('CITRAMAX IPA', 6.7, 'IPA',
 'A West Coast style IPA dry-hopped with organic Citra hops to impart intense tropical and citrus fruit aromas. This brew has an aggressive, boldly-bright American hop character that will leave you craving another.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511650026/market_citramax_beer_pic_mh7psh.png', true);
-INSERT INTO beers (name, abv, type, info, img_url, is_active) VALUES 
+'http://res.cloudinary.com/teclebrew/image/upload/v1511650026/market_citramax_beer_pic_mh7psh.png', true, 1);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('PROSPERITY WHEAT', 6.0, 'Wheat',
 'Formerly known as ***** Street Wheat! If you’ve ever spent time in a German Beer Garden, you know how much they love their wheat beer.  Our Bavarian style Hefeweizen is a satisfying blend of sweet wheat and pale malts, clove and banana aromatics, and the zesty tang of wheat beer yeast.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511650039/market_prosperity_ber_pic_efdril.png', true);
-INSERT INTO beers (name, abv, type, info, img_url, is_active) VALUES 
+'http://res.cloudinary.com/teclebrew/image/upload/v1511650039/market_prosperity_ber_pic_efdril.png', true, 1);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('PROGRESS PILSNER', 5.5, 'Pilsner',
 'Great American Beer Festival Award Winning Brew! Inspired by the Pilsners of the Rhine region, this lager is a tribute to the spicy, crisp and clean character of German noble hops and has just the right malt body to balance. Named aptly for the Cleveland slogan “Progress&Prosperity”.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511650338/market_progress_beer_pic_oe4yta.png', true);
+'http://res.cloudinary.com/teclebrew/image/upload/v1511650338/market_progress_beer_pic_oe4yta.png', true, 1);
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) VALUES 
+('Eliot Ness', 6.1, 27, 'Amber Lager',
+'Almost untouchably smooth--armed with lightly toasted malts and noble hops.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511645068/eliotness_beer_yx7iv4.png', true, 1);
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) VALUES 
+('Burning river', 6.0, 35, 'Pale Ale',
+'Crisp and bright, with refreshing flickers of citrus and pine that ignite the senses (not our local waterways).',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511645196/burningriver_beer_v1vzlz.png', true, 1);
 
 INSERT INTO reviews (name, description, rating, create_date) VALUES
 ('Greatest Beer Ever',
