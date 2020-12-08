@@ -5,6 +5,10 @@
         <div id="body">
             <h1 class="heading">Welcome to Brew Finder!</h1>
             <h3 class="subheading">A beer-lover's favorite website</h3>
+            <h3 class="subheading">A beer-lover's favorite website</h3>
+            <h3 class="subheading">A beer-lover's favorite website</h3>
+            <h3 class="subheading">A beer-lover's favorite website</h3>
+            <h3 class="subheading">A beer-lover's favorite website</h3>
         <h1>Popular Breweries</h1>
         <div class="brewery-list">
             <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
@@ -61,10 +65,12 @@ div.brewery-list {
 div#background {
     background-image: url('../img/cle-sign-bg.jpg');
     position: relative;
+    opacity: 0.90;
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 1500px;
+    padding-top: 1150px;
+    top: -10px;
 }
 
 </style>

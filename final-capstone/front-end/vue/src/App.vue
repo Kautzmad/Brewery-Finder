@@ -25,8 +25,17 @@ template {
   margin-top: -35px;
 }
 #nav {
+  background-image: url('/img/cle-sign-bg.jpg');
   position: relative;
-  background-color: transparent;
+  opacity: 0.90;
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+
+  position: fixed;
+  text-shadow: 2px 2px 15px black;
+  z-index: 999;
   display: flex;
   align-items: baseline;
   justify-content: space-around;
