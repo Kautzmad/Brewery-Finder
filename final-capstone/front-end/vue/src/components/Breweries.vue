@@ -2,6 +2,9 @@
 <div id="background">
 <div class="breweries">
     <h1 class="heading">All Our Breweries</h1>
+    <div class="loading" v-if="isLoading">
+            <img src="../img/beerClink.gif" />
+    </div>
     <div class="brewery-list">
         <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
     </div>
@@ -18,12 +21,14 @@ export default {
     },
     data() {
         return {
-            breweries: []
+            breweries: [],
+            isLoading: true
         }
     },
     created() {
         applicationServices.getBreweries().then(response => {
             this.breweries = response.data
+            this.isLoading = false;
     })
     }
 }
@@ -42,6 +47,13 @@ div.breweries {
     margin-left: 65px; margin-right: 65px;
     align-content: center;
 }
+
+div.loading {
+    text-align: center;
+    float: center;
+    z-index: 998;
+}
+
 div#body {
     margin-left: 25px; margin-right: 25px; margin-bottom: 50px;
     padding-bottom: 100px;

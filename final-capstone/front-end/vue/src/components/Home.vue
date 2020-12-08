@@ -6,6 +6,9 @@
             <h1 class="heading">Welcome to Brew Finder!</h1>
             <h3 class="subheading">A beer-lover's favorite website</h3>
         <h1>Popular Breweries</h1>
+        <div class="loading" v-if="isLoading">
+            <img src="../img/beerClink.gif" />
+        </div>
         <div class="brewery-list">
             <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
         </div>
@@ -24,12 +27,14 @@ export default {
     },
     data() {
         return {
-            breweries: []
+            breweries: [],
+            isLoading: true
         }
     },
     created() {
         applicationServices.getBreweries().then(response => {
             this.breweries = response.data
+            this.isLoading = false;
     })
     }
 }
@@ -39,7 +44,6 @@ div.home {
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
-    margin-bottom: 50px;
 }
 div#body {
     margin-left: 25px; margin-right: 25px; margin-bottom: 50px;
@@ -60,13 +64,19 @@ div.brewery-list {
     flex-wrap: wrap;
 }
 
+div.loading {
+    text-align: center;
+    float: center;
+    z-index: 998;
+}
+
 div#background {
     background-image: url('../img/cle-sign-bg.jpg');
     position: relative;
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 1150px; padding-bottom: 150px;
+    padding-top: 1150px;
     top: -10px;
 }
 
