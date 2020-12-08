@@ -1,3 +1,4 @@
+ROLLBACK;
 BEGIN;
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, hours, user_id, lat, lng)
@@ -59,4 +60,4 @@ VALUES ('Bascule Brewery And Public House','1397 Colorado Ave','Lorain','44052-3
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, hours, user_id, lat, lng)
 VALUES ('Big Ash Brewing Company','','Cincinnati','45244-3244','5133079688','','','',2,'','');
 
-
+COMMIT;
