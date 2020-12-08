@@ -1,8 +1,10 @@
 <template>
+<router-link v-bind:to="{ name: 'brewery-details', params:{id: this.brewery.breweryId} }">
     <div id="card">
         <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>
         <h2>{{this.brewery.name}}</h2>
     </div>
+</router-link>
 </template>
 <script>
 export default {
@@ -13,5 +15,4 @@ export default {
 img.company-logo {
     width: 200px;
 }
-
 </style>

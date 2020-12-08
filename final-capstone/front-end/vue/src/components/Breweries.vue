@@ -1,9 +1,11 @@
 <template>
+<div id="background">
 <div class="breweries">
     <h1 class="heading">All Our Breweries</h1>
     <div class="brewery-list">
         <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
     </div>
+</div>
 </div>
 </template>
 <script>
@@ -34,7 +36,7 @@ div.brewery-list {
     align-items: baseline;
 }
 div.breweries {
-    margin-top: 150px;
+    padding-top: 150px;
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
@@ -50,5 +52,14 @@ h1 {
 }
 h1.heading {
     padding-top:25px;
+}
+div#background {
+    background-image: url('../img/cle-sign-bg.jpg');
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    top: -10px;
 }
 </style>

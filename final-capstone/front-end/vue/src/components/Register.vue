@@ -1,4 +1,5 @@
 <template>
+<div id="background">
   <div id="register" class="text-center">
     <form class="form-register" @submit.prevent="register">
       <h1 class="h3 mb-3 font-weight-normal heading">Create Account</h1>
@@ -43,6 +44,7 @@
       </button>
     </form>
   </div>
+</div>
 </template>
 
 <script>
@@ -100,7 +102,7 @@ div#register {
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
-    margin-top: 150px;
+    padding-top: 150px;
 }
 
 form.form-register {
@@ -129,5 +131,14 @@ input#confirmPassword {
 
 h1.heading {
     padding-top:25px;
+}
+
+div#background {
+    background-image: url('../img/cle-sign-bg.jpg');
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    top: -10px;
 }
 </style>

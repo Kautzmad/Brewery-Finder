@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    
     <div id="nav">
+
       <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="@/img/BrewFootball.png"/></router-link>
       <router-link class="nav-link" id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse<br>Breweries</router-link>&nbsp;|&nbsp;
       <router-link class="nav-link" id="browse-beer" v-bind:to="{ name: 'beers' }">Browse<br>Beers</router-link>&nbsp;|&nbsp;
@@ -12,8 +14,10 @@
   </div>
 </template>
 <style scoped>
-template {
-
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 #app {
   color: black;
@@ -25,14 +29,11 @@ template {
   margin-top: -35px;
 }
 #nav {
-  background-image: url('/img/cle-sign-bg.jpg');
+  background-image: url('./img/cle-sign-bg.jpg');
   position: relative;
-  opacity: 0.90;
   background-position:center;
   background-size: cover;
   background-attachment: fixed;
-  object-fit: cover;
-
   position: fixed;
   text-shadow: 2px 2px 15px black;
   z-index: 999;
@@ -42,7 +43,7 @@ template {
   flex-wrap: wrap;
   padding-bottom: 45px;
   margin-top: -20px; 
-  width: 100%;
+  width: 95%;
 }
 .nav-link {
   background-color: transparent;
