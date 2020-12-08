@@ -13,42 +13,42 @@
 </template>
 <style scoped>
 template {
-  width: 100%;
-  overflow-x: hidden;
+
 }
 #app {
-    border-color: black;
-    border-width: 10px;
-    border-style: solid;
-    background-color: black;
-    color: black;
-    font-family: 'Arial';
+  color: black;
+  font-family: 'Arial';
 }
 #logo {
-    width: 250px;
-    margin-bottom: -110px;
-    margin-top: -35px;
+  width: 250px;
+  margin-bottom: -110px;
+  margin-top: -35px;
 }
 #nav {
-
-    position: fixed;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-bottom: 25px;
-    margin-top: -20px; 
-    background-color: black;
-    width: 100%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 45px;
+  margin-top: -20px; 
+  width: 100%;
 }
 .nav-link {
-  color: #FFDE59;
+  background-color: transparent;
   text-decoration: none;
   font-weight: 700;
   text-align: center;
 }
-#browse-beer, #logout-link, #login-link {
-  color: #38B6FF;
+
+a {
+  color: #FF3C00;
+}
+
+a:hover {
+  color: #311D00;
+  text-decoration: underline;
 }
 
 </style>

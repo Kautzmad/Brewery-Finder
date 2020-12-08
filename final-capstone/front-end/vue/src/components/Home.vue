@@ -1,14 +1,15 @@
 <template>
-  <div class="home">
-    <div id="body">
-        <h1 class="heading">Welcome to Brew Finder!</h1>
-        <h3 class="subheading">A beer-lover's favorite website</h3>
-    <img id="beer-glass-bg" src='../img/beer-glass-style-background.jpg'/>
-    
-    <h1>Popular Breweries</h1>
-    <div class="brewery-list">
-        <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
-    </div>
+<div id="background">
+    <!-- <img id="cle-sign-bg" src='../img/cle-sign-bg.jpg'/> -->
+    <div class="home">
+        <div id="body">
+            <h1 class="heading">Welcome to Brew Finder!</h1>
+            <h3 class="subheading">A beer-lover's favorite website</h3>
+        <h1>Popular Breweries</h1>
+        <div class="brewery-list">
+            <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
+        </div>
+        </div>
     </div>
   </div>
 </template>
@@ -35,7 +36,6 @@ export default {
 </script>
 <style scoped>
 div.home {
-    margin-top: 150px;
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
@@ -57,12 +57,14 @@ div.brewery-list {
     text-align: center;
     align-items: baseline;
 }
-img {
-    width: 125px
-}
-img#beer-glass-bg {
-    width: 65%;
-    padding-top: 25px;
+
+div#background {
+    background-image: url('../img/cle-sign-bg.jpg');
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 1500px;
 }
 
 </style>
