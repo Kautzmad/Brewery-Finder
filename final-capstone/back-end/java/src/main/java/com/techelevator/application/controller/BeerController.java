@@ -10,6 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -100,4 +101,17 @@ public class BeerController {
 	public List<Beer> getBeerByBreweryID(@PathVariable Long breweryId) throws NotFoundException {
 		return beerDAO.getBeerByBreweryID(breweryId);
 	}
+	
+	/****************************************
+	 * Update a beer
+	 * - preauth "Brewer"
+	 *
+	 ***/
+	@PreAuthorize("hasRole('ROLE_BREWER')")
+	@RequestMapping(path= "/beers", method = RequestMethod.PUT)
+	public void updateBeer(@RequestBody Beer aBeer) throws NotAllowedException {
+		beerDAO.updateBeer(aBeer);
+	}
+	
+	
 }
