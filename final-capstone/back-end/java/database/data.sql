@@ -2,70 +2,6 @@ BEGIN;
 
 --- BREWERY INSERTS ----------------------
 
-/*INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
-VALUES ('Great Lakes Brewery', '2516 Market Ave.', 'Cleveland', 44113, '(216) 771-4404',
-'Iconic microbrewery with house suds, an updated American menu, free tours & a patio.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511722746/gret_lakes_brewery_logo_black_uw5ech.jpg',
-'https://www.greatlakesbrewing.com',
-'Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays', 41.484312, -81.704461);
-
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
-VALUES ('Platform Beer Co.', '4125 Lorain Ave.', 'Cleveland', 44113,'(216) 202-1386',
-'Opened in 2014, 100+ seat tasting room and patio offers 20+ house beers and food options. 10BBL brewhouse creates constantly changing selection of styles. Head R&D brewer Danny Monnot leads the way at our flagship location.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511302719/brewery_images/pnozkgiqhblcydhtllru.jpg',
-'https://platformbeer.co/',
-'Monday - Thursday: 03:00 PM - 12:00 AM Friday: 03:00 AM - 02:00 AM Saturday: 10:00 PM - 02:00 AM Sunday: 10:00 PM - 10:00 PM', 41.4795909, -81.7138139);
-
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
-VALUES ('Goldhorn Brewery', '1361 E 55th St.', 'Cleveland', 44103,'(216) 465-1352',
-'Cool taproom offering seasonal, housemade beer in a vast space with a long bar & tables outside.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511722787/goldhorn_brown_logo_er48xf.png',
-'https://www.yelp.com/biz/goldhorn-brewery-cleveland',
-'Tuesday - Friday: 11:00 AM - 09:00 PM  Saturday: 12:00 PM - 10:00 PM Sunday: 12:00 PM - 06:00 PM Closed on Mondays', 41.521425, -81.651681);
-INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
-VALUES ('Masthead Brewing Co.', '1261 Superior Ave.', 'Cleveland', 44144,'(216) 206-6176',
-'Located in a historic building with 300 seats, a 100â€™ long bar, and an additional 50 seat dog friendly patio with a view of downtown Cleveland. Masthead includes a full bar and kitchen focusing on American and Belgian style beers, Neapolitan wood-fired pizza, and a barrel aged beer program',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511363501/brewery_images/oorzznvts0irqao76zqb.jpg',
-'http://mastheadbrewingco.com/',
-<<<<<<< HEAD
-'Tuesday - Friday: 11:00 AM - 10:00 PM  Saturday: 11:00 PM - 01:00 AM Sunday: 11:00 PM - 05:00 PM Closed on Mondays', 41.504100, -81.685403);*/
-=======
-'Tuesday - Friday: 11:00 AM - 10:00 PM  Saturday: 11:00 PM - 01:00 AM Sunday: 11:00 PM - 05:00 PM Closed on Mondays', 41.504100, -81.685403);
-
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
-('Original Lager', 5.2, 'German Lager',
-'A traditional full flavored German Lager with a crisp finish. The bier Hofbrauhaus has been famous for since 1589.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511649200/hofbrau_lager_puc_h8or43.jpg', true, 1);
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
-('Hefeweizen', 5.4, 'Hefeweizen',
-'A specialty born in Munich â€“ loved by the world. A fairly sweet old-style Wheat bier brewed to create a wonderful combination banana and clove flavor and aroma.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511649351/hofbrau_heffwiz_pic_uz7nlz.jpg', true, 1);
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
-('Dunkel', 5.5, 'Dunkel',
-'For centuries Munichâ€™s favorite bier. Dunkel translates to â€œDarkï¿½? lager. It is medium bodied, easy to drink, with simple roasted malt flavor and slight caramel undertones.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511649546/Hofbrauhaus_dunkel_pic_w5bxhw.jpg', true, 1);
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
-('CITRAMAX IPA', 6.7, 'IPA',
-'A West Coast style IPA dry-hopped with organic Citra hops to impart intense tropical and citrus fruit aromas. This brew has an aggressive, boldly-bright American hop character that will leave you craving another.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511650026/market_citramax_beer_pic_mh7psh.png', true, 1);
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
-('PROSPERITY WHEAT', 6.0, 'Wheat',
-'Formerly known as ***** Street Wheat! If youâ€™ve ever spent time in a German Beer Garden, you know how much they love their wheat beer.  Our Bavarian style Hefeweizen is a satisfying blend of sweet wheat and pale malts, clove and banana aromatics, and the zesty tang of wheat beer yeast.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511650039/market_prosperity_ber_pic_efdril.png', true, 1);
-INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
-('PROGRESS PILSNER', 5.5, 'Pilsner',
-'Great American Beer Festival Award Winning Brew! Inspired by the Pilsners of the Rhine region, this lager is a tribute to the spicy, crisp and clean character of German noble hops and has just the right malt body to balance. Named aptly for the Cleveland slogan â€œProgress&Prosperityï¿½?.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511650338/market_progress_beer_pic_oe4yta.png', true, 1);
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) VALUES 
-('Eliot Ness', 6.1, 27, 'Amber Lager',
-'Almost untouchably smooth--armed with lightly toasted malts and noble hops.',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511645068/eliotness_beer_yx7iv4.png', true, 1);
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) VALUES 
-('Burning river', 6.0, 35, 'Pale Ale',
-'Crisp and bright, with refreshing flickers of citrus and pine that ignite the senses (not our local waterways).',
-'http://res.cloudinary.com/teclebrew/image/upload/v1511645196/burningriver_beer_v1vzlz.png', true, 1);
->>>>>>> 1a030a64ac0804e487f44c3491f16cd6423eff8a
-
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES('Bookhouse Brewing, LLC.','1526 W 25th St','Cleveland','44113','4144264555','Bookhouse Brewing is a brewery in the Ohio City neighborhood with a comfortable, intimate taproom in a historic brewery building.','https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.heinens.com%2Fwp-content%2Fuploads%2F2020%2F08%2FBookhouse-Brewing.png&f=1&nofb=1','http://www.bookhouse.beer',2,'M-F 5PM-7PM Delivery only (due to Covid-19)',0,0);
 
@@ -79,7 +15,7 @@ INSERT INTO breweries (name, address, city, zipcode, phone_number, description, 
 VALUES('Collision Bend Brewing Co','1250 Old River Rd','Cleveland','44113','2162737879','Collision Bend Brewing Company is an artisanal brewery and full-service restaurant, featuring crisp, bright beers brewed on site, served alongside freshly prepared Southern California street food.','https://www.collisionbendbrewery.com/wp-content/uploads/2017/04/collision-bend-logo-b-1030x317.png','http://www.collisionbendbrewery.com',2,'Will Reopen March 2021(due to Covid-19)',-81.7039719,41.49884829);
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Forest City Brewery','2135 Columbus Rd Ste A','Cleveland','44113','','Step inside our 40-seat tasting room and brewhouse – thoughtfully designed and constructed from reclaimed materials.','http://static1.squarespace.com/static/538c6a0fe4b006c49d7f990e/t/58e460be414fb56455f1b252/1599240198115/?format=1500w','http://www.forestcitybrewery.com',2,'T-F 4PM-10PM Sa 12PM-10PM Su 12PM-6PM',0,0);
+VALUES('Forest City Brewery','2135 Columbus Rd Ste A','Cleveland','44113','','Step inside our 40-seat tasting room and brewhouse ï¿½ thoughtfully designed and constructed from reclaimed materials.','http://static1.squarespace.com/static/538c6a0fe4b006c49d7f990e/t/58e460be414fb56455f1b252/1599240198115/?format=1500w','http://www.forestcitybrewery.com',2,'T-F 4PM-10PM Sa 12PM-10PM Su 12PM-6PM',0,0);
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url,  user_id,hours, lat, lng)
 VALUES('Hansa Brewery','2717 Lorain Ave','Cleveland','44113','2166316585','We welcome you with open arms and cold beer to Clevelands newest, authentic Eastern European restaurant and brewery. PROST!','https://www.hansabrewery.com/wp-content/uploads/2017/04/hansalogofooter.png','http://www.hansabrewery.com',2,'W-Th 12PM-8PM F-Sa 12PM-9PM Su 12PM-3PM',-81.70479139,41.48344207);
@@ -109,13 +45,43 @@ INSERT INTO breweries (name, address, city, zipcode, phone_number, description, 
 VALUES('Working Class Brewery','17448 Lorain Ave','Cleveland','44111','2164175112','Working Class Brewery is a working class guy following a passion and dream to create great fresh local craft beer for hard working people.' ,'https://static.wixstatic.com/media/c1529d_6e3c8fc297934fc1a2aca366c23bcf96~mv2.jpg/v1/fill/w_745,h_255,al_c,q_80,usm_2.00_1.00_0.00/c1529d_6e3c8fc297934fc1a2aca366c23bcf96~mv2.webp','http://www.workingclassbrewery.com',2,'Tu-F 4PM-10PM Sa 12PM-10PM Su 12:30PM-8PM',-81.820461,41.44993);
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Maize Valley Craft Brewery','6193 Edison St NE','Hartville','44632','3308778344','Maize Valley is proud to be the first Craft Brewery to open in Stark county, starting in September, 2014.  With a rotation of 16 craft beers on tap, we offer a wide range of beers from our flagship IPA, Hopnesia, to our award winning Belgian Dark Strong Ale, Monk in Public, our beer selection is able to satisfy a broad range of beer loving tastes.','https://www.maizevalley.com/wp-content/uploads/2015/07/logo-400.png','http://www.maizevalley.com',2,'Monday – Saturday 10 a.m. – 8 p.m',-81.27813638,40.95340888);
+VALUES('Maize Valley Craft Brewery','6193 Edison St NE','Hartville','44632','3308778344','Maize Valley is proud to be the first Craft Brewery to open in Stark county, starting in September, 2014.  With a rotation of 16 craft beers on tap, we offer a wide range of beers from our flagship IPA, Hopnesia, to our award winning Belgian Dark Strong Ale, Monk in Public, our beer selection is able to satisfy a broad range of beer loving tastes.','https://www.maizevalley.com/wp-content/uploads/2015/07/logo-400.png','http://www.maizevalley.com',2,'Monday ï¿½ Saturday 10 a.m. ï¿½ 8 p.m',-81.27813638,40.95340888);
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
 VALUES('Fat Heads Brewery','17450 Engle Lake Dr','Middleburg Heights','44130','2168980242','In 1992 Glenn & Michelle had this crazy idea that a craft beer bar & restaurant would be a great adventure. Fat Heads was born.','http://www.fatheads.com/images/green_fh_logo.png?crc=361736492','http://www.fatheads.com',2,'Su-Th 12PM-8PM F-Sa 12PM-9PM',0,0);
 
 INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, user_id, hours, lat, lng)
-VALUES('Baithouse Brewery','223 MEIGS STREET','Sandusky','44870','4193665372','One of our ‘co-conspirators’ thought we needed a big-ole-perch on our sign to help passersby find the brewery. So we turned this big perch idea over to Bob the Fish carver and he thought it would look good all by itself on the building.','https://baithousebrewery.com/wp-content/uploads/2019/04/baithouse-logo-300x279.png','http://www.baithousebrewery.com',2,'COMING SOON',0,0);
+VALUES('Baithouse Brewery','223 MEIGS STREET','Sandusky','44870','4193665372','One of our ï¿½co-conspiratorsï¿½ thought we needed a big-ole-perch on our sign to help passersby find the brewery. So we turned this big perch idea over to Bob the Fish carver and he thought it would look good all by itself on the building.','https://baithousebrewery.com/wp-content/uploads/2019/04/baithouse-logo-300x279.png','http://www.baithousebrewery.com',2,'COMING SOON',0,0);
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+VALUES ('Great Lakes Brewery', '2516 Market Ave.', 'Cleveland', 44113, '(216) 771-4404',
+'Iconic microbrewery with house suds, an updated American menu, free tours & a patio.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511722746/gret_lakes_brewery_logo_black_uw5ech.jpg',
+'https://www.greatlakesbrewing.com',
+'Monday - Thursday: 10:00 AM - 10:00 PM Friday and Saturday: 10:00 AM - 11:00 PM Closed on Sundays', 41.484312, -81.704461);
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+VALUES ('Masthead Brewing Co.', '1261 Superior Ave.', 'Cleveland', 44144,'(216) 206-6176',
+'Located in a historic building with 300 seats, a 100â€™ long bar, and an additional 50 seat dog friendly patio with a view of downtown Cleveland. Masthead includes a full bar and kitchen focusing on American and Belgian style beers, Neapolitan wood-fired pizza, and a barrel aged beer program',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511363501/brewery_images/oorzznvts0irqao76zqb.jpg',
+'http://mastheadbrewingco.com/',
+'Tuesday - Friday: 11:00 AM - 10:00 PM  Saturday: 11:00 PM - 01:00 AM Sunday: 11:00 PM - 05:00 PM Closed on Mondays', 41.504100, -81.685403);
+
+INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+VALUES ('Platform Beer Co.', '4125 Lorain Ave.', 'Cleveland', 44113,'(216) 202-1386',
+'Opened in 2014, 100+ seat tasting room and patio offers 20+ house beers and food options. 10BBL brewhouse creates constantly changing selection of styles. Head R&D brewer Danny Monnot leads the way at our flagship location.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511302719/brewery_images/pnozkgiqhblcydhtllru.jpg',
+'https://platformbeer.co/',
+'Monday - Thursday: 03:00 PM - 12:00 AM Friday: 03:00 AM - 02:00 AM Saturday: 10:00 PM - 02:00 AM Sunday: 10:00 PM - 10:00 PM', 41.4795909, -81.7138139);
+
+/*INSERT INTO breweries (name, address, city, zipcode, phone_number, description, brewery_logo_url, website_url, hours, lat, lng)
+VALUES ('Goldhorn Brewery', '1361 E 55th St.', 'Cleveland', 44103,'(216) 465-1352',
+'Cool taproom offering seasonal, housemade beer in a vast space with a long bar & tables outside.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511722787/goldhorn_brown_logo_er48xf.png',
+'https://www.yelp.com/biz/goldhorn-brewery-cleveland',
+'Tuesday - Friday: 11:00 AM - 09:00 PM  Saturday: 12:00 PM - 10:00 PM Sunday: 12:00 PM - 06:00 PM Closed on Mondays', 41.521425, -81.651681);
+*/
+
 
 
 --------- BEER INSERTS --------------------------
@@ -263,44 +229,6 @@ VALUES ('I Rish I Had Another Red Ale', 4.2, 22,
 'Irish Red Ale', 'This brew is a collaboration with our homebrewing friends Jay and Eli of SNOBS Homebrew
  Club. Their multi-award winning recipe is our first pro-am offering and one fine red ale.', 
 'no img', true, 5);
-
--- Great Lakes Brewery
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Burning River Pale Ale', 6.0, 45,
-'Pale Ale', 'Greetings from Cleveland! Where an infamous river fire rekindled appreciation for our 
-region’s natural resources (like the malt and hops illuminating this Pale Ale).', 
-'https://www.greatlakesbrewing.com/sites/default/files/burning-river-cans-fixed-580x960.jpg'
-, true, 1);
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Dortmunder Gold Lager', 5.8, 30,
-'Lager', 'A classic award-winning balance of sweet malt and dry hop flavors, proudly waving 
-the flag for Cleveland and refreshing beer drinkers everywhere since 1988.', 
-'https://www.greatlakesbrewing.com/sites/default/files/dort-2020-fixed.png'
-, true, 1);
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Siren Shores', 6.9, 15,
-'Passion Fruit Saison', 'Ahoy, weary sailor! Heed the call of the North Coast’s
- “inland seas” and plunge into an effervescent maelstrom of sweet passion fruit, 
- zesty spices, and tempting tropical fruit aromas.', 
-'https://www.greatlakesbrewing.com/sites/default/files/siren-shores.png'
-, false, 1);
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Edmund Fitzgerald', 6.0, 37,
-'Porter', 'Robust and complex, our Porter is a bittersweet tribute to the
- legendary freighter’s fallen crew—taken too soon when the gales of November came early.', 
-'https://www.greatlakesbrewing.com/sites/default/files/edfitz-fixed_1.png'
-, true, 1);
-
-INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Commodore Perry', 7.7, 70,
-'IPA', 'What’s this? A British-style IPA named after the man who defeated 
-His Majesty’s Royal Navy in the War of 1812? Consider this a bold, hoppy 
-(and mildly ironic) plunder of war.', 
-'https://www.greatlakesbrewing.com/sites/default/files/commodore-fixed-2020.jpg'
-, true, 1);
 
 -- Hansa Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -586,6 +514,80 @@ to classic American beers, and will even out those “sea legs”.',
 'https://baithousebrewery.com/wp-content/uploads/2019/05/White-Cap-1-640x321.jpg'
 , true, 17);
 
+-- Great Lakes Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Burning River Pale Ale', 6.0, 45,
+'Pale Ale', 'Greetings from Cleveland! Where an infamous river fire rekindled appreciation for our 
+region’s natural resources (like the malt and hops illuminating this Pale Ale).', 
+'https://www.greatlakesbrewing.com/sites/default/files/burning-river-cans-fixed-580x960.jpg'
+, true, 18);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Dortmunder Gold Lager', 5.8, 30,
+'Lager', 'A classic award-winning balance of sweet malt and dry hop flavors, proudly waving 
+the flag for Cleveland and refreshing beer drinkers everywhere since 1988.', 
+'https://www.greatlakesbrewing.com/sites/default/files/dort-2020-fixed.png'
+, true, 18);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Siren Shores', 6.9, 15,
+'Passion Fruit Saison', 'Ahoy, weary sailor! Heed the call of the North Coast’s
+ “inland seas” and plunge into an effervescent maelstrom of sweet passion fruit, 
+ zesty spices, and tempting tropical fruit aromas.', 
+'https://www.greatlakesbrewing.com/sites/default/files/siren-shores.png'
+, false, 18);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Edmund Fitzgerald', 6.0, 37,
+'Porter', 'Robust and complex, our Porter is a bittersweet tribute to the
+ legendary freighter’s fallen crew—taken too soon when the gales of November came early.', 
+'https://www.greatlakesbrewing.com/sites/default/files/edfitz-fixed_1.png'
+, true, 18);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Commodore Perry', 7.7, 70,
+'IPA', 'What’s this? A British-style IPA named after the man who defeated 
+His Majesty’s Royal Navy in the War of 1812? Consider this a bold, hoppy 
+(and mildly ironic) plunder of war.', 
+'https://www.greatlakesbrewing.com/sites/default/files/commodore-fixed-2020.jpg'
+, true, 18);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) VALUES 
+('Eliot Ness', 6.1, 27, 'Amber Lager',
+'Almost untouchably smooth--armed with lightly toasted malts and noble hops.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511645068/eliotness_beer_yx7iv4.png', true, 18);
+
+------ Masthead ------
+
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
+('Original Lager', 5.2, 'German Lager',
+'A traditional full flavored German Lager with a crisp finish. The bier Hofbrauhaus has been famous for since 1589.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511649200/hofbrau_lager_puc_h8or43.jpg', true, 19);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
+('Hefeweizen', 5.4, 'Hefeweizen',
+'A specialty born in Munich â€“ loved by the world. A fairly sweet old-style Wheat bier brewed to create a wonderful combination banana and clove flavor and aroma.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511649351/hofbrau_heffwiz_pic_uz7nlz.jpg', true, 19);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
+('Dunkel', 5.5, 'Dunkel',
+'For centuries Munichâ€™s favorite bier. Dunkel translates to â€œDarkï¿½? lager. It is medium bodied, easy to drink, with simple roasted malt flavor and slight caramel undertones.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511649546/Hofbrauhaus_dunkel_pic_w5bxhw.jpg', true, 19);
+
+--- Platform ---
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
+('CITRAMAX IPA', 6.7, 'IPA',
+'A West Coast style IPA dry-hopped with organic Citra hops to impart intense tropical and citrus fruit aromas. This brew has an aggressive, boldly-bright American hop character that will leave you craving another.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511650026/market_citramax_beer_pic_mh7psh.png', true, 20);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
+('PROSPERITY WHEAT', 6.0, 'Wheat',
+'Formerly known as ***** Street Wheat! If youâ€™ve ever spent time in a German Beer Garden, you know how much they love their wheat beer.  Our Bavarian style Hefeweizen is a satisfying blend of sweet wheat and pale malts, clove and banana aromatics, and the zesty tang of wheat beer yeast.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511650039/market_prosperity_ber_pic_efdril.png', true, 20);
+INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
+('PROGRESS PILSNER', 5.5, 'Pilsner',
+'Great American Beer Festival Award Winning Brew! Inspired by the Pilsners of the Rhine region, this lager is a tribute to the spicy, crisp and clean character of German noble hops and has just the right malt body to balance. Named aptly for the Cleveland slogan â€œProgress&Prosperityï¿½?.',
+'http://res.cloudinary.com/teclebrew/image/upload/v1511650338/market_progress_beer_pic_oe4yta.png', true, 20);
+
+
+
 ------ REVIEW INSERTS --------------------
 
 INSERT INTO reviews (name, description, rating, create_date) VALUES
@@ -604,7 +606,6 @@ INSERT INTO reviews (name, description, rating, create_date) VALUES
 ('Still better than Al Capone',
 'Im not sure which is cooler the man or the beer! ',
 5,now());
-
 
 INSERT INTO reviews (name, description, rating, create_date)
 VALUES ('Christmas magic in a a bottle',
