@@ -14,6 +14,6 @@ public interface beerDao {
 
 	Beer getBeerbyID(Long beerId);
 
-	Beer getBeerByBreweryID(Long breweryId);
+	List <Beer> getBeerByBreweryID(Long breweryId);
 	
 }

@@ -97,7 +97,7 @@ public class BeerController {
 	
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/breweries/{breweryId}/beers", method = RequestMethod.GET)
-	public Beer getBeerByBreweryID(@PathVariable Long breweryId) {
+	public List<Beer> getBeerByBreweryID(@PathVariable Long breweryId) {
 		return beerDAO.getBeerByBreweryID(breweryId);
 	}
 }
