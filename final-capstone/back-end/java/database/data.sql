@@ -1,4 +1,3 @@
-ROLLBACK;
 BEGIN;
 
 
@@ -39,7 +38,7 @@ INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES
 'http://res.cloudinary.com/teclebrew/image/upload/v1511649351/hofbrau_heffwiz_pic_uz7nlz.jpg', true, 1);
 INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('Dunkel', 5.5, 'Dunkel',
-'For centuries Munich’s favorite bier. Dunkel translates to “Dark�? lager. It is medium bodied, easy to drink, with simple roasted malt flavor and slight caramel undertones.',
+'For centuries Munich’s favorite bier. Dunkel translates to “Dark�? lager. It is medium bodied, easy to drink, with simple roasted malt flavor and slight caramel undertones.',
 'http://res.cloudinary.com/teclebrew/image/upload/v1511649546/Hofbrauhaus_dunkel_pic_w5bxhw.jpg', true, 1);
 INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('CITRAMAX IPA', 6.7, 'IPA',
@@ -51,7 +50,7 @@ INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES
 'http://res.cloudinary.com/teclebrew/image/upload/v1511650039/market_prosperity_ber_pic_efdril.png', true, 1);
 INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES 
 ('PROGRESS PILSNER', 5.5, 'Pilsner',
-'Great American Beer Festival Award Winning Brew! Inspired by the Pilsners of the Rhine region, this lager is a tribute to the spicy, crisp and clean character of German noble hops and has just the right malt body to balance. Named aptly for the Cleveland slogan “Progress&Prosperity�?.',
+'Great American Beer Festival Award Winning Brew! Inspired by the Pilsners of the Rhine region, this lager is a tribute to the spicy, crisp and clean character of German noble hops and has just the right malt body to balance. Named aptly for the Cleveland slogan “Progress&Prosperity�?.',
 'http://res.cloudinary.com/teclebrew/image/upload/v1511650338/market_progress_beer_pic_oe4yta.png', true, 1);
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) VALUES 
 ('Eliot Ness', 6.1, 27, 'Amber Lager',
