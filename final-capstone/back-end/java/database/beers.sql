@@ -43,28 +43,28 @@ VALUES ('Fortitude', 6.8, 20,
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Dog Pound Brown', 5.8, 32,
 'Brown Ale', 'Nutty biscuit and mild chocolate', 
-null , true, 2);
+'no img' , true, 2);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Jobu', 6.0, 30,
 'Spiced Hazy Juicy IPA', 'Tropical IPA infused with spicy Cerrano peppers', 
-null , true, 2);
+'no img', true, 2);
   
   INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Holy Toledo Pilsner', 5.4, 33,
 'German Pilsner', 'German style, noble hopped Pilsener. Clean & refreshing', 
-null , true, 2);
+'no img' , true, 2);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Put-N-Berry', 5.5, 20,
 'Fruit Beer', 'Crisp Honey Ale. Touch of cracker with fresh Raspberry tartness', 
-null , true, 2);
+'no img' , true, 2);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Millennial Hipster', 6.0, 35,
 'Hazy Juicy IPA', 'Big juicy sweetness and tropical citrus. This Hazy IPA is tighter
 than your skinny jeans and hotter than a wool hat in the summer', 
-null , true, 2);
+'no img' , true, 2);
  
  -- Brick and Barrel Brewing
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -72,47 +72,42 @@ VALUES ('Bitter Chief IPA', 6.9, null,
 'IPA', 'For our bitter Tribe fans, we almost got that series win. In the meantime, 
 drink some local craft beer and enjoy. Light cooper color. Nice bitterness with 
 refreshing citrus and grassy flavors and aromas. Malty finish balancing out the bitterness', 
-null , true, 3);
+'no img' , true, 3);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Big Chief Imperial IPA', 8.7, null,
 'Imperial IPA', 'Big hoppy Imperial IPA. Malt backbone with a robust hop aroma and flavor 
 from kettle and fermenter dry-hopping.', 
-null , true, 3);
+'no img' , true, 3);
   
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Rally Possum', 7.4, null,
 'Imperial Brown Ale', 'Hoppy imperial brown ale with nice citrus, chocolate hazelnut roast
  aromas and flavors. Just in time for a fantastic Browns season.', 
-  null
- , true, 3);
+'no img', true, 3);
  
   INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Pinot Saison', 6.3, null,
 'Farmhouse Saison', 'Classic farmhouse saison ale, phenolic pepper and tropical fruit
  form the Saison yeast strain. Pinot Noir wine must co fermented to give aromas and
  flavors of raspberry, strawberry and red grapes giving a red wine aroma.', 
-  null
- , true, 3);
+'no img', true, 3);
  
  -- Collision Bend Brewery
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('C-Town', 6.7, 68,
 'American IPA', 'No description', 
-  null
- , true, 4);
+'no img', true, 4);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hope Flows', 5.2, 19,
 'Kolsch', 'No description', 
-  null
- , true, 4);
+'no img', true, 4);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Home Before 10', 7.3, 23,
 'Farmhouse Saison', 'No description', 
- null
- , true, 4);
+'no img', true, 4);
  
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Bollard Pull', 5.8, 30,
@@ -126,15 +121,13 @@ VALUES ('Black Betsy Black IPA', 5.6, 68,
 'Black IPA', 'This beer is named after Shoeless Joe Jackson’s primary bat. Betsy 
 is brewed with classic hops (Columbus, Chinook, Cascade) paired with a stout-like 
 malt bill making this beer a balanced and flavorful home run!', 
-null
-, true, 5);
+'no img', true, 5);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Berg-A-Horn Bock', 6.5, 22,
 'Bock', 'Our traditional Bock is a strong, dark, lightly hopped brew of German origin. Named after 
 our giant Sycamore tree in the original beer garden. Berg-A-Horn means Sycamore in German', 
-null
-, true, 5);
+'no img', true, 5);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Duck Island Amber Ale', 5.5, 40,
@@ -142,15 +135,13 @@ VALUES ('Duck Island Amber Ale', 5.5, 40,
 containing subtly delicious hints of caramel and fruit. This Forest City staple has a medium intensity
  hop flavor with citrus hop notes. A frothy headed classic that is sure to find its’ way into your 
  stomach and into your cooler!', 
-null
-, true, 5);
+'no img', true, 5);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('I Rish I Had Another Red Ale', 4.2, 22,
 'Irish Red Ale', 'This brew is a collaboration with our homebrewing friends Jay and Eli of SNOBS Homebrew
  Club. Their multi-award winning recipe is our first pro-am offering and one fine red ale.', 
-null
-, true, 5);
+'no img', true, 5);
 
 -- Great Lakes Brewery
 /*INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -196,30 +187,26 @@ VALUES ('Mr. Meeseeks', 4.6, 9,
 'Blueberry Gose', 'This bier is meant to serve the one purpose of quenching your thirst. Fulfilling
  fruity taste with a lemony tartness. Hints of coriander and a touch of salt that follows through 
  with a fantastic blueberry taste!', 
-null
-, true, 6);
+'no img', true, 6);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Bye Felicia!', 5.2, 21,
 'Nut Brown Ale', 'The perfect bier to say “Bye!” to last year and “Hello!” to a fresh start! Complex
  malt profile with chocolate malt, honey malt, and crystal rye. Very sessionable and a touch on the sweet side.', 
-null
-, true, 6);
+'no img', true, 6);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Black Flag', 4.7, 23,
 'Schwarzbier', 'Dark brown German lager with an undertone of caramel, toffee, and light roast coffee.
  Clean and smooth in taste with some floral German hop taste', 
-null
-, true, 6);
+'no img', true, 6);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('S.I.P.A.', 7.0, 88,
 'German IPA', 'A German interpretation of an American IPA with a caramel malt backbone. We use five
  new German hop varieties that give it a melon and subtle strawberry character. Assertive bitterness
   and refreshingly floral.', 
-null
-, true, 6);
+'no img', true, 6);
 
 -- Market Garden Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -227,8 +214,7 @@ VALUES ('Nano OG', 4.3, null,
 'Lager', 'This pale lager is a throwback to how beer was brewed in America more than 100 years ago. 
 Another Great American Beer Festival award winner, it is crisp, brilliant, and refreshing with a 
 delicate malt body and a snappy hop finish; Nano keeps you dominating all day.', 
-null
-, true, 7);
+'no img', true, 7);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Progress Pilsner', 5.5, null,
@@ -236,23 +222,20 @@ VALUES ('Progress Pilsner', 5.5, null,
  award-winning lager is a tribute to the crisp and clean character of the noble hop and has just the
   right malt body to balance to perfection. Born on the Rhine, brewed on the Cuyahoga. This, friends,
    is sunlight in a glass!', 
-null
-, true, 7);
+'no img', true, 7);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hyper Haze', 6.5, null,
 'Hazy IPA', 'A firework of tropical hop aroma from late additions of Mosaic and Azacca hops. Its 
 low bitterness and soft malt profile comes together for this citrus-centric, juicy IPA', 
-null
-, true, 7);
+'no img', true, 7);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Frosty Lime Wit', 5.5, null,
 'Hazy IPA', 'Frosty leads off with an exhilarating aroma of lime and tangerine. Spicy Belgian yeast 
 character plays with the limes tartness leading to a dry, quenching finish that pushes further into 
 new flavor territory thanks to the judicious use of diverse ingredients sure to keep you feeling Frosty.', 
-null
-, true, 7);
+'no img', true, 7);
 
 -- Masthead Brewery
 /*INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -294,14 +277,13 @@ VALUES ('Lager Life', 4.5, null,
 'Lager', 'Bright, crisp, light, and just downright delicious! 
 Brewed with a touch of rice for a dry but thirst-quenching beverage. Let LIFE give 
 you a beer. Trust us, you will be better off with one in your hand. Get a LIFE!', 
-null
-, true, 8);
+'no img', true, 8);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hola Cerveza Mexican', 5.0, null,
 'Mexican Lager', 'Crisp, clean and refreshing with sweet aromatics of lemon, lime and 
 caramelized maize corn. This 5% quencher starts the fiesta', 
-null, true, 8);
+'no img', true, 8);
 
 -- Noble Beast Brewing
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -353,22 +335,19 @@ VALUES ('Muellerfest', 5.4, null,
 'Oktoberfest Lager', 'In honor of Ernst Mueller, who emigrated with his family to Cleveland and 
 started the Cleveland Home Brewing Company, We give you our Oktoberfest at 5.4%. Full bodied lager 
 using German Noble hops making this beer just plain delicious. PROST!', 
-null
-, true, 12);
+'no img', true, 12);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Browns Town', 5.4, null,
 'Brown Ale', 'Sessionable Brown Ale with notes of chocolate and coffee. Finish is a little complex but 
 balanced. Not too strong and to keeps you having more than just one.  ', 
-null
-, true, 12);
+'no img', true, 12);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('AWFUGIT', 11.0, null,
 'Triple IPA', 'This super balanced, but boozy Triple IPA joins our menu when we all 
 need to get tuned up fast: family holidays, big games, and bad weather. ', 
-null
-, true, 12);
+'no img', true, 12);
 
 -- The Jolly Scholar
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -398,20 +377,17 @@ and bitterness. Chocolate and dark fruit meld perfectly in this smooth lager.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Grinders Coffee Porter', 6.3, 31,
 'Coffee Porter', 'Our Pipefitters Porter infused with fresh coffee from the 5 Points Coffee Co.', 
-null
-, true, 14);
+'no img', true, 14);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Ploughman Pilsner', 5.0, 27,
 'Pilsner', 'A German Style Pilsner, German Magnam and German Tettnanger Hops', 
-null
-, true, 14);
+'no img', true, 14);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Wing Walker Wheat', 5.0, 12,
 'German Wheat Beer', 'German style wheat beer with hints of clove and banana', 
-null
-, true, 14);
+'no img', true, 14);
 
 -- Maize Valley Craft Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
