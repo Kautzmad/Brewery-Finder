@@ -4,6 +4,7 @@
  DROP TABLE IF EXISTS beers;
  DROP TABLE IF EXISTS breweries;
  DROP TABLE IF EXISTS roles;
+ DROP TABLE IF EXISTS brewery_beer;
 
 
 CREATE TABLE breweries (
@@ -37,6 +38,12 @@ CREATE TABLE beers (
     brewery_id integer,
     CONSTRAINT pk_beers_beer_id PRIMARY KEY (beer_id),
     CONSTRAINT fk_breweries_brewery_id FOREIGN KEY (brewery_id) REFERENCES breweries(brewery_id)
+);
+
+CREATE TABLE brewery_beer (
+    beer_id integer,
+    brewery_id integer,
+    CONSTRAINT pk_brewery_beer_brewery_id_beer_id PRIMARY KEY (beer_id, brewery_id)
 );
 
 CREATE TABLE reviews (
