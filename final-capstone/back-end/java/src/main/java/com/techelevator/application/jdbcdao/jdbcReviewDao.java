@@ -23,11 +23,11 @@ public class jdbcReviewDao implements reviewDao{
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-	//GET REVIEWS
+	//GET REVIEWS BY ID
 	@Override
 	public List<Review> getReviews(Long beerId){
 		 List<Review> reviews = new ArrayList<>();
-		 String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE beer_id = ?";
+		 String sqlGetReviewByBeerId = "SELECT * FROM reviews WHERE beer_id = ? ORDER BY create_date";
 		 SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetReviewByBeerId, beerId);
 		 
 		 while(results.next()) {
@@ -36,6 +36,9 @@ public class jdbcReviewDao implements reviewDao{
 		 }
 		 return reviews;
 	}
+	
+	//ADD A REVIEW
+	
 	@Override
 	public void addReview(Review aReview) {
 		String sqladdReview = "INSERT INTO reviews (description, rating, beer_id, user_id, name, create_date) VALUES (?,?,?,?,?,?)";
@@ -43,21 +46,7 @@ public class jdbcReviewDao implements reviewDao{
 	}
 	
 	
-	
-	
-	private Review mapRowToReview(SqlRowSet row) {
-		Review review = new Review();
-		
-		review.setId(row.getLong("reviews_id"));
-		review.setName(row.getString("name"));
-		review.setDescription(row.getString("description"));
-		review.setRating(row.getInt("rating"));
-		review.setCreateTime(row.getTimestamp("create_date").toLocalDateTime());
-		review.setBeerId(row.getLong("beer_id"));
-		review.setUserId(row.getLong("user_id"));
-		return review;
-	}
-
+	// why is this method here?
 	@Override
 	public void saveReview(@Valid Review review) {
 		String sqlSaveReview = "INSERT INTO reviews(description, rating, create_date, beer_id) VALUES(?,?,?,?)";
@@ -66,7 +55,8 @@ public class jdbcReviewDao implements reviewDao{
 		
 	}
 	
-
+	// GET REVIEWS BY BEER ID
+	
 	@Override
 	public List<Review> searchReviewsByBeerId(long beerId) {
 		List<Review> reviewList = new ArrayList<>();
@@ -80,6 +70,20 @@ public class jdbcReviewDao implements reviewDao{
 		
 		return reviewList;
 	}
+	
+	//MAP ROW TO REVIEW
 
+	private Review mapRowToReview(SqlRowSet row) {
+		Review review = new Review();
+		
+		review.setId(row.getLong("reviews_id"));
+		review.setName(row.getString("name"));
+		review.setDescription(row.getString("description"));
+		review.setRating(row.getInt("rating"));
+		review.setCreateTime(row.getTimestamp("create_date").toLocalDateTime());
+		review.setBeerId(row.getLong("beer_id"));
+		review.setUserId(row.getLong("user_id"));
+		return review;
+	}
 
 }
