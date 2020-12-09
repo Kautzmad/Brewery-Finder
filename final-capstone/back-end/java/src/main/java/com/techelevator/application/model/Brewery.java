@@ -13,6 +13,7 @@ public class Brewery {
 	private String hours;
 	private String lat;
 	private String lng;
+	private String websiteUrl;
 	
 	public Long getBreweryId() {
 		return breweryId;
@@ -85,6 +86,10 @@ public class Brewery {
 	}
 	public void setBreweryLogoUrl(String breweryLogoUrl) {
 		this.breweryLogoUrl = breweryLogoUrl;
+	}
+	public void setWebsiteUrl(String websiteUrl) {
+		this.websiteUrl = websiteUrl;
+		
 	}
 	
 	

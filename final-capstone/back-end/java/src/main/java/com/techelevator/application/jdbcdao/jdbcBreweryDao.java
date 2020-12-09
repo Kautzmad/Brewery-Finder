@@ -101,6 +101,7 @@ public class jdbcBreweryDao implements breweryDao{
 	newBrewery.setPhoneNumber(row.getString("phone_number"));
 	newBrewery.setDescription(row.getString("description"));
 	newBrewery.setBreweryLogoUrl(row.getString("brewery_logo_url"));
+	newBrewery.setWebsiteUrl(row.getString("website_url"));
 	return newBrewery;
 	}
 }

@@ -30,10 +30,7 @@ export default {
 </script>
 <style scoped>
 div.beer-list {
-    display: flex;
-    justify-content: space-around;
     text-align: center;
-    align-items: baseline;
 }
 div.beers {
     padding-top: 150px;
@@ -61,5 +58,8 @@ div#background {
     background-attachment: fixed;
     padding-bottom: 150px;
     top: -10px;
+}
+.card-space:nth-child(even) {
+    background-color: rgb(221, 221, 221);
 }
 </style>

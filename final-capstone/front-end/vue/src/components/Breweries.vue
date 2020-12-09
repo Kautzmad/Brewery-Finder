@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             breweries: [],
-            isLoading: true
+            isLoading: true,
         }
     },
     created() {
@@ -75,4 +75,19 @@ div#background {
     padding-bottom: 150px;
     top: -10px;
 }
+.card-space {
+
+    color: black;
+    text-decoration: none;
+}
+
+.card-space:hover {
+    color: #311D00;
+    text-decoration: underline;
+}
+
+.card-space:visited {
+    color: gray;
+}
+
 </style>
