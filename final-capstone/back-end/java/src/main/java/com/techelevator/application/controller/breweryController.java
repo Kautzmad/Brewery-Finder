@@ -62,4 +62,10 @@ public class breweryController {
 		breweryDao.deleteBrewery(breweryId);
 	}
 	
+	//Get Brewery by user id
+	@RequestMapping(path = "/users/{userId}/breweries", method = RequestMethod.GET)
+	public List<Brewery> getBreweriesByUserId(@PathVariable Long userId) throws NotFoundException{
+		return breweryDao.getBreweryByUserID(userId);
+	}
+	
 }
