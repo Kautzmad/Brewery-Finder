@@ -1,8 +1,10 @@
 <template>
 <div id="background">
-    <!-- <img id="cle-sign-bg" src='../img/cle-sign-bg.jpg'/> -->
     <div class="home">
         <div id="body">
+            <!-- <div class="bg-image-list">
+                <img src="../img/hops.jpg">
+            </div> -->
             <h1 class="heading">Welcome to Brew Finder!</h1>
             <h3 class="subheading">A beer-lover's favorite website</h3>
         <h1>Popular Breweries</h1>
@@ -41,27 +43,49 @@ export default {
 </script>
 <style scoped>
 * {
-    padding: 0%;
-    margin: 0%;
+  padding: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
 }
+
 div.home {
-    background: white;
-    margin-left: 65px; margin-right: 65px;
+    margin-left: 10px; margin-right: 10px;
     align-content: center;
 }
+
+/* .bg-image-list {
+    background-image: url('../img/hops.jpg');
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: 2;
+    margin-top: 200px;
+} */
+
 div#body {
+    background-color: white;
     margin-left: 25px; margin-right: 25px; margin-bottom: 50px;
     padding-bottom: 100px;
     text-align: center;
 }
 h1 {
     text-align: center;
+    margin-top: 100px;
+}
+
+.brewery-list {
+    display: grid;
+    grid-gap: 10px 200px;
+    align-self: start;
 }
 
 .card-space {
-
     color: black;
     text-decoration: none;
+    width: 20%;
+    height: 20%;
 }
 
 .card-space:hover {

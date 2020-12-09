@@ -34,6 +34,13 @@ export default {
 }
 </script>
 <style scoped>
+* {
+  padding: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
+}
+
 div.brewery-list {
     display: flex;
     flex-wrap: wrap;
@@ -42,10 +49,10 @@ div.brewery-list {
     align-items: baseline;
 }
 div.breweries {
-    padding-top: 150px;
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
+    margin-top: 120px;
 }
 
 div.loading {
@@ -64,7 +71,7 @@ h1 {
     text-align: center;
 }
 h1.heading {
-    padding-top:25px;
+    padding-top: 15px;
 }
 div#background {
     background-image: url('../img/cle-sign-bg.jpg');
@@ -88,6 +95,16 @@ div#background {
 
 .card-space:visited {
     color: gray;
+}
+
+div#background {
+    background-image: url('../img/cle-sign-bg.jpg');
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 400px;
+    top: -10px;
 }
 
 </style>
