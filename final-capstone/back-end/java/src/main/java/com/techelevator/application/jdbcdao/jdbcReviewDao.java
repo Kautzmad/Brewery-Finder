@@ -66,6 +66,20 @@ public class jdbcReviewDao implements reviewDao{
 		
 	}
 	
-	
+
+	@Override
+	public List<Review> searchReviewsByBeerId(long beerId) {
+		List<Review> reviewList = new ArrayList<>();
+		String sqlSearchReviewByBeerId = "SELECT * FROM reviews WHERE beer_id = ? ORDER BY create_date";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSearchReviewByBeerId, beerId);
+		
+		while(results.next()){
+			reviewList.add(mapRowToReview(results));
+		}
+		
+		
+		return reviewList;
+	}
+
 
 }

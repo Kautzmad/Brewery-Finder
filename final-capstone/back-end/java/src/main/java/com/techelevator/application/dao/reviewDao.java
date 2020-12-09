@@ -15,4 +15,6 @@ public interface reviewDao {
 
 	void saveReview(@Valid Review review);
 
+	List<Review> searchReviewsByBeerId(long beerId);
+
 }
