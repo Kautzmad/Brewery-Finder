@@ -21,12 +21,12 @@
 }
 #app {
   color: black;
-  font-family: 'Arial';
+  font-family: Arial, Helvetica, sans-serif;
 }
 #logo {
   width: 250px;
   margin-bottom: -110px;
-  margin-top: -35px;
+  margin-top: -15px;
 }
 #nav {
   background-image: url('./img/cle-sign-bg.jpg');
@@ -43,7 +43,8 @@
   flex-wrap: wrap;
   padding-bottom: 45px;
   margin-top: -20px; 
-  width: 95%;
+  width: 100%;
+  margin-right: 60px;
 }
 .nav-link {
   background-color: transparent;

@@ -9,22 +9,24 @@
       </div>
       <br>
       <label for="username" class="sr-only">Username</label>
+      <br>
       <input
         type="text"
         id="username"
-        class="form-control"
-        placeholder="Username"
+        class="input-box"
+        placeholder="What shall we call you?"
         v-model="user.username"
         required
         autofocus
       />
       <br>
       <label for="password" class="sr-only">Password</label>
+      <br>
       <input
         type="password"
         id="password"
-        class="form-control"
-        placeholder="Password"
+        class="input-box"
+        placeholder="Please...not password123"
         v-model="user.password"
         required
       />
@@ -32,14 +34,14 @@
       <input
         type="password"
         id="confirmPassword"
-        class="form-control"
-        placeholder="Confirm Password"
+        class="input-box"
+        placeholder="One more time please"
         v-model="user.confirmPassword"
         required
       />
       <br>
-      <router-link :to="{ name: 'login' }">Have an account?</router-link>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
+      <router-link class="have-account" :to="{ name: 'login' }">Have an account?</router-link>
+      <button class=" create-account btn btn-lg btn-primary btn-block" type="submit">
         Create Account
       </button>
     </form>
@@ -98,41 +100,54 @@ export default {
 </script>
 
 <style scoped>
-div#register {
-    background: white;
-    margin-left: 65px; margin-right: 65px;
-    align-content: center;
-    padding-top: 150px;
-    margin-bottom: 50px;
+input {
+    margin: 8px;
+}
+
+h1 {
+  margin-top: -5px;
+  margin-bottom: -10px;
+  text-align: center;
 }
 
 form.form-register {
-    background: white;
-    margin-left: 65px; margin-right: 65px; margin-bottom: 10px;
-    padding-bottom: 10px;
-    align-content: center;
-    text-align: center;
-}
-input {
-    margin: 5px;
-}
-input#confirmPassword {
-    margin-left: 81px
+  top: 170px;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 5px;
+} 
+
+.input-box {
+  margin-left: -1px;
 }
 
-.h3 {
-    font-size: 2rem;
-    margin: 1;
+.have-account {
+  text-decoration: none;
+  color: #FF3C00;
 }
 
-.sr-only {
-    font-size: 50;
-    margin-right: 1%;
+.have-account:hover {
+  color: #311D00;
+  text-decoration: underline;
 }
 
-h1.heading {
-    padding-top:25px;
+.create-account {
+  background-color: #FF3C00;
+  border: none;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-top: 10px;
 }
+
+.create-account:hover {
+  background-color: #311D00;
+  color: white;
+}
+
 
 div#background {
     background-image: url('../img/cle-sign-bg.jpg');
@@ -140,7 +155,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 738px;
     top: -10px;
-    padding-bottom: 150px;
 }
 </style>

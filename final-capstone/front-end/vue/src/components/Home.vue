@@ -40,6 +40,10 @@ export default {
 }
 </script>
 <style scoped>
+* {
+    padding: 0%;
+    margin: 0%;
+}
 div.home {
     background: white;
     margin-left: 65px; margin-right: 65px;
@@ -53,6 +57,22 @@ div#body {
 h1 {
     text-align: center;
 }
+
+.card-space {
+
+    color: black;
+    text-decoration: none;
+}
+
+.card-space:hover {
+    color: #311D00;
+    text-decoration: underline;
+}
+
+.card-space:visited {
+    color: gray;
+}
+
 h1.heading {
     padding-top:25px;
 }
@@ -76,7 +96,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 1150px;
+    padding-top: 760px;
     top: -10px;
 }
 

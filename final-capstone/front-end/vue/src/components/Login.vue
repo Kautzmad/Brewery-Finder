@@ -2,7 +2,7 @@
 <div id="background">
     <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
-      <h1 class="h3 mb-3 font-weight-normal heading">Please Sign In</h1>
+      <h1 class="h3 mb-3 font-weight-normal heading">Sign In</h1>
       <br>
       <div
         class="alert alert-danger"
@@ -21,7 +21,7 @@
         type="text"
         id="username"
         class="form-control"
-        placeholder="Username"
+        placeholder="Enter thou brewname"
         v-model="user.username"
         required
         autofocus
@@ -34,15 +34,15 @@
         type="password"
         id="password"
         class="form-control"
-        placeholder="Password"
+        placeholder="Shh. Don't Tell Anyone!"
         v-model="user.password"
         required
       />
       </div>
       <br>
       <div class="form-field">
-      <router-link :to="{ name: 'register' }">Need an account?</router-link> 
-      <button type="submit">Sign in</button>
+      <router-link class="need-account" :to="{ name: 'register' }">Need an account?</router-link> 
+      <button class="submit" type="submit">Sign in</button>
       </div>
     </form>
   </div>
@@ -89,34 +89,58 @@ export default {
 
 <!-- CSS -->
 <style scoped>
-div#login {
-    background: white;
-    margin-left: 65px; margin-right: 65px;
-    align-content: center;
-    padding-top: 150px;
-    margin-bottom: 50px;
+.h3 {
+    font-size: 2rem;
+}
+
+h1 {
+  margin-top: -5px;
+  margin-bottom: -10px;
+  text-align: center;
 }
 
 form.form-signin {
-    background: white;
-    margin-left: 65px; margin-right: 65px; margin-bottom: 10px;
-    padding-bottom: 10px;
-    align-content: center;
-    text-align: center;
-}
+  top: 170px;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 5px;
+} 
 
-.h3 {
-    font-size: 2rem;
-    margin: 1;
-}
-
-.sr-only {
+#username.form-control {
     font-size: 50;
     margin-right: 1%;
+    margin-top: 5px;
+}
+#password.form-control {
+  font-size: 50;
+  margin-right: 10%;
+  margin-top: 5px;
 }
 
-h1.heading {
-    padding-top:25px;
+a.need-account {
+  text-decoration: none;
+  color: #FF3C00;
+}
+
+.need-account:hover {
+  color: #311D00;
+  text-decoration: underline;
+}
+
+.submit {
+  background-color: #FF3C00;
+  border: none;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.submit:hover {
+  background-color: #311D00;
+  color: white;
 }
 
 div#background {
@@ -125,7 +149,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 738px;
     top: -10px;
-    padding-bottom: 150px;
 }
 </style>
