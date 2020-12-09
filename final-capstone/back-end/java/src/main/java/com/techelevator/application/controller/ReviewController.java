@@ -22,12 +22,23 @@ public class ReviewController {
 		this.reviewDao = reviewDao;
 	}
 	
+	/****************************************
+	 * Request Mapping to show reviews for a beer by id
+	 *
+	 ***/
+	
 	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.GET)
-	public List<Review> getReviews(@PathVariable Long beerId){
+	public List<Review> getReviews(@PathVariable Long beerId) throws NotFoundException {
 		return reviewDao.getReviews(beerId);
 	}
+	
+	/****************************************
+	 * Request Mapping to add a review for a beer by id
+	 *
+	 ***/
+	
 	@RequestMapping(path = "/reviews", method = RequestMethod.POST)
-	public void addReviews(@RequestBody Review aReview) {
+	public void addReviews(@RequestBody Review aReview) throws NotAllowedException {
 		reviewDao.addReview(aReview);
 	}
 	
