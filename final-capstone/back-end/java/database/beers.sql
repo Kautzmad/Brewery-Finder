@@ -43,33 +43,28 @@ VALUES ('Fortitude', 6.8, 20,
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Dog Pound Brown', 5.8, 32,
 'Brown Ale', 'Nutty biscuit and mild chocolate', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Jobu', 6.0, 30,
 'Spiced Hazy Juicy IPA', 'Tropical IPA infused with spicy Cerrano peppers', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
   
   INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Holy Toledo Pilsner', 5.4, 33,
 'German Pilsner', 'German style, noble hopped Pilsener. Clean & refreshing', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Put-N-Berry', 5.5, 20,
 'Fruit Beer', 'Crisp Honey Ale. Touch of cracker with fresh Raspberry tartness', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Millennial Hipster', 6.0, 35,
 'Hazy Juicy IPA', 'Big juicy sweetness and tropical citrus. This Hazy IPA is tighter
 than your skinny jeans and hotter than a wool hat in the summer', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
  
  -- Brick and Barrel Brewing
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -77,21 +72,19 @@ VALUES ('Bitter Chief IPA', 6.9, null,
 'IPA', 'For our bitter Tribe fans, we almost got that series win. In the meantime, 
 drink some local craft beer and enjoy. Light cooper color. Nice bitterness with 
 refreshing citrus and grassy flavors and aromas. Malty finish balancing out the bitterness', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Big Chief Imperial IPA', 8.7, null,
 'Imperial IPA', 'Big hoppy Imperial IPA. Malt backbone with a robust hop aroma and flavor 
 from kettle and fermenter dry-hopping.', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
- , true, 1);
+null , true, 1);
   
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Rally Possum', 7.4, null,
 'Imperial Brown Ale', 'Hoppy imperial brown ale with nice citrus, chocolate hazelnut roast
  aromas and flavors. Just in time for a fantastic Browns season.', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+  null
  , true, 1);
  
   INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -99,26 +92,26 @@ VALUES ('Pinot Saison', 6.3, null,
 'Farmhouse Saison', 'Classic farmhouse saison ale, phenolic pepper and tropical fruit
  form the Saison yeast strain. Pinot Noir wine must co fermented to give aromas and
  flavors of raspberry, strawberry and red grapes giving a red wine aroma.', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+  null
  , true, 1);
  
  -- Collision Bend Brewery
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('C-Town', 6.7, 68,
 'American IPA', 'No description', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+  null
  , true, 1);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hope Flows', 5.2, 19,
 'Kolsch', 'No description', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+  null
  , true, 1);
  
  INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Home Before 10', 7.3, 23,
 'Farmhouse Saison', 'No description', 
-  'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+ null
  , true, 1);
  
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -133,14 +126,14 @@ VALUES ('Black Betsy Black IPA', 5.6, 68,
 'Black IPA', 'This beer is named after Shoeless Joe Jackson’s primary bat. Betsy 
 is brewed with classic hops (Columbus, Chinook, Cascade) paired with a stout-like 
 malt bill making this beer a balanced and flavorful home run!', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Berg-A-Horn Bock', 6.5, 22,
 'Bock', 'Our traditional Bock is a strong, dark, lightly hopped brew of German origin. Named after 
 our giant Sycamore tree in the original beer garden. Berg-A-Horn means Sycamore in German', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -149,14 +142,14 @@ VALUES ('Duck Island Amber Ale', 5.5, 40,
 containing subtly delicious hints of caramel and fruit. This Forest City staple has a medium intensity
  hop flavor with citrus hop notes. A frothy headed classic that is sure to find its’ way into your 
  stomach and into your cooler!', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('I Rish I Had Another Red Ale', 4.2, 22,
 'Irish Red Ale', 'This brew is a collaboration with our homebrewing friends Jay and Eli of SNOBS Homebrew
  Club. Their multi-award winning recipe is our first pro-am offering and one fine red ale.', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 -- Great Lakes Brewery
@@ -203,21 +196,21 @@ VALUES ('Mr. Meeseeks', 4.6, 9,
 'Blueberry Gose', 'This bier is meant to serve the one purpose of quenching your thirst. Fulfilling
  fruity taste with a lemony tartness. Hints of coriander and a touch of salt that follows through 
  with a fantastic blueberry taste!', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Bye Felicia!', 5.2, 21,
 'Nut Brown Ale', 'The perfect bier to say “Bye!” to last year and “Hello!” to a fresh start! Complex
  malt profile with chocolate malt, honey malt, and crystal rye. Very sessionable and a touch on the sweet side.', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Black Flag', 4.7, 23,
 'Schwarzbier', 'Dark brown German lager with an undertone of caramel, toffee, and light roast coffee.
  Clean and smooth in taste with some floral German hop taste', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -225,7 +218,7 @@ VALUES ('S.I.P.A.', 7.0, 88,
 'German IPA', 'A German interpretation of an American IPA with a caramel malt backbone. We use five
  new German hop varieties that give it a melon and subtle strawberry character. Assertive bitterness
   and refreshingly floral.', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 -- Market Garden Brewery
@@ -234,7 +227,7 @@ VALUES ('Nano OG', 4.3, null,
 'Lager', 'This pale lager is a throwback to how beer was brewed in America more than 100 years ago. 
 Another Great American Beer Festival award winner, it is crisp, brilliant, and refreshing with a 
 delicate malt body and a snappy hop finish; Nano keeps you dominating all day.', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -243,14 +236,14 @@ VALUES ('Progress Pilsner', 5.5, null,
  award-winning lager is a tribute to the crisp and clean character of the noble hop and has just the
   right malt body to balance to perfection. Born on the Rhine, brewed on the Cuyahoga. This, friends,
    is sunlight in a glass!', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hyper Haze', 6.5, null,
 'Hazy IPA', 'A firework of tropical hop aroma from late additions of Mosaic and Azacca hops. Its 
 low bitterness and soft malt profile comes together for this citrus-centric, juicy IPA', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -258,7 +251,7 @@ VALUES ('Frosty Lime Wit', 5.5, null,
 'Hazy IPA', 'Frosty leads off with an exhilarating aroma of lime and tangerine. Spicy Belgian yeast 
 character plays with the limes tartness leading to a dry, quenching finish that pushes further into 
 new flavor territory thanks to the judicious use of diverse ingredients sure to keep you feeling Frosty.', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 -- Masthead Brewery
@@ -301,15 +294,14 @@ VALUES ('Lager Life', 4.5, null,
 'Lager', 'Bright, crisp, light, and just downright delicious! 
 Brewed with a touch of rice for a dry but thirst-quenching beverage. Let LIFE give 
 you a beer. Trust us, you will be better off with one in your hand. Get a LIFE!', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hola Cerveza Mexican', 5.0, null,
 'Mexican Lager', 'Crisp, clean and refreshing with sweet aromatics of lemon, lime and 
 caramelized maize corn. This 5% quencher starts the fiesta', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
-, true, 1);
+null, true, 1);
 
 -- Noble Beast Brewing
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
@@ -361,21 +353,21 @@ VALUES ('Muellerfest', 5.4, null,
 'Oktoberfest Lager', 'In honor of Ernst Mueller, who emigrated with his family to Cleveland and 
 started the Cleveland Home Brewing Company, We give you our Oktoberfest at 5.4%. Full bodied lager 
 using German Noble hops making this beer just plain delicious. PROST!', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Browns Town', 5.4, null,
 'Brown Ale', 'Sessionable Brown Ale with notes of chocolate and coffee. Finish is a little complex but 
 balanced. Not too strong and to keeps you having more than just one.  ', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('AWFUGIT', 11.0, null,
 'Triple IPA', 'This super balanced, but boozy Triple IPA joins our menu when we all 
 need to get tuned up fast: family holidays, big games, and bad weather. ', 
-'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+null
 , true, 1);
 
 -- The Jolly Scholar
@@ -404,59 +396,72 @@ and bitterness. Chocolate and dark fruit meld perfectly in this smooth lager.',
 
 -- Working Class Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Love You, Bye', 8.0, 34,
-'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
-'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+VALUES ('Grinders Coffee Porter', 6.3, 31,
+'Coffee Porter', 'Our Pipefitters Porter infused with fresh coffee from the 5 Points Coffee Co.', 
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Juicy ASAP', 6.5, 66,
-'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+VALUES ('Ploughman Pilsner', 5.0, 27,
+'Pilsner', 'A German Style Pilsner, German Magnam and German Tettnanger Hops', 
+null
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Habituale ', 5.0, 21,
-'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+VALUES ('Wing Walker Wheat', 5.0, 12,
+'German Wheat Beer', 'German style wheat beer with hints of clove and banana', 
+null
 , true, 1);
 
 -- Maize Valley Craft Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Love You, Bye', 8.0, 34,
-'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
-'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+VALUES ('Barrel of Monks', 11.0, null,
+'Belgian Dark Strong Ale', 'Our award winning Monk in Public that has been aged 9 
+months in bourbon barrels.  This Belgian Dark Strong Ale is smooth and silky, 
+the bourbon barrels impart a nice boozy component with a pleasant mouthfeel and 
+lingering flavors.  At 11% ABV, this beer is perfect for sipping by the fire.', 
+'https://www.maizevalley.com/wp-content/uploads/2020/10/00100trPORTRAIT_00100_BURST20201030141828926_COVER-225x300.jpg'
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Juicy ASAP', 6.5, 66,
-'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+VALUES ('Azacca Smash Pale Ale', 4.5, 45,
+'Pale Ale', 'Azacca Smash is a pale ale brewed with Vienna Malt and Azacca Hops.  
+Light golden in color with tropical fruit aromas and flavors, this is an easy drinking 
+pale ale.', 
+'https://www.maizevalley.com/wp-content/uploads/2016/05/beer-tasting-event.jpg'
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Habituale ', 5.0, 21,
-'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+VALUES ('Hopnesia IPA', 7.4, 70,
+'Kölsch Style Golden Ale', 'A bitter, floral and citrusy ale brewed with pale ale, light 
+crystal and munich malts mashed a low temperature for good attenuation and a dry, crisp finish. 
+Malts take a backseat in this style while hops are the star. This beer is brewed with Pale and 
+Victory malts and hopped with Citra and Equinox hops. ', 
+'https://www.maizevalley.com/wp-content/uploads/2019/01/Hopnesia-e1547862547510.jpg'
 , true, 1);
 
 -- Fat Head's Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Love You, Bye', 8.0, 34,
-'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
-'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+VALUES ('Bumble Berry', 5.3, 13,
+'Honey Blueberry Ale', 'Brewed with fresh harvested spring honey and infused with 
+fresh blueberries. A light, refreshing ale with a nice blueberry aroma, crackery malt 
+flavors, a hint of sweetness and a refreshing blueberry finish.', 
+'https://fatheads.com/images/fh_web_beerpage_feb2020_canglassphoto_bumbleberry-crop-u89116.png?crc=422555867'
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Juicy ASAP', 6.5, 66,
-'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+VALUES ('Strange Magic', 6.5, 65,
+'IPA', 'The magic is in our masterful combination of hops that create this ridiculously good India Pale Ale. 
+The strange thing is how we get as much of it as we do into cans before we drink all of it ourselves.', 
+'https://fatheads.com/images/fh_website_2019_beerandglassphoto_strange-crop-u1019524.png?crc=3917450316'
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Habituale ', 5.0, 21,
-'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+VALUES ('Sunshine Daydream', 4.9, 50,
+'Session IPA', 'Award-Winning Session IPA with big hop aromas, flavors of citrus, peach, 
+orange and tropical fruit with a nice light malt backbone. This is a very drinkable session ale. 
+(Our fans call it an obsession.) Peace, Love & Hoppiness!', 
+'https://fatheads.com/images/fh_web_beerpage_feb2020_canglassphoto_sunshinedaydream-crop-u89737.png?crc=3885080326'
 , true, 1);
 
 -- Baithouse Brewery
