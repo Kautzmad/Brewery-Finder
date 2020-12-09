@@ -24,7 +24,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 #logo {
-  width: 250px;
+  width: 250px; 
   margin-bottom: -110px;
   margin-top: -15px;
 }
