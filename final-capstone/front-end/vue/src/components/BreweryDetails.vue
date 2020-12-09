@@ -4,7 +4,7 @@
         <h1>{{brewery.name}}</h1>
         <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>
         <h3><span class="brewery-address" v-if="brewery.address" >{{brewery.address}}, </span>{{brewery.city}}</h3>
-        <h3> {{brewery.website_url}} /// </h3>
+        <h3> {{brewery.website_url}}</h3>
         <h2 class="brewery-desc">{{brewery.description}}</h2>
         <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
         <div id="beer-list">
@@ -59,6 +59,8 @@ div#background {
     padding-bottom: 150px;
 }
 img.company-logo {
+    background-color: rgb(209, 209, 209);
+    border-radius: 5%;
     width: 200px;
 }
 span.beer-type {

@@ -14,6 +14,8 @@ export default {
 </script>
 <style scoped>
 img.company-logo {
+    background-color: rgb(209, 209, 209);
+    border-radius: 5%;
     width: 200px;
 }
 </style>
