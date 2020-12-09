@@ -466,19 +466,25 @@ orange and tropical fruit with a nice light malt backbone. This is a very drinka
 
 -- Baithouse Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Love You, Bye', 8.0, 34,
-'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
-'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+VALUES ('Portside Porter', 5.6, 24,
+'Porter', 'This dark and delicious brew will delight the dark beer lover.  Stop in today to enjoy a frost glass today.', 
+'https://baithousebrewery.com/wp-content/uploads/2019/07/Portside-Porter-600x321.jpg'
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Juicy ASAP', 6.5, 66,
-'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+VALUES ('Tip-Up Ale', 5.4, 23,
+'American India Pale Ale', 'This is a light blonde ale that was dry-hopped using Chinook hops 
+from Ohio Hops, LLC located in Castalia, OH.  Come in and enjoy this delicious beer after a long 
+day.  Come as you are!', 
+'https://baithousebrewery.com/wp-content/uploads/2019/05/Tip-Up-Blonde-1-600x321.jpg'
 , true, 1);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
-VALUES ('Habituale ', 5.0, 21,
-'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
-'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+VALUES ('White Cap Ale', 5.4, 15,
+'Cream Ale', 'This is a cream ale that is light and delightful and is reminiscent of the 
+slight “rollers” one encounters while fishing on Lake Erie on a warm summer day.  Just as 
+the movement of the boat enhances your fishing experience, so does this brew enliven your 
+beer drinking experience.  The corn in this beer gives it a smooth finish and flavor similar 
+to classic American beers, and will even out those “sea legs”.', 
+'https://baithousebrewery.com/wp-content/uploads/2019/05/White-Cap-1-640x321.jpg'
 , true, 1);
