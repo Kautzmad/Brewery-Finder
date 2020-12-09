@@ -95,5 +95,10 @@ public class UserSqlDAO implements UserDAO {
         user.setActivated(true);
         return user;
     }
+
+	@Override
+	public void updatePassword(String userName, String password) {
+		
+	}
     
 }

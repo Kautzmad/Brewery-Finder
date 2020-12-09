@@ -23,15 +23,25 @@ public class UserController {
 		this.userDAO = userDAO;
 	}
 	
+	/****************************************
+	 * Request Mapping to show display password form
+	 *
+	 ***/
+	
 	@RequestMapping(path="/users/{userName}/changePassword", method=RequestMethod.GET)
 	public String displayChangePasswordForm(Map<String, Object> model, @PathVariable String userName) {
 		model.put("userName", userName);
 		return "changePassword";
 	}
 	
-	/* @RequestMapping(path="/users/{userName}/changePassword", method=RequestMethod.POST)
+	/****************************************
+	 * Request Mapping to update password
+	 *
+	 ***/
+	
+	@RequestMapping(path="/users/{userName}/changePassword", method=RequestMethod.POST)
 	public String changePassword(@PathVariable String userName, @RequestParam String password) {
 		userDAO.updatePassword(userName, password);
 		return "userDashboard";
-	}*/
+	}
 }
