@@ -1,4 +1,8 @@
 to run this script
 
-chmod u+r+x create-capstone-db.sh
-./create-capstone-db.sh`
+you need to be in this file, if on mac the first command is neccessary (window possibly)
+
+`chmod u+r+x create_capstone-db.sh`
+`./create_capstone-db.sh`
+
+
