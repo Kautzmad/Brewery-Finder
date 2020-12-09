@@ -25,8 +25,9 @@
 }
 #logo {
   width: 250px; 
-  margin-bottom: -110px;
+  margin-bottom: -120px;
   margin-top: -15px;
+  margin-top: 20px;
 }
 #nav {
   background-image: url('./img/cle-sign-bg.jpg');
@@ -41,7 +42,7 @@
   align-items: baseline;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-bottom: 45px;
+  padding-bottom: 120px;
   margin-top: -20px; 
   width: 100%;
   margin-right: 60px;

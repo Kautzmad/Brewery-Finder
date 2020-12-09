@@ -100,18 +100,26 @@ export default {
 </script>
 
 <style scoped>
+* {
+  padding: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
+}
+
 input {
     margin: 8px;
 }
 
 h1 {
   margin-top: -5px;
-  margin-bottom: -10px;
-  text-align: center;
+  margin-bottom: -20px;
+  margin-left: -12px;
+  font-size: 25px;
 }
 
 form.form-register {
-  top: 170px;
+  top: 200px;
   position: absolute;
   right: 0;
   margin: 20px;
@@ -119,10 +127,11 @@ form.form-register {
   padding: 16px;
   background-color: white;
   border-radius: 5px;
+  padding-left: 30px;
 } 
 
 .input-box {
-  margin-left: -1px;
+  margin-left: -10px;
 }
 
 .have-account {
@@ -141,6 +150,7 @@ form.form-register {
   font-size: 15px;
   margin-left: 30px;
   margin-top: 10px;
+  width: 70px;
 }
 
 .create-account:hover {
@@ -155,7 +165,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 738px;
+    padding-top: 100%;
     top: -10px;
 }
 </style>

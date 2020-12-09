@@ -89,18 +89,22 @@ export default {
 
 <!-- CSS -->
 <style scoped>
-.h3 {
-    font-size: 2rem;
+* {
+  padding: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
 }
 
 h1 {
   margin-top: -5px;
-  margin-bottom: -10px;
-  text-align: center;
+  margin-bottom: -20px;
+  margin-left: -22px;
+  font-size: 25px;
 }
 
 form.form-signin {
-  top: 170px;
+  top: 200px;
   position: absolute;
   right: 0;
   margin: 20px;
@@ -108,6 +112,7 @@ form.form-signin {
   padding: 16px;
   background-color: white;
   border-radius: 5px;
+  padding-left: 40px;
 } 
 
 #username.form-control {
@@ -115,6 +120,7 @@ form.form-signin {
     margin-right: 1%;
     margin-top: 5px;
 }
+
 #password.form-control {
   font-size: 50;
   margin-right: 10%;
@@ -135,7 +141,8 @@ a.need-account {
   background-color: #FF3C00;
   border: none;
   font-size: 15px;
-  margin-left: 30px;
+  margin-left: 20px;
+  width: 70px;
 }
 
 .submit:hover {
@@ -144,12 +151,12 @@ a.need-account {
 }
 
 div#background {
-    background-image: url('../img/cle-sign-bg.jpg');
+   background-image: url('../img/cle-sign-bg.jpg');
     position: relative;
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 738px;
-    top: -10px;
+    padding-top: 635px;
+    top: -8px;
 }
 </style>
