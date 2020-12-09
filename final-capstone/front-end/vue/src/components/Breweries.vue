@@ -83,7 +83,7 @@ div#background {
     top: -10px;
 }
 .card-space {
-
+    margin-left: 5px; margin-right: 5px;
     color: black;
     text-decoration: none;
 }
@@ -105,6 +105,11 @@ div#background {
     background-attachment: fixed;
     padding-top: 400px;
     top: -10px;
+}
+.brewery-list {
+    display: grid;
+    grid-gap: 10px 200px;
+    align-self: start;
 }
 
 </style>

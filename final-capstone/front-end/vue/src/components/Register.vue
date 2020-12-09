@@ -40,6 +40,14 @@
         required
       />
       <br>
+      <input 
+        type="checkbox"
+        id="brewer-checkbox"
+        class="checkbox"
+        v-model="user.role"
+        v-on:change="(user.role == user ? user.role = 'brewer' : user.role = 'user')"
+        />
+        <br>
       <router-link class="have-account" :to="{ name: 'login' }">Have an account?</router-link>
       <button class=" create-account btn btn-lg btn-primary btn-block" type="submit">
         Create Account

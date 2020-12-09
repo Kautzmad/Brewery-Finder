@@ -14,6 +14,9 @@ export default {
     getBreweryByID(id) {
         return http.get(`/breweries/${id}`)
     },
+    getBeerByID(id) {
+        return http.get(`/beers/${id}`)
+    },
     getBeerByBreweryID(id) {
         return http.get(`/breweries/${id}/beers`)
     }

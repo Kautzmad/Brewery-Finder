@@ -1,10 +1,12 @@
 <template>
-    <div id="card">
+<div id="card">
+    <router-link v-bind:to="{ name: 'beer-details', params:{id: this.beer.id} }">
         <h4 class="brewery-name" > {{this.brewery.name}} </h4>
         <h3>{{this.beer.name}} - <span class="beer-type"> {{this.beer.type}} </span></h3>
         <h5> {{this.beer.abv}} ABV </h5>
         <h4 class="beer-info"> {{this.beer.info}} </h4>
-    </div>
+    </router-link>
+</div>
 </template>
 <script>
 import applicationServices from '../services/ApplicationServices'
@@ -48,5 +50,13 @@ span.beer-type {
 h5 {
     margin-top: -10px; margin-bottom: -5px;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    background-color: gray;
+}
+
 
 </style>

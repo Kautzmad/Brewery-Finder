@@ -34,7 +34,7 @@ div.beer-list {
     text-align: center;
 }
 div.beers {
-    padding-top: 150px;
+    padding-top: 200px;
     background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
@@ -63,4 +63,8 @@ div#background {
 .card-space:nth-child(even) {
     background-color: rgb(221, 221, 221);
 }
+.card-space:hover {
+    background-color: rgb(139, 139, 139);
+}
+
 </style>

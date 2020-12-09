@@ -42,7 +42,7 @@
   align-items: baseline;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   margin-top: -20px; 
   width: 100%;
   margin-right: 60px;
