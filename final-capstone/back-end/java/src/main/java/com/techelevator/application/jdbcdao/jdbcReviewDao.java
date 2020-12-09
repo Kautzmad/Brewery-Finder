@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
+import javax.validation.Valid;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -55,6 +56,14 @@ public class jdbcReviewDao implements reviewDao{
 		review.setBeerId(row.getLong("beer_id"));
 		review.setUserId(row.getLong("user_id"));
 		return review;
+	}
+
+	@Override
+	public void saveReview(@Valid Review review) {
+		String sqlSaveReview = "INSERT INTO reviews(description, rating, create_date, beer_id) VALUES(?,?,?,?)";
+		jdbcTemplate.update(sqlSaveReview, review.getDescription(), review.getRating(), 
+				review.getCreateTime(), review.getBeerId());
+		
 	}
 	
 	

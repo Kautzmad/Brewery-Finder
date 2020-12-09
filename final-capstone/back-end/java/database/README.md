@@ -1,7 +1,10 @@
 to run this script
 
-you need to be in this file, if on mac the first command is neccessary (window possibly)
 
+Inside the <project-root>/database/ directory you will find an executable Bash script (.sh file)
+
+To run:
+`cd <project-root>/database/`
 `chmod u+r+x create_capstone-db.sh`
 `./create_capstone-db.sh`
 
