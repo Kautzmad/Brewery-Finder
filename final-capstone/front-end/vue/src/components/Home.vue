@@ -66,8 +66,9 @@ div.home {
 
 div#body {
     background-color: white;
-    margin-left: 25px; margin-right: 25px; margin-bottom: 50px;
-    padding-bottom: 100px;
+    margin-left: 4px; margin-right: 4px; margin-bottom: 50px;
+    margin-top: -100px;
+    padding-bottom: 50px;
     text-align: center;
 }
 h1 {
@@ -82,10 +83,9 @@ h1 {
 }
 
 .card-space {
-    color: black;
-    text-decoration: none;
-    width: 20%;
-    height: 20%;
+    margin-left: 10px; margin-right: 10px;
+    align-content: center;
+    margin-top: 120px;
 }
 
 .card-space:hover {
@@ -102,10 +102,10 @@ h1.heading {
 }
 div.brewery-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
     align-items: baseline;
-    flex-wrap: wrap;
 }
 
 div.loading {

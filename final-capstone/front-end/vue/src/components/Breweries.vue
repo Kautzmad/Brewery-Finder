@@ -50,9 +50,9 @@ div.brewery-list {
 }
 div.breweries {
     background: white;
-    margin-left: 65px; margin-right: 65px;
+    margin-left: 10px; margin-right: 10px;
     align-content: center;
-    margin-top: 120px;
+    margin-top: 220px;
 }
 
 div.loading {
@@ -61,17 +61,12 @@ div.loading {
     z-index: 998;
 }
 
-div#body {
-    margin-left: 25px; margin-right: 25px; margin-bottom: 50px;
-    padding-bottom: 100px;
-    text-align: center;
-}
-h1 {
+
+h1.heading {
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: black;
     text-align: center;
-}
-h1.heading {
-    padding-top: 15px;
 }
 div#background {
     background-image: url('../img/cle-sign-bg.jpg');

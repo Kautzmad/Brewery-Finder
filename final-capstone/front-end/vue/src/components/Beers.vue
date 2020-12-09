@@ -30,6 +30,13 @@ export default {
 }
 </script>
 <style scoped>
+* {
+  padding: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
+}
+
 div.beer-list {
     text-align: center;
 }

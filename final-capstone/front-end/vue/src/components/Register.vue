@@ -173,7 +173,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 100%;
+    padding-top: 720px;
     top: -10px;
 }
 </style>

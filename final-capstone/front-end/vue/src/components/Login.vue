@@ -112,7 +112,7 @@ form.form-signin {
   padding: 16px;
   background-color: white;
   border-radius: 5px;
-  padding-left: 40px;
+  padding-left: 30px;
 } 
 
 #username.form-control {
@@ -130,6 +130,7 @@ form.form-signin {
 a.need-account {
   text-decoration: none;
   color: #FF3C00;
+
 }
 
 .need-account:hover {
@@ -156,7 +157,7 @@ div#background {
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 635px;
+    padding-top: 720px;
     top: -8px;
 }
 </style>
