@@ -35,7 +35,7 @@ public class breweryController {
 	// Get Brewery by ID
 	@PreAuthorize("permitAll")
 	@RequestMapping(path = "/breweries/{breweryId}", method = RequestMethod.GET)
-	public Brewery getBrewerybyBreweryID(@PathVariable Long breweryId) {
+	public Brewery getBrewerybyBreweryID(@PathVariable Long breweryId) throws NotFoundException {
 		return breweryDao.getBreweryById(breweryId);
 	}
 	
@@ -43,14 +43,14 @@ public class breweryController {
 	// This needs to limited to just "Brewer" users
 	@PreAuthorize("hasRole('ADMIN')")
 	@RequestMapping(path = "/breweries", method = RequestMethod.POST)
-	public void addNewBrewery(@RequestBody Brewery aBrewery) {
+	public void addNewBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {
 		breweryDao.addNewBrewery(aBrewery);
 	}
 	
 	// Update a brewery
 	
 	@RequestMapping(path = "/breweries", method = RequestMethod.PUT)
-	public void updateBrewery(@RequestBody Brewery aBrewery) {
+	public void updateBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {
 		breweryDao.updateBrewery(aBrewery);
 	}
 	
@@ -58,7 +58,7 @@ public class breweryController {
 	// Should be limited to Admin
 	@PreAuthorize("hasRole('ADMIN')")
 	@RequestMapping(path = "/breweries/{breweryId}", method = RequestMethod.DELETE)
-	public void deleteBrewery(@PathVariable Long breweryId) {
+	public void deleteBrewery(@PathVariable Long breweryId) throws NotAllowedException {
 		breweryDao.deleteBrewery(breweryId);
 	}
 	

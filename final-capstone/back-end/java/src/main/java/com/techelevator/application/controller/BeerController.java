@@ -66,7 +66,7 @@ public class BeerController {
 	
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/beers/{beerId}", method = RequestMethod.GET)
-	public Beer getBeerByID(@PathVariable Long beerId) {
+	public Beer getBeerByID(@PathVariable Long beerId) throws NotFoundException {
 		return beerDAO.getBeerbyID(beerId);
 	}
 	
@@ -76,7 +76,7 @@ public class BeerController {
 	 ***/
 	
 	@RequestMapping(path="/addBeer", method=RequestMethod.GET)
-	public String showAddBeer() {
+	public String showAddBeer() throws NotAllowedException {
 		return "addBeer";
 	}
 	
@@ -86,7 +86,7 @@ public class BeerController {
 	 ***/
 	
 	@RequestMapping(path = "/beers/{beerId}", method = RequestMethod.DELETE)
-	public void deleteABeer(@PathVariable Long beerId) {
+	public void deleteABeer(@PathVariable Long beerId) throws NotAllowedException {
 		beerDAO.deleteBeer(beerId);
 	}
 	
@@ -97,7 +97,7 @@ public class BeerController {
 	
 	@PreAuthorize("permitAll")
 	@RequestMapping(path="/breweries/{breweryId}/beers", method = RequestMethod.GET)
-	public List<Beer> getBeerByBreweryID(@PathVariable Long breweryId) {
+	public List<Beer> getBeerByBreweryID(@PathVariable Long breweryId) throws NotFoundException {
 		return beerDAO.getBeerByBreweryID(breweryId);
 	}
 }
