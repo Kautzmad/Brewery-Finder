@@ -205,7 +205,7 @@ VALUES ('Bollard Pull', 5.8, 30,
  -- Forest City Brewery
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Black Betsy Black IPA', 5.6, 68,
-'Black IPA', 'This beer is named after Shoeless Joe Jackson’s primary bat. Betsy 
+'Black IPA', 'This beer is named after Shoeless Joe Jacksonï¿½s primary bat. Betsy 
 is brewed with classic hops (Columbus, Chinook, Cascade) paired with a stout-like 
 malt bill making this beer a balanced and flavorful home run!', 
 'no img', true, 5);
@@ -220,7 +220,7 @@ INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id)
 VALUES ('Duck Island Amber Ale', 5.5, 40,
 'Amber Ale', 'Crafted from American ingredients, this deep copper ale is anchored by a strong malt backbone 
 containing subtly delicious hints of caramel and fruit. This Forest City staple has a medium intensity
- hop flavor with citrus hop notes. A frothy headed classic that is sure to find its’ way into your 
+ hop flavor with citrus hop notes. A frothy headed classic that is sure to find itsï¿½ way into your 
  stomach and into your cooler!', 
 'no img', true, 5);
 
@@ -240,7 +240,7 @@ VALUES ('Mr. Meeseeks', 4.6, 9,
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Bye Felicia!', 5.2, 21,
-'Nut Brown Ale', 'The perfect bier to say “Bye!” to last year and “Hello!” to a fresh start! Complex
+'Nut Brown Ale', 'The perfect bier to say ï¿½Bye!ï¿½ to last year and ï¿½Hello!ï¿½ to a fresh start! Complex
  malt profile with chocolate malt, honey malt, and crystal rye. Very sessionable and a touch on the sweet side.', 
 'no img', true, 6);
 
@@ -353,7 +353,7 @@ big aroma, and a clean finish.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Kapitan ', 4.7, 38,
 'Alt Bier', 'Altbier is a copper colored German-style ale with a moderate hop character. A traditional 
-decoction mash brings out rich malt flavors without sweetness and makes Kapitän an easy drinker. A favorite 
+decoction mash brings out rich malt flavors without sweetness and makes Kapitï¿½n an easy drinker. A favorite 
 of the Brewmaster!', 
 'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p392_i1_w1184.jpeg?width=640'
 , true, 9);
@@ -374,7 +374,7 @@ VALUES ('Juicy ASAP', 6.5, 66,
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Habituale ', 5.0, 21,
-'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
+'Kï¿½lsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
 'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
 , true, 11);
 
@@ -458,7 +458,7 @@ pale ale.',
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Hopnesia IPA', 7.4, 70,
-'Kölsch Style Golden Ale', 'A bitter, floral and citrusy ale brewed with pale ale, light 
+'Kï¿½lsch Style Golden Ale', 'A bitter, floral and citrusy ale brewed with pale ale, light 
 crystal and munich malts mashed a low temperature for good attenuation and a dry, crisp finish. 
 Malts take a backseat in this style while hops are the star. This beer is brewed with Pale and 
 Victory malts and hopped with Citra and Equinox hops. ', 
@@ -507,10 +507,10 @@ day.  Come as you are!',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('White Cap Ale', 5.4, 15,
 'Cream Ale', 'This is a cream ale that is light and delightful and is reminiscent of the 
-slight “rollers” one encounters while fishing on Lake Erie on a warm summer day.  Just as 
+slight ï¿½rollersï¿½ one encounters while fishing on Lake Erie on a warm summer day.  Just as 
 the movement of the boat enhances your fishing experience, so does this brew enliven your 
 beer drinking experience.  The corn in this beer gives it a smooth finish and flavor similar 
-to classic American beers, and will even out those “sea legs”.', 
+to classic American beers, and will even out those ï¿½sea legsï¿½.', 
 'https://baithousebrewery.com/wp-content/uploads/2019/05/White-Cap-1-640x321.jpg'
 , true, 17);
 
@@ -518,7 +518,7 @@ to classic American beers, and will even out those “sea legs”.',
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Burning River Pale Ale', 6.0, 45,
 'Pale Ale', 'Greetings from Cleveland! Where an infamous river fire rekindled appreciation for our 
-region’s natural resources (like the malt and hops illuminating this Pale Ale).', 
+regionï¿½s natural resources (like the malt and hops illuminating this Pale Ale).', 
 'https://www.greatlakesbrewing.com/sites/default/files/burning-river-cans-fixed-580x960.jpg'
 , true, 18);
 
@@ -531,8 +531,8 @@ the flag for Cleveland and refreshing beer drinkers everywhere since 1988.',
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Siren Shores', 6.9, 15,
-'Passion Fruit Saison', 'Ahoy, weary sailor! Heed the call of the North Coast’s
- “inland seas” and plunge into an effervescent maelstrom of sweet passion fruit, 
+'Passion Fruit Saison', 'Ahoy, weary sailor! Heed the call of the North Coastï¿½s
+ ï¿½inland seasï¿½ and plunge into an effervescent maelstrom of sweet passion fruit, 
  zesty spices, and tempting tropical fruit aromas.', 
 'https://www.greatlakesbrewing.com/sites/default/files/siren-shores.png'
 , false, 18);
@@ -540,14 +540,14 @@ VALUES ('Siren Shores', 6.9, 15,
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Edmund Fitzgerald', 6.0, 37,
 'Porter', 'Robust and complex, our Porter is a bittersweet tribute to the
- legendary freighter’s fallen crew—taken too soon when the gales of November came early.', 
+ legendary freighterï¿½s fallen crewï¿½taken too soon when the gales of November came early.', 
 'https://www.greatlakesbrewing.com/sites/default/files/edfitz-fixed_1.png'
 , true, 18);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Commodore Perry', 7.7, 70,
-'IPA', 'What’s this? A British-style IPA named after the man who defeated 
-His Majesty’s Royal Navy in the War of 1812? Consider this a bold, hoppy 
+'IPA', 'Whatï¿½s this? A British-style IPA named after the man who defeated 
+His Majestyï¿½s Royal Navy in the War of 1812? Consider this a bold, hoppy 
 (and mildly ironic) plunder of war.', 
 'https://www.greatlakesbrewing.com/sites/default/files/commodore-fixed-2020.jpg'
 , true, 18);
