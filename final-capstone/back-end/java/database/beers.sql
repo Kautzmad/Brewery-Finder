@@ -294,3 +294,186 @@ hops there are. Our staff grabbed them and they just smelled like excellence so 
 took them and brewed this beer.', 
 'https://beer.untappd.com/labels/4029532'
 , true, 1);
+
+-- Nano Brew Cleveland
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Lager Life', 4.5, null,
+'Lager', 'Bright, crisp, light, and just downright delicious! 
+Brewed with a touch of rice for a dry but thirst-quenching beverage. Let LIFE give 
+you a beer. Trust us, you will be better off with one in your hand. Get a LIFE!', 
+'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Hola Cerveza Mexican', 5.0, null,
+'Mexican Lager', 'Crisp, clean and refreshing with sweet aromatics of lemon, lime and 
+caramelized maize corn. This 5% quencher starts the fiesta', 
+'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+, true, 1);
+
+-- Noble Beast Brewing
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Union Pils', 4.9, 36,
+'Bohemian Lager', 'Traditionally brewed with a double-decoction mash to enhance malt flavor and balanced with 
+Czech Saaz hops for a delightfully floral and spicy aroma. Lagered horizontally for two months for clarity of 
+flavor. Light but with rich malt and hop character.', 
+'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p191_i2_w1184.jpeg?width=640'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Evil Motives', 7.2, 68,
+'Double Dry Hopped IPA', 'Double dry-hopped IPA, brewed with big hop additions of Citra, Simcoe, and Mosaic. Smooth bitterness, 
+big aroma, and a clean finish.', 
+'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p455_i2_w1184.jpeg?width=640'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Kapitan ', 4.7, 38,
+'Alt Bier', 'Altbier is a copper colored German-style ale with a moderate hop character. A traditional 
+decoction mash brings out rich malt flavors without sweetness and makes Kapitän an easy drinker. A favorite 
+of the Brewmaster!', 
+'https://www.noblebeastbeer.com/uploads/1/3/0/9/130995430/s493792787205224201_p392_i1_w1184.jpeg?width=640'
+, true, 1);
+
+-- Saucy Brew Works
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Love You, Bye', 8.0, 34,
+'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
+'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Juicy ASAP', 6.5, 66,
+'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Habituale ', 5.0, 21,
+'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+, true, 1);
+
+-- The Cleveland Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Muellerfest', 5.4, null,
+'Oktoberfest Lager', 'In honor of Ernst Mueller, who emigrated with his family to Cleveland and 
+started the Cleveland Home Brewing Company, We give you our Oktoberfest at 5.4%. Full bodied lager 
+using German Noble hops making this beer just plain delicious. PROST!', 
+'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Browns Town', 5.4, null,
+'Brown Ale', 'Sessionable Brown Ale with notes of chocolate and coffee. Finish is a little complex but 
+balanced. Not too strong and to keeps you having more than just one.  ', 
+'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('AWFUGIT', 11.0, null,
+'Triple IPA', 'This super balanced, but boozy Triple IPA joins our menu when we all 
+need to get tuned up fast: family holidays, big games, and bad weather. ', 
+'https://ih1.redbubble.net/image.810331432.7493/fposter,small,wall_texture,product,750x1000.u1.jpg'
+, true, 1);
+
+-- The Jolly Scholar
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Give Me Good Dreams', 10.1, 18,
+'Fruit Beer', 'This Belgian-style beer is bursting at its seams with 
+raspberry and fruity and spicy yeast notes. Low bitterness and very high alcohol 
+round out this red-hued ale', 
+'https://untappd.akamaized.net/site/brewery_logos/brewery-338653_6b0c7.jpeg'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Remote Drinking', 6.9, 60,
+'American India Pale Ale', 'A nice regular IPA with some bitterness and fruit/citrus. 
+If you close your eyes and taste this, you are back at the Jolly Scholar for dollar 
+beer night.', 
+'https://untappd.akamaized.net/site/brewery_logos/brewery-338653_6b0c7.jpeg'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Tursas', 7.7, 26,
+'Baltic Porter', 'A hefty Baltic Porter with lots of malt flavor and low roastiness 
+and bitterness. Chocolate and dark fruit meld perfectly in this smooth lager.', 
+'https://untappd.akamaized.net/site/brewery_logos/brewery-338653_6b0c7.jpeg'
+, true, 1);
+
+-- Working Class Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Love You, Bye', 8.0, 34,
+'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
+'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Juicy ASAP', 6.5, 66,
+'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Habituale ', 5.0, 21,
+'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+, true, 1);
+
+-- Maize Valley Craft Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Love You, Bye', 8.0, 34,
+'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
+'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Juicy ASAP', 6.5, 66,
+'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Habituale ', 5.0, 21,
+'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+, true, 1);
+
+-- Fat Head's Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Love You, Bye', 8.0, 34,
+'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
+'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Juicy ASAP', 6.5, 66,
+'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Habituale ', 5.0, 21,
+'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+, true, 1);
+
+-- Baithouse Brewery
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Love You, Bye', 8.0, 34,
+'Hazy Imperial IPA', 'Super juicy and permanently hazy.', 
+'https://www.saucybrewworks.com/media/images/Love_you_bye.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Juicy ASAP', 6.5, 66,
+'American India Pale Ale', 'Tropical, citrusy, and most certainly juicy.', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_IPA.width-400.png'
+, true, 1);
+
+INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
+VALUES ('Habituale ', 5.0, 21,
+'Kölsch Style Golden Ale', 'Light, clean, crisp with a slight citrusy, spicy character', 
+'https://www.saucybrewworks.com/media/images/Beer-Page_Core-Cans_Habituale.width-400.png'
+, true, 1);
