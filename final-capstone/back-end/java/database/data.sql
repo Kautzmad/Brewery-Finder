@@ -301,7 +301,7 @@ VALUES ('Robot Santa Christmas Ale', 5.8, null,
 'Winter Ale', 'After the robot uprising you will be leaving Robot Santa a Christmas 
 Ale brewed with cinnamon, ginger, nutmeg, coriander, honey and orange peel.', 
 'https://beer.untappd.com/labels/3543126'
-, true, 1);
+, true, 7);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Saturday Transfer', 7.5, null,
@@ -309,7 +309,7 @@ VALUES ('Saturday Transfer', 7.5, null,
 Mosaic. Expect a soft mouthfeel and bitterness paired with huge tropical hop flavors 
 and aroma.', 
 'https://beer.untappd.com/labels/2886738'
-, true, 1);
+, true, 7);
 
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 
 VALUES ('Big Hairy American Winning Machines', 9.2, null,
@@ -318,7 +318,7 @@ Citra, El Dorado, and Australian Galaxy; they just happen to be some of the best
 hops there are. Our staff grabbed them and they just smelled like excellence so we 
 took them and brewed this beer.', 
 'https://beer.untappd.com/labels/4029532'
-, true, 1);
+, true, 7);
 
 -- Nano Brew Cleveland
 INSERT INTO beers (name, abv, ibu, type, info, img_url, is_active, brewery_id) 

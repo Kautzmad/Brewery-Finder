@@ -107,7 +107,7 @@ public class BeerController {
 	 * - preauth "Brewer"
 	 *
 	 ***/
-	//@PreAuthorize("hasRole('ROLE_BREWER')")
+	@PreAuthorize("hasRole('ROLE_BREWER')")
 	@RequestMapping(path= "/beers", method = RequestMethod.PUT)
 	public void updateBeer(@RequestBody Beer aBeer) throws NotAllowedException {
 		beerDAO.updateBeer(aBeer);
