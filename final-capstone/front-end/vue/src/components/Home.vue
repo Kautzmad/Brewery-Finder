@@ -1,5 +1,4 @@
 <template>
-    <div id="background">
         <div class="home">
             <div class="headings">
                 <h1 class="heading">Welcome to Brew Finder!</h1>
@@ -18,7 +17,6 @@
 
             </div>
         </div>
-    </div>
 </template>
 <script>
 import BreweryCard from './BreweryCard.vue'
@@ -63,7 +61,7 @@ export default {
 
 .headings h1 {
     font-size: 4rem;
-    margin-top: -10rem;
+    margin-top: -12rem;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -79,39 +77,29 @@ export default {
     flex-direction: column;
     align-items: center;
     font-size: 3rem;
-    margin-top: 15rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
 }
 
-.brewery-list {
+/* .brewery-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.card-space:hover {
+/* .card-space:hover {
     color: #311D00;
     
-}
+} */
 
-.card-space:visited {
+/* .card-space:visited {
     color: gray;
-}
+} */
 
 div.loading {
     text-align: center;
     float: center;
     z-index: 998;
 }
-
-div#background {
-    background-image: url('../img/cle-sign-bg.jpg');
-    position: relative;
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 </style>

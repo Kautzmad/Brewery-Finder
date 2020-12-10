@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="@/img/BrewFootball.png"/></router-link>
+    <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="./assets/BrewFootball.png"/></router-link>
     <nav class="navbar">
       <ul class="nav-links">
         <li><router-link id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse Breweries</router-link>&nbsp;|&nbsp;</li>
@@ -15,15 +15,17 @@
 </template>
 
 <style scoped>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; 
-}
 
-#app {
+
+div#app {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: transparent;
+  background-image: url('assets/cle-sign-bg.jpg');
+  position: relative;
+  background-position:left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: -8px;
 }
 
 .navbar {
@@ -31,46 +33,33 @@
   display: flex;
   justify-content: flex-end;
   background-color: transparent;
-  
+  margin-top: -3rem;
+}
+
+.nav-links {
+  list-style-type: none;
 }
 
 a, li {
-  color: #FF3C00;
+  color: #311D00;
   text-decoration: none;
   display: inline-block;
-  padding: 0px 5px;
-  margin-right: 10px;
+  padding: 0px 3px;
+  margin-right: 5px;
+  list-style-type: none;
 }
 
 a:hover {
-  color: #311D00;
+  color: #FF3C00;
 }
 
 a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 
-#logo {
-  width: 250px; 
-  z-index: 999;
+#logo { 
+  max-width: 15%;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
-
-/* #nav {
-  background-image: url('./img/cle-sign-bg.jpg');
-  position: relative;
-  background-position:center;
-  background-size: cover;
-  background-attachment: fixed;
-  position: fixed;
-  text-shadow: 2px 2px 15px black;
-  z-index: 999;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-bottom: 100px;
-  margin-top: -20px; 
-  width: 100%;
-  margin-right: 60px;
-} */
 </style>

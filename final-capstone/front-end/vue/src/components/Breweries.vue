@@ -51,12 +51,12 @@ div.loading {
     z-index: 998;
 }
 
-.brewery-list {
+/* .brewery-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .heading {
     font-size: 2rem;
@@ -70,15 +70,6 @@ div.loading {
     text-shadow: 2px 2px 15px black;
 }
 
-div#background {
-    background-image: url('../img/cle-sign-bg.jpg');
-    position: relative;
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-bottom: 150px;
-    top: -10px;
-}
 /* .card-space {
     margin-left: 5px; margin-right: 5px;
     color: black;
@@ -94,14 +85,14 @@ div#background {
     color: gray;
 } */
 
-div#background {
+/* div#background {
     background-image: url('../img/cle-sign-bg.jpg');
     position: relative;
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+} */
 
 /* .brewery-list {
     display: grid;
