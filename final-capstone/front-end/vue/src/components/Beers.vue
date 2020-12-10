@@ -41,8 +41,6 @@ div.beer-list {
     text-align: center;
 }
 div.beers {
-    padding-top: 200px;
-    background: white;
     margin-left: 65px; margin-right: 65px;
     align-content: center;
 }
@@ -52,23 +50,29 @@ div#body {
     text-align: center;
 }
 h1 {
-    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 55vh;
+    color: #ff7300;
+    text-shadow: 2px 2px 15px black;
+    font-size: 4rem;
+
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 h1.heading {
     padding-top:25px;
 }
-div#background {
-    background-image: url('../img/cle-sign-bg.jpg');
-    position: relative;
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-bottom: 150px;
-    top: -10px;
+.card-space:nth-child(odd) {
+    background-color: rgb(243, 241, 241);
+    border-radius: 12.5%;
 }
 .card-space:nth-child(even) {
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(185, 185, 185);
+    border-radius: 12.5%;
 }
 .card-space:hover {
     background-color: rgb(139, 139, 139);
