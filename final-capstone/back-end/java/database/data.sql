@@ -627,16 +627,283 @@ INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
 2,now(), 4);
 
 INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
-('Dog Pound Brown is ',
-'Yes',
-5,now(), 5);
+('Brown for sure',
+'Beer is brown, sometimes, so thats good, right?',
+4,now(), 5);
 INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
 ('Not enough dog',
 'I didnt get my dog for this. 4/10 would not reccomend',
 2,now(), 5);
 
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('What is Jobu?',
+'I dont know what Jobu is but this beer is pretty good',
+3,now(), 6);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough jobu',
+'I didnt get my jobu for this. 4/10 would not reccomend',
+2,now(), 6);
 
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Holy Toledo Batman!',
+'See, I got this reference at least',
+4,now(), 7);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough holy',
+'I didnt get my holy for this. 2/10 would not reccomend',
+1,now(), 7);
 
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Put-in-Beautiful!',
+'Great color, great taste, great beer!',
+4,now(), 8);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough berry',
+'I didnt get my berry for this. 4/10 would not reccomend',
+2,now(), 8);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Millenials are cool still, right?',
+'Right?',
+4,now(), 9);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough hipster',
+'I didnt get my hipster for this. 4/10 would not reccomend',
+2,now(), 9);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Bitter = Good',
+'Idk if bitter is necessarily good, but this beer sure is!',
+5,now(), 10);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough chief',
+'I didnt get my chief for this. 4/10 would not reccomend',
+2,now(), 10);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Big Chief (not keef)',
+'Chief is big and this beer is good',
+4,now(), 11);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough big',
+'I didnt get my big for this. 2/10 would not reccomend',
+1,now(), 11);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Rally Possum is a great name',
+'Thank you Brick and Barrel, very cool!',
+5,now(), 12);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough possum',
+'I didnt get my possum for this. 4/10 would not reccomend',
+2,now(), 12);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Poni-Pina-Pinoe-Pinot Says-Saisi-Saison',
+'I cant pronounce this beer sober, much less drunk!',
+4,now(), 13);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough pinot',
+'I didnt get my pinot for this. 4/10 would not reccomend',
+2,now(), 13);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('C-town sucks but this beer doesnt',
+'Woo! Im drunk!',
+4,now(), 14);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough c',
+'I didnt get my c for this. 4/10 would not reccomend',
+2,now(), 14);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Hope this beer is always around',
+'Hope flows freely and this beer should too',
+5,now(), 15);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough flows',
+'I didnt get my flows for this. 4/10 would not reccomend',
+2,now(), 15);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Before 10? Yeah right!',
+'This beer keeps me out all night!',
+4,now(), 16);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough 10',
+'I didnt get my 10 for this. 4/10 would not reccomend',
+2,now(), 16);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw!',
+4,now(), 17);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough bollard',
+'I didnt get my vollard for this. 4/10 would not reccomend',
+2,now(), 17);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 18);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough betsy',
+'I didnt get my betsy for this. 4/10 would not reccomend',
+2, now(), 18);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 19);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough berg-a-horn',
+'I didnt get my berg-a-horn for this. 4/10 would not reccomend',
+2, now(), 19);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 20);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough duck',
+'I didnt get my duck for this. 4/10 would not reccomend',
+2, now(), 20);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 21);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough rish',
+'I didnt get my rish for this. 4/10 would not reccomend',
+2, now(), 21);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Can you get my favorite beer for me?',
+'Oh, caaaaaaaan doo!',
+5,now(), 22);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough meseeks',
+'I didnt get my meseeks for this. 4/10 would not reccomend',
+2, now(), 22);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 23);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough felicia',
+'I didnt get my felicia for this. 4/10 would not reccomend',
+2, now(), 23);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 24);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough flag',
+'I didnt get my flag for this. 4/10 would not reccomend',
+2, now(), 24);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 25);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough sipa',
+'I didnt get my sipa for this. 4/10 would not reccomend',
+2, now(), 25);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 26);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough nano',
+'I didnt get my nano for this. 4/10 would not reccomend',
+2, now(), 26);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 27);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough progress',
+'I didnt get my progress for this. 4/10 would not reccomend',
+2, now(), 27);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 28);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough haze',
+'I didnt get my haze for this. 4/10 would not reccomend',
+2, now(), 28);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Greatest Beer Ever',
+'This is the best beer in the world!',
+5,now(), 29);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough frosty',
+'I didnt get my frosty for this. 4/10 would not reccomend',
+2, now(), 29);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw!',
+5,now(), 30);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough falling',
+'I didnt get my falling for this. 4/10 would not reccomend',
+2,now(), 30);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw! Besht xms beeer yeh!',
+4,now(), 31);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough robot santa',
+'I didnt get my robot santa for this. 4/10 would not reccomend',
+2,now(), 31);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw!',
+4,now(), 32);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough saturday',
+'I didnt get my saturday for this. 4/10 would not reccomend',
+2,now(), 32);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw!',
+4,now(), 33);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough big hairy american',
+'I didnt get my big hairy american for this. 4/10 would not reccomend',
+2,now(), 33);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw!',
+4,now(), 34);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough life',
+'I didnt get my life for this. 4/10 would not reccomend',
+2,now(), 34);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('This stusff id amzzing!',
+'Iv hwd 3 ifthes an i so drnk nw!',
+4,now(), 35);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough hola',
+'I didnt get my hola for this. 4/10 would not reccomend',
+2,now(), 35);
 
 
 COMMIT;
