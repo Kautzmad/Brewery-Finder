@@ -4,7 +4,7 @@
         <img>
     </div>
     <div class="middle" v-else-if="showBeer != false">
-        <img v-if="this.beer.imgUrl == 'no img'" src="../img/404BeerNotFoundCrop.jpg" alt="Avatar" class="image" >
+        <img v-if="this.beer.imgUrl == 'no img'" v-bind:src="this.brewery.breweryLogoUrl" alt="Avatar" class="image" >
         <img v-if="this.beer.imgUrl != 'no img'" v-bind:src="this.beer.imgUrl"  alt="Avatar" class="image">
     </div>
     <router-link v-bind:to="{ name: 'beer-details', params:{id: this.beer.id} }">

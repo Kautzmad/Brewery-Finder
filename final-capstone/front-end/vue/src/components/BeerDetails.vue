@@ -3,7 +3,7 @@
     <div id="details">
         <h1>{{beer.name}}</h1>
         <img class="beer-logo" v-bind:src="this.beer.imgUrl"/>
-        <img class="beer-logo-404" v-if="beer.imgUrl == 'no img'" src="../img/404BeerNotFoundCrop.jpg"/>
+        <img class="beer-logo-404" v-if="beer.imgUrl == 'no img'" v-bind:src="this.brewery.breweryLogoUrl"/>
         <h3>{{beer.type}}<span class="beer-ibu" v-if="beer.ibu != 0" > - {{beer.ibu}} IBU</span> - {{beer.abv}} ABV</h3>
         <h3> {{brewery.website_url}}</h3>
         <h2 class="beer-desc" v-if="beer.info != 'No description'">{{beer.info}}</h2>
