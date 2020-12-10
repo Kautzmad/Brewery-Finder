@@ -66,7 +66,7 @@ div.loading {
     justify-content: center;
     text-align: center;
     height: 40vh;
-    color: #FF3C00;
+    color: #ff7300;
     text-shadow: 2px 2px 15px black;
 }
 

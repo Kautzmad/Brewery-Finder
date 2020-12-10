@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="./assets/BrewFootball.png"/></router-link>
+    <router-link id="logo" v-bind:to="{ name: 'home' }"><img id="logo" src="./assets/BrewFootball.png"/></router-link>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><router-link id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse Breweries</router-link>&nbsp;|&nbsp;</li>
-        <li><router-link id="browse-beer" v-bind:to="{ name: 'beers' }">Browse Beers</router-link>&nbsp;|&nbsp;</li>
-        <li><router-link id="browse-random" v-bind:to="{ name: 'home' }">Random Beer</router-link>&nbsp;|&nbsp;</li>
+        <li><router-link id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse Breweries</router-link></li>
+        <li><router-link id="browse-beer" v-bind:to="{ name: 'beers' }">Browse Beers</router-link></li>
+        <li><router-link id="browse-random" v-bind:to="{ name: 'home' }">Random Beer</router-link></li>
         <li><router-link id="logout-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link></li>
         <li><router-link id="login-link" v-bind:to="{ name: 'login' }" v-if="$store.state.token === ''">Login</router-link></li>
       </ul>
@@ -16,6 +16,19 @@
 
 <style scoped>
 
+li {
+  float: right;
+}
+
+ul {
+  opacity: 75%;
+  background-color: rgb(59, 64, 75);
+  position: fixed;
+  top: 0;
+  width: 80%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
 
 div#app {
   font-family: Arial, Helvetica, sans-serif;
@@ -41,12 +54,10 @@ div#app {
 }
 
 a, li {
-  color: #311D00;
+  display: block;
+  color: white;
+  padding: 16px;
   text-decoration: none;
-  display: inline-block;
-  padding: 0px 3px;
-  margin-right: 5px;
-  list-style-type: none;
 }
 
 a:hover {
@@ -57,8 +68,13 @@ a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 
+
+li a:hover {
+  background-color: #111;
+}
+
 #logo { 
-  max-width: 15%;
+  max-width: 33%;
   margin-top: 1rem;
   margin-left: 1rem;
 }
