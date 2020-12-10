@@ -1,6 +1,6 @@
 <template>
 <router-link v-bind:to="{ name: 'brewery-details', params:{id: this.brewery.breweryId} }">
-    <div id="card" data-aos="fade-left">
+    <div id="card" data-aos="fade-down">
         <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>
         <img class="company-logo" v-if="!brewery.breweryLogoUrl"  src="../img/404BeerNotFoundCrop.jpg">
         <a href="#" class="btn">{{this.brewery.name}}</a>

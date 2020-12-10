@@ -55,7 +55,7 @@ export default {
     justify-content: center;
     text-align: center;
     height: 55vh;
-    color: #FF3C00;
+    color: #ff7300;
     text-shadow: 2px 2px 15px black;
 }
 
@@ -71,7 +71,7 @@ export default {
 }
 
 .popular {
-    color: #FF3C00;
+    color: #ff7300;
     text-shadow: 2px 2px 15px black;
     display: flex;
     flex-direction: column;
@@ -81,12 +81,15 @@ export default {
     margin-bottom: 2rem;
 }
 
-/* .brewery-list {
+.brewery-list {
+    padding-right: 25px;
+    padding-left: 25px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
+    flex-wrap: wrap;
+    grid-gap: 10px 200px;
+    align-self: space-around;
+    justify-content: space-around;
+} 
 
 /* .card-space:hover {
     color: #311D00;

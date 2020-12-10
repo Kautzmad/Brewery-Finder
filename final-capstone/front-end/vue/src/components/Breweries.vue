@@ -66,7 +66,7 @@ div.loading {
     justify-content: center;
     text-align: center;
     height: 40vh;
-    color: #FF3C00;
+    color: #ff7300;
     text-shadow: 2px 2px 15px black;
 }
 
@@ -94,10 +94,14 @@ div.loading {
     background-attachment: fixed;
 } */
 
-/* .brewery-list {
-    display: grid;
+ .brewery-list {
+    padding-right: 25px;
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
     grid-gap: 10px 200px;
-    align-self: start;
-} */
+    align-self: space-around;
+    justify-content: space-around;
+} 
 
 </style>

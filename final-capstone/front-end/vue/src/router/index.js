@@ -9,6 +9,7 @@ import Breweries from '../components/Breweries'
 import Beers from '../components/Beers'
 import BreweryDetails from '../components/BreweryDetails'
 import BeerDetails from '../components/BeerDetails'
+import Review from '../components/Review'
 
 Vue.use(Router)
 
@@ -88,7 +89,15 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
-    }
+    },
+    {
+      path: "/reviews",
+      name: "reviews",
+      component: Review,
+      meta: {
+        requiresAuth: false
+      },
+    },
  
   ]
 })

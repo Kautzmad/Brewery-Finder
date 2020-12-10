@@ -13,6 +13,7 @@
                 <router-link v-bind:to="{ name: 'brewery-details', params:{id: beer.breweryId} }">
             <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>  
                 </router-link>
+                <!-- here is where we want to include an option to add a review, including review and rating -->
     </div>
     </div>
 </div>
