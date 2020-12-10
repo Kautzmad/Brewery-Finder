@@ -1,35 +1,61 @@
 <template>
   <div id="app">
-    
-    <div id="nav">
-
-      <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="@/img/BrewFootball.png"/></router-link>
-      <router-link class="nav-link" id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse<br>Breweries</router-link>&nbsp;|&nbsp;
-      <router-link class="nav-link" id="browse-beer" v-bind:to="{ name: 'beers' }">Browse<br>Beers</router-link>&nbsp;|&nbsp;
-      <router-link class="nav-link" id="browse-random" v-bind:to="{ name: 'home' }">Random<br>Beer</router-link>&nbsp;|&nbsp;
-      <router-link class="nav-link" id="logout-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
-      <router-link class="nav-link" id="login-link" v-bind:to="{ name: 'login' }" v-if="$store.state.token === ''">Login</router-link>
-    </div>
+    <router-link v-bind:to="{ name: 'home' }"><img id="logo" src="@/img/BrewFootball.png"/></router-link>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><router-link id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse Breweries</router-link>&nbsp;|&nbsp;</li>
+        <li><router-link id="browse-beer" v-bind:to="{ name: 'beers' }">Browse Beers</router-link>&nbsp;|&nbsp;</li>
+        <li><router-link id="browse-random" v-bind:to="{ name: 'home' }">Random Beer</router-link>&nbsp;|&nbsp;</li>
+        <li><router-link id="logout-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link></li>
+        <li><router-link id="login-link" v-bind:to="{ name: 'login' }" v-if="$store.state.token === ''">Login</router-link></li>
+      </ul>
+    </nav>
     <router-view />
   </div>
 </template>
+
 <style scoped>
 * {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
 }
+
 #app {
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
 }
+
+.navbar {
+  border-right: none;
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  
+}
+
+a, li {
+  color: #FF3C00;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 5px;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: #311D00;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
 #logo {
   width: 250px; 
-  margin-bottom: -120px;
-  margin-top: -15px;
-  margin-top: 20px;
+  z-index: 999;
 }
-#nav {
+
+/* #nav {
   background-image: url('./img/cle-sign-bg.jpg');
   position: relative;
   background-position:center;
@@ -46,21 +72,5 @@
   margin-top: -20px; 
   width: 100%;
   margin-right: 60px;
-}
-.nav-link {
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: 700;
-  text-align: center;
-}
-
-a {
-  color: #FF3C00;
-}
-
-a:hover {
-  color: #311D00;
-  text-decoration: underline;
-}
-
+} */
 </style>
