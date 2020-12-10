@@ -1,7 +1,7 @@
 <template>
 <div id="card" @mouseover="showBeer = true" @mouseleave="showBeer = false">
     <div v-if="showBeer == false">
-        <img src="../img/QuestionMark.png" width="33%" height="33%">
+        <img>
     </div>
     <div class="middle" v-else-if="showBeer != false">
         <img v-if="this.beer.imgUrl == 'no img'" src="../img/404BeerNotFoundCrop.jpg" alt="Avatar" class="image" >
@@ -13,8 +13,6 @@
         <h5> {{this.beer.abv}} ABV </h5>
         <h4 class="beer-info"> {{this.beer.info}} </h4>
     </router-link>
-    </div>
-    
 </div>
 </template>
 <script>
@@ -86,6 +84,15 @@ a:hover {
 
 .container:hover .overlay {
   opacity: 1;
+}
+
+div.card:nth-child(even) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: baseline;
+    background-color: rgb(221, 221, 221);
 }
 
 
