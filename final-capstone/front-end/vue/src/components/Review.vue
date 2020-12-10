@@ -1,5 +1,6 @@
 <template>
   <div>
+    
 <!--     <form class="reviewForm">
     <div class ="form-group">
       <label for="name">Review Title:</label>
@@ -58,7 +59,9 @@ methods: {
         }
   })
       
-    }
+    },
+
+  displayReviews
 }
 };
 </script>
