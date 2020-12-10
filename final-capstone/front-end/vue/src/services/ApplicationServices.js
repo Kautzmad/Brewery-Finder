@@ -25,5 +25,9 @@ export default {
     },
     addReview(review){
         return http.post(`/reviews`, review);
+    },
+    getUserByID(id){
+        return http.get(`users/${id}`);
     }
+
 }

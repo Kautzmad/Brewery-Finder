@@ -1,13 +1,28 @@
 <template>
     <div class = "card">
-        <h1>{{review.name}}</h1>
+        <h1>{{review.name}} Reviewed by:<span id="userName" v-if="review.userId">{{user.userName}}</span>
+        <span id="userName" v-if="!review.userId">Anonymous</span>
+        </h1>
+        <h2>{{review.rating}}/5</h2>
         <h2>{{review.description}}</h2>
     </div>
 </template>
 
 <script>
+import appServices from "../services/ApplicationServices";
+
 export default {
     props: ["review"], 
+    data(){
+       return{
+           user: [],
+       } 
+    },
+    created(){
+        appServices.getUserByID(this.review.id).then(response =>{
+            this.user = response.data;
+        })
+    }
 }
 </script>
 
