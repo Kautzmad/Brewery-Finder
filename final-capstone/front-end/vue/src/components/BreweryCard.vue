@@ -22,6 +22,7 @@ export default {
     text-align: center;
     padding: 5px 5px;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
 }
 
@@ -39,10 +40,13 @@ img.company-logo {
 
 #card {
     width: 300px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr;
     grid-gap: 0rem;
-    background-color: #f1f1f1;
+    background-color: #d3d3d3;
     margin-bottom: 2rem;
     border-radius: 5px;
 }

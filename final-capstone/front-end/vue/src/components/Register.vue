@@ -134,7 +134,7 @@ form.form-register {
   margin: 20px;
   max-width: 300px;
   padding: 16px;
-  background-color: white;
+  background-color: gray;
   border-radius: 5px;
   padding-left: 30px;
 } 
@@ -165,16 +165,5 @@ form.form-register {
 .create-account:hover {
   background-color: #311D00;
   color: white;
-}
-
-
-div#background {
-    background-image: url('../img/cle-sign-bg.jpg');
-    position: relative;
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 720px;
-    top: -10px;
 }
 </style>

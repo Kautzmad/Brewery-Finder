@@ -1,5 +1,4 @@
 <template>
-<div id="background">
     <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
       <h1 class="h3 mb-3 font-weight-normal heading">Sign In</h1>
@@ -46,7 +45,6 @@
       </div>
     </form>
   </div>
-</div>
 </template>
 
 <script>
@@ -86,31 +84,19 @@ export default {
 }
 </script>
 
-
-<!-- CSS -->
 <style scoped>
 * {
-  padding: 0px;
-  margin-left: -10px;
-  margin-right: -10px;
-  box-sizing: border-box;
-}
-
-h1 {
-  margin-top: -5px;
-  margin-bottom: -20px;
-  margin-left: -22px;
-  font-size: 25px;
+  padding: 0;
+  margin: 0;
 }
 
 form.form-signin {
-  top: 200px;
   position: absolute;
   right: 0;
   margin: 20px;
   max-width: 300px;
   padding: 16px;
-  background-color: white;
+  background-color: gray;
   border-radius: 5px;
   padding-left: 30px;
 } 
@@ -149,15 +135,5 @@ a.need-account {
 .submit:hover {
   background-color: #311D00;
   color: white;
-}
-
-div#background {
-   background-image: url('../img/cle-sign-bg.jpg');
-    position: relative;
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 720px;
-    top: -8px;
 }
 </style>
