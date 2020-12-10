@@ -19,5 +19,11 @@ export default {
     },
     getBeerByBreweryID(id) {
         return http.get(`/breweries/${id}/beers`)
+    },
+    getReviewsByBeerID(beerId){
+        return http.get(`/reviews/${beerId}`)
+    },
+    addReview(review){
+        return http.post(`/reviews`, review);
     }
 }
