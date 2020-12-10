@@ -4,7 +4,7 @@
         <h1>{{brewery.name}}</h1>
         <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>
         <h3><span class="brewery-address" v-if="brewery.address" >{{brewery.address}}, </span>{{brewery.city}}</h3>
-        <h3> {{brewery.website_url}}</h3>
+        <a v-bind:href="brewery.websiteUrl" target="_blank"><h3> {{brewery.websiteUrl}}</h3> </a>
         <h2 class="brewery-desc">{{brewery.description}}</h2>
         <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
         <div id="beer-list">
@@ -29,7 +29,7 @@ export default {
                 name: '',
                 description: '',
                 breweryLogoUrl: '',
-                website_url: ''
+                websiteUrl: ''
             },
             beers: [],
             noDescReplacement: "We can't find a description of this brewery, but we're sure they're really great!"
