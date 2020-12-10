@@ -72,6 +72,7 @@ div#background {
 }
 .card-space:hover {
     background-color: rgb(139, 139, 139);
+    transition: 0.5s ease;
 }
 
 </style>
