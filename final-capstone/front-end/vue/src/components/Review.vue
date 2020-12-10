@@ -1,20 +1,6 @@
 <template>
   <div>
-    
-<!--     <form class="reviewForm">
-    <div class ="form-group">
-      <label for="name">Review Title:</label>
-      <input id="name" type="text" class="form-control" v-model="review.name" />
-    </div>
-    </form>
-
-    
-    <div class="reviews"> 
-      <h2>Reviews</h2>
-      <div class="review" v-for="review in reviews>
-
-      </div>
-    </div> -->
+    <review-card v-for="review in reviews" v-bind:key="review.id" v-bind:review="review"/>
   </div>
 
 </template>
@@ -22,31 +8,36 @@
 <script>
 import appServices from "../services/ApplicationServices";
 import moment from "moment";
+import ReviewCard from './ReviewCard.vue';
 
 export default {
     name: "review",
-    props: {
-      reviewId:{
-        type: Number,
-        default: 0
-      }
-  },    
+    props: [
+      'review'
+    ], 
+    components: {
+      ReviewCard
+    },
+       
+
 data(){
   return {
-    review: {
+    reviews: [],
+    isLoading: true,
+    /* review: {
       name: "",
       description: "",
       rating: "",
       userId: 0,
       beerId: 0,
       createDate: null
-    }
+    } */
   };
 },
 methods: {
   submitReview(){
     const newReview = {
-      beerId: Number(this.$route.params.beerId),
+      beerId: Number(this.$route.params.id),
       name: this.review.name,
       descrption: this.review.description,
       rating: this.review.rating,
@@ -55,15 +46,23 @@ methods: {
     };
   appServices.addReview(newReview).then(response =>{
         if(response.status === 201){
-          this.$route.push(`/beers/${newReview.beerId}`);
+          alert(
+            "Review successfully added"
+          );
         }
   })
       
     },
 
-  displayReviews
+},
+created(){
+  appServices.getReviewsByBeerID(this.$route.params.id).then(response => {
+    this.reviews = response.data;
+    this.isLoading = false;
+  })
 }
-};
+}
+
 </script>
 
 <style scoped>

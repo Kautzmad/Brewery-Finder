@@ -14,13 +14,17 @@
             <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>  
                 </router-link>
                 <!-- here is where we want to include an option to add a review, including review and rating -->
+            <review/>    
     </div>
     </div>
 </div>
 </template>
 <script>
 import applicationServices from '../services/ApplicationServices'
+import Review from './Review.vue'
+
 export default {
+  components: { Review },
     name: "brewery-details",
     data() {
         return {

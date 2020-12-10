@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,7 @@ import com.techelevator.application.dao.beerDao;
 import com.techelevator.application.dao.reviewDao;
 import com.techelevator.application.model.Review;
 
+@CrossOrigin
 @RestController
 public class ReviewController {
 
