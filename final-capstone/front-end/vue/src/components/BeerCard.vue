@@ -3,8 +3,9 @@
     <router-link v-bind:to="{ name: 'beer-details', params:{id: this.beer.id} }">
         <h4 class="brewery-name" > {{this.brewery.name}} </h4>
         <h3>{{this.beer.name}} - <span class="beer-type"> {{this.beer.type}} </span></h3>
-        <h5> {{this.beer.abv}} ABV </h5>
-        <h4 class="beer-info"> {{this.beer.info}} </h4>
+        <h5> {{this.beer.abv}} ABV <span v-if="beer.ibu"> - {{this.beer.ibu}} IBU </span></h5>
+        <h4 class="beer-info" v-if="beer.info != 'No description'" > {{this.beer.info}} </h4>
+        <h4 class="beer-info" v-if="beer.info == 'No description'" > {{noDesc}} </h4>
     </router-link>
 </div>
 </template>
@@ -21,6 +22,7 @@ export default {
                 breweryLogoUrl: '',
                 website_url: ''
             },
+            noDesc: 'We can\'t find any info on this beer, but we\'re sure it\'s great!'
         }
     },
     created() {
@@ -42,10 +44,10 @@ span.beer-type {
 }
 .brewery-name {
     color:rgb(65, 65, 65);
-    margin-bottom: -10px; padding-top: 50px;
+    margin-bottom: -10px; padding-top: 25px;
 }
 .beer-info {
-    padding-bottom: 10px;
+    padding-bottom: 35px;
 }
 h5 {
     margin-top: -10px; margin-bottom: -5px;

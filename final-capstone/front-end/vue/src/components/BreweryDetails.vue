@@ -9,15 +9,19 @@
         <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
         <div id="beer-list">
             <h1>Beers from {{brewery.name}}</h1>
-        <h3 v-for="beer in beers" v-bind:key="beer.id"> {{beer.name}} - <span class="beer-type">{{beer.type}}</span></h3>
+            <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
     </div>
     </div>
 </div>
 </template>
 <script>
 import applicationServices from '../services/ApplicationServices'
+import BeerCard from './BeerCard'
 export default {
     name: "brewery-details",
+    components: {
+        BeerCard
+    },
     data() {
         return {
             brewery: {
@@ -44,7 +48,7 @@ export default {
 </script>
 <style scoped>
 div#details {
-    padding-top: 150px;
+    padding-top: 175px;
     text-align: center;
     background-color: white;
     margin-left: 65px; margin-right: 65px;
@@ -74,5 +78,12 @@ div#beer-list {
 h2.brewery-desc {
     
     align-items: center;
+}
+
+.card-space:nth-child(even) {
+    background-color: rgb(221, 221, 221);
+}
+.card-space:hover {
+    background-color: rgb(139, 139, 139);
 }
 </style>
