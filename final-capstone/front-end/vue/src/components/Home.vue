@@ -81,12 +81,15 @@ export default {
     margin-bottom: 2rem;
 }
 
-/* .brewery-list {
+.brewery-list {
+    padding-right: 25px;
+    padding-left: 25px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
+    flex-wrap: wrap;
+    grid-gap: 10px 200px;
+    align-self: space-around;
+    justify-content: space-around;
+} 
 
 /* .card-space:hover {
     color: #311D00;
