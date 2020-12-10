@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-/* .btn {
+ .btn {
     font-family: Arial, Helvetica, sans-serif;
     font-size: .9rem;
     display: inline-block;
@@ -63,5 +63,5 @@ img.company-logo {
     background-color: #d3d3d3;
     margin-bottom: 2rem;
     border-radius: 5px;
-} */
+} 
 </style>

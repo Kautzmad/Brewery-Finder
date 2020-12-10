@@ -62,7 +62,7 @@ methods: {
   submitReview(newReview){
     newReview.createDate =  moment().format("YYYY-MMMM-do, h:mm:ss a");
 
-  appServices.addReview(newReview).then(response =>{
+  appServices.addReview(this.newReview).then(response =>{
         if(response.status === 201){
           alert(
             "Review successfully added"
