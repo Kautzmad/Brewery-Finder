@@ -58,6 +58,7 @@ a, li {
   color: white;
   padding: 16px;
   text-decoration: none;
+  transition-duration: 500ms;
 }
 
 a:hover {
