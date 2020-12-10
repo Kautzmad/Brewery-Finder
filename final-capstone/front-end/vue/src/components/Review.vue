@@ -20,7 +20,7 @@
         <textarea id="description" v-model="newReview.description"/>
       </div>
       <div>
-        <button v-on:click.prevent="submitReview(newReview)" type="submit">Submit</button>
+        <button v-on:click.prevent="submitReview()" type="submit">Submit</button>
       </div>
     </form>
   
@@ -31,7 +31,8 @@
 
 <script>
 import appServices from "../services/ApplicationServices";
-import moment from "moment";
+/* import moment from "moment";
+ */
 import ReviewCard from './ReviewCard.vue';
 
 export default {
@@ -54,13 +55,13 @@ data(){
       rating: 0,
       userId: this.$store.state.user.id,
       beerId: this.$route.params.id,
-      createDate: null
+      /* createDate: null */
     }
   };
 },
 methods: {
-  submitReview(newReview){
-    newReview.createDate =  moment().format("YYYY-MMMM-do, h:mm:ss a");
+  submitReview(){
+    /* newReview.createDate =  moment().format("YYYY-MMMM-do, h:mm:ss a"); */
 
   appServices.addReview(this.newReview).then(response =>{
         if(response.status === 201){
