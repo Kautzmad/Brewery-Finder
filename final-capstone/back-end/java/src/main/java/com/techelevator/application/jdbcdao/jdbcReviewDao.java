@@ -80,7 +80,7 @@ public class jdbcReviewDao implements reviewDao{
 		review.setName(row.getString("name"));
 		review.setDescription(row.getString("description"));
 		review.setRating(row.getInt("rating"));
-		review.setCreateTime(row.getTimestamp("create_date").toLocalDateTime());
+		//review.setCreateTime(row.getTimestamp("create_date").toLocalDateTime());
 		review.setBeerId(row.getLong("beer_id"));
 		review.setUserId(row.getLong("user_id"));
 		return review;
