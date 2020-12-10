@@ -1,5 +1,29 @@
 <template>
   <div>
+    <form>
+      <div  class="form-element">
+        <label for="name">Title:</label>
+        <input id="name" type="text" v-model="newReview.name" />
+      </div>
+      <div  class="form-element">
+        <label for="rating">Rating:</label>
+        <select id="rating" v-model.number="newReview.rating">
+          <option value="1">1 Beer</option>
+          <option value="2">2 Beers</option>
+          <option value="3">1 Beers</option>
+          <option value="4">1 Beers</option>
+          <option value="5">1 Beers</option>
+        </select>
+      </div>
+      <div class="form-element">
+        <label for="description">Review: </label>
+        <textarea id="description" v-model="newReview.description"/>
+      </div>
+      <div>
+        <button v-on:click.prevent="submitReview(newReview)" type="submit">Submit</button>
+      </div>
+    </form>
+  
     <review-card v-for="review in reviews" v-bind:key="review.id" v-bind:review="review"/>
   </div>
 
@@ -24,26 +48,20 @@ data(){
   return {
     reviews: [],
     isLoading: true,
-    /* review: {
+    newReview: {
       name: "",
       description: "",
-      rating: "",
-      userId: 0,
-      beerId: 0,
+      rating: 0,
+      userId: this.$store.state.user.id,
+      beerId: this.$route.params.id,
       createDate: null
-    } */
+    }
   };
 },
 methods: {
-  submitReview(){
-    const newReview = {
-      beerId: Number(this.$route.params.id),
-      name: this.review.name,
-      descrption: this.review.description,
-      rating: this.review.rating,
-      userId: this.review.userId,
-      createDate: moment().format("MMM Do YYYY")
-    };
+  submitReview(newReview){
+    newReview.createDate =  moment().format("YYYY-MMMM-do, h:mm:ss a");
+
   appServices.addReview(newReview).then(response =>{
         if(response.status === 201){
           alert(
