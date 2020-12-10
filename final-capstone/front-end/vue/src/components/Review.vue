@@ -10,9 +10,9 @@
         <select id="rating" v-model.number="newReview.rating">
           <option value="1">1 Beer</option>
           <option value="2">2 Beers</option>
-          <option value="3">1 Beers</option>
-          <option value="4">1 Beers</option>
-          <option value="5">1 Beers</option>
+          <option value="3">3 Beers</option>
+          <option value="4">4 Beers</option>
+          <option value="5">5 Beers</option>
         </select>
       </div>
       <div class="form-element">
