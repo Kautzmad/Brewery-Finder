@@ -111,9 +111,12 @@ export default {
 <style scoped>
 * {
   padding: 0px;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin: 0;
   box-sizing: border-box;
+}
+
+#background {
+  height: 87vh;
 }
 
 input {
@@ -121,20 +124,17 @@ input {
 }
 
 h1 {
-  margin-top: -5px;
-  margin-bottom: -20px;
-  margin-left: -12px;
-  font-size: 25px;
+  margin: -5px 0px -20px -12px;
+  font-size: 2rem;
 }
 
 form.form-register {
-  top: 200px;
   position: absolute;
   right: 0;
   margin: 20px;
   max-width: 300px;
   padding: 16px;
-  background-color: gray;
+  background-color: #f2f2f2;
   border-radius: 5px;
   padding-left: 30px;
 } 
@@ -157,9 +157,9 @@ form.form-register {
   background-color: #FF3C00;
   border: none;
   font-size: 15px;
-  margin-left: 30px;
-  margin-top: 10px;
-  width: 70px;
+  padding: 3px;
+  margin: 10px 0px 0px 10px;
+  border-radius: 3px;
 }
 
 .create-account:hover {

@@ -15,6 +15,10 @@
 </template>
 
 <style scoped>
+* {
+  padding: 0;
+  margin: 0;
+}
 
 li {
   float: right;
@@ -24,8 +28,8 @@ ul {
   opacity: 75%;
   background-color: rgb(59, 64, 75);
   position: fixed;
-  top: 0;
-  width: 80%;
+  top: 1rem;
+  width: 50%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
@@ -39,6 +43,8 @@ div#app {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: -8px;
+  margin-top: -20px;
+  
 }
 
 .navbar {
@@ -59,6 +65,7 @@ a, li {
   padding: 16px;
   text-decoration: none;
   transition-duration: 500ms;
+  border-radius: 5px;
 }
 
 a:hover {
@@ -76,7 +83,5 @@ li a:hover {
 
 #logo { 
   max-width: 33%;
-  margin-top: 1rem;
-  margin-left: 1rem;
 }
 </style>

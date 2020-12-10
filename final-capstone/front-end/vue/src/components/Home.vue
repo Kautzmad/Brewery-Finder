@@ -61,7 +61,7 @@ export default {
 
 .headings h1 {
     font-size: 4rem;
-    margin-top: -12rem;
+    margin-top: -2rem;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -70,14 +70,14 @@ export default {
     font-size: 2rem;
 }
 
-.popular {
+h3 {
     color: #ff7300;
     text-shadow: 2px 2px 15px black;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 3rem;
-    margin-top: 6rem;
+    margin-top: 11rem;
     margin-bottom: 2rem;
 }
 
@@ -90,15 +90,6 @@ export default {
     align-self: space-around;
     justify-content: space-around;
 } 
-
-/* .card-space:hover {
-    color: #311D00;
-    
-} */
-
-/* .card-space:visited {
-    color: gray;
-} */
 
 div.loading {
     text-align: center;

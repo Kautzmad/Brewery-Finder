@@ -90,16 +90,31 @@ export default {
   margin: 0;
 }
 
+#login {
+  height: 87vh;
+}
+
 form.form-signin {
   position: absolute;
   right: 0;
   margin: 20px;
   max-width: 300px;
   padding: 16px;
-  background-color: gray;
   border-radius: 5px;
   padding-left: 30px;
 } 
+
+h1 {
+  margin: -5px 0px -20px 0px;
+  font-size: 2rem;
+}
+
+.form-signin {
+  background-color: #f2f2f2;
+  background-position: center;
+  background-size: 100vh;
+  backdrop-filter: blur(5px);
+}
 
 #username.form-control {
     font-size: 50;
@@ -130,6 +145,8 @@ a.need-account {
   font-size: 15px;
   margin-left: 20px;
   width: 70px;
+  padding: 3px;
+  border-radius: 3px;
 }
 
 .submit:hover {
