@@ -123,7 +123,7 @@ VALUES ('Fortitude', 6.8, 20,
  silky-soft body, with just enough residual sweetness to keep the magic hidden. Intense orange peel aromatics, 
  pillowy puffs of wheat and oats, and a refreshing subtle herbal spice in the finish. Build up your Fortitude and
   watch the days fly by.', 
-  'https://bookhouse-brewing-llc.square.site/uploads/1/2/6/2/126287558/s706640680989578270_p367_i1_w1080.jpeg'
+  'https://bookhouse-brewing-llc.square.site/uploads/1/2/6/2/126287558/s706640680989578270_p365_i1_w1080.jpeg'
  , false, 1);
  
  -- Boss Dog Brewing
@@ -590,27 +590,51 @@ INSERT INTO beers (name, abv, type, info, img_url, is_active, brewery_id) VALUES
 
 ------ REVIEW INSERTS --------------------
 
-INSERT INTO reviews (name, description, rating, create_date) VALUES
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
 ('Greatest Beer Ever',
-'This is the best Xmas beer in the world!',
-5,now());
-INSERT INTO reviews (name, description, rating, create_date) VALUES
-('Ho Ho Drunk',
-'I had 6 of these already and Im wasted, Merry Christmas to all!!!!!',
-4,now());
-INSERT INTO reviews (name, description, rating, create_date) VALUES
-('Twas the night before Xmas',
-'Or maybe it was the night after, I blacked out both so Im not sure',
-5,now());
-INSERT INTO reviews (name, description, rating, create_date) VALUES
-('Still better than Al Capone',
-'Im not sure which is cooler the man or the beer! ',
-5,now());
+'This is the best beer in the world!',
+5,now(), 1);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough Oats',
+'I didnt get my oats for this. 4/10 would not reccomend',
+2, now(), 1);
 
-INSERT INTO reviews (name, description, rating, create_date)
-VALUES ('Christmas magic in a a bottle',
-'Just okay',
-5,now());
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('BLM',
+'Yes',
+5,now(), 2);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough Black',
+'I didnt get my Black for this. 4/10 would not reccomend',
+2,now(), 2);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Whoops! All Down Under!',
+'Pretty good. Not too sweet. Not too salty. I think thats good for a beer, right?',
+5,now(), 3);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough down under',
+'I didnt get my down for this. 6/10 would not reccomend',
+3,now(), 3);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Fills me with Determi-wait, no, Fortitude',
+'Seeing an outdated Undertale reference fills me with Fortitude',
+4,now(), 4);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough Fortitude',
+'I didnt get my fortitude for this. 4/10 would not reccomend',
+2,now(), 4);
+
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Dog Pound Brown is ',
+'Yes',
+5,now(), 5);
+INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
+('Not enough dog',
+'I didnt get my dog for this. 4/10 would not reccomend',
+2,now(), 5);
+
 
 
 
