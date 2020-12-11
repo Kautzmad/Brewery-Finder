@@ -89,6 +89,11 @@ public class AuthenticationController {
 		return userDAO.getUserById(userId);
 	}
 	
+	/****************************************
+	 * Request Mapping getAllUsers
+	 *
+	 ***/
+	
 	@RequestMapping(path="/users", method = RequestMethod.GET)
 	public List<User> getAllUsers() {
 		List<User> userList = userDAO.findAll();
