@@ -107,7 +107,7 @@ public class AuthenticationController {
 	 *
 	 ***/
 	
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+//	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(path = "/users/{userId}", method = RequestMethod.DELETE)
 	public void deleteUser(@PathVariable Long userId) throws NotAllowedException{
 		userDAO.deleteUser(userId);

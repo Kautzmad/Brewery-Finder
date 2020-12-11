@@ -64,20 +64,13 @@ export default {
 </script>
 <style scoped>
 div#details {
-    margin-top: 50px;
+    margin-top: 100px;
     text-align: center;
     background-color: white;
     margin-left: 65px; margin-right: 65px;
     padding-top: 15px; padding-bottom: 15px; padding-left: 150px; padding-right: 150px;
 }
-div#background {
-    background-image: url('../img/cle-sign-bg.jpg');
-    position: relative;
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-bottom: 150px; padding-top: 150px;
-}
+
 img.company-logo, img.beer-logo, img.beer-logo-404 {
     background-color: rgb(209, 209, 209);
     border-radius: 5%;
