@@ -24,13 +24,18 @@ export default {
         return http.get(`/reviews/${beerId}`)
     },
     addReview(review){
-        return http.post(`/reviews`, review);
+        return http.post(`/reviews`, review)
     },
     getUserByID(id){
-        return http.get(`users/${id}`);
+        return http.get(`users/${id}`)
     },
     createNewBrewery(brewery){
         return http.post(`/breweries`, brewery)
+    },
+    getAllUsers(){
+        return http.get(`/users`)   
+    },
+    getBreweryByUserId(id){
+        return http.get(`/users/${id}/breweries`)
     }
-
 }

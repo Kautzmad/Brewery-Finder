@@ -3,6 +3,7 @@
     <router-link id="logo" v-bind:to="{ name: 'home' }"><img id="logo" src="./assets/BrewFootball.png"/></router-link>
     <nav class="navbar">
       <ul class="nav-links">
+        <li><router-link id="admin" v-bind:to="{ name: 'admin' }" v-if="this.$store.state.user.username == 'admin'">Admin Features</router-link></li>
         <li><router-link id="browse-brewery" v-bind:to="{ name: 'breweries' }">Browse Breweries</router-link></li>
         <li><router-link id="browse-beer" v-bind:to="{ name: 'beers' }">Browse Beers</router-link></li>
         <li><router-link id="browse-random" v-bind:to="{ name: 'home' }">Random Beer</router-link></li>

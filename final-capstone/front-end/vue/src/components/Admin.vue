@@ -52,6 +52,24 @@
                  v-on:click.prevent="addNewBrewery()" >Submit</button>
             </div>
         </form>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>UserId</th>
+                       <!--  <th>Number of breweries</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="user in users" v-bind:key="user.id" v-bind:user="user">
+                        <td>{{user.username}}<td/>
+                        <td>{{user.id}}<td/>
+                        <!-- <td>{{getBreweryByUserId(user.id)}}<td/> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </template>
 
@@ -69,6 +87,7 @@ export default {
 
 data(){
     return{
+    users: [],
     newBrewery: {
       name: "",
       address: "",
@@ -94,12 +113,30 @@ methods:{
           );
         }  
         })
+    },
+    getBreweryByUserId(id){
+        appServices.getBreweryByUserId(id).then(response =>{
+            
+            let counter
+
+            response.data.forEach(element => {
+                console.log(element)
+                counter ++
+            });
+            
+            return counter
+        })
     }
+},
+created(){
+    appServices.getAllUsers().then(response=> {
+        this.users = response.data;
+        })
+     }
+    
 }
-}
-
-
 </script>
+
 <style scoped>
 
 </style>
