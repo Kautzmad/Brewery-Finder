@@ -5,7 +5,22 @@
                 <span id="userName" v-if="!review.userId">Anonymous</span>
             </h1>
         </div>
-        <h2>{{review.rating}}/5</h2>
+        <div class="rating">
+            <img
+                src="../img/full-beer.png"
+                v-bind:title="review.rating + ' Beer Review'"
+                class="ratingStar"
+                v-for="n in review.rating"
+                v-bind:key="n"
+            />
+            <img
+                src="../img/empty-beer.png"
+                v-bind:title="review.rating + ' Beer Review'"
+                class="ratingStar"
+                v-for="n in 5 - review.rating"
+                v-bind:key="n"
+            />
+        </div>
         <h2>{{review.description}}</h2>
     </div>
 </template>
@@ -70,4 +85,16 @@ img.company-logo {
 .header {
     margin-top: 10px;
 }
+
+div.rating {
+  height: 2rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.5rem;
+}
+
+div.rating img {
+  height: 100%;
+}
+
 </style>
