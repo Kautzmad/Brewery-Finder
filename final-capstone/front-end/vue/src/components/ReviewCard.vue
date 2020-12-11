@@ -1,6 +1,6 @@
 <template>
     <div class = "card">
-        <h1>{{review.name}} Reviewed by:<span id="userName" v-if="review.userId">{{user.userName}}</span>
+        <h1>{{review.name}} Reviewed by: <span id="userName" v-if="review.userId">{{user.username}}</span>
         <span id="userName" v-if="!review.userId">Anonymous</span>
         </h1>
         <h2>{{review.rating}}/5</h2>
@@ -19,7 +19,7 @@ export default {
        } 
     },
     created(){
-        appServices.getUserByID(this.review.id).then(response =>{
+        appServices.getUserByID(this.$store.state.user.id).then(response =>{
             this.user = response.data;
         })
     }
