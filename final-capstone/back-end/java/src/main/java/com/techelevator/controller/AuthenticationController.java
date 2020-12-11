@@ -85,6 +85,8 @@ public class AuthenticationController {
 	public User getUserByID(@PathVariable Long userId) {
 		return userDAO.getUserById(userId);
 	}
+	
+	
 
     /**
      * Object to return as body in JWT Authentication.

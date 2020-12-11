@@ -10,6 +10,7 @@ import Beers from '../components/Beers'
 import BreweryDetails from '../components/BreweryDetails'
 import BeerDetails from '../components/BeerDetails'
 import Review from '../components/Review'
+import Admin from '../components/Admin'
 
 Vue.use(Router)
 
@@ -31,7 +32,8 @@ const router = new Router({
       name: 'home',
       component: Home,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       }
     },
     {
@@ -39,7 +41,8 @@ const router = new Router({
       name: "login",
       component: Login,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       }
     },
     {
@@ -47,7 +50,8 @@ const router = new Router({
       name: "logout",
       component: Logout,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       }
     },
     {
@@ -55,7 +59,8 @@ const router = new Router({
       name: "register",
       component: Register,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       }
     },
     {
@@ -63,7 +68,8 @@ const router = new Router({
     name: "breweries",
     component: Breweries,
     meta: {
-      requiresAuth: false
+      requiresAuth: false,
+      requiresAdmin: false
     },
     },
     {
@@ -71,7 +77,8 @@ const router = new Router({
       name: "beers",
       component: Beers,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       },
     },
     {
@@ -79,7 +86,8 @@ const router = new Router({
       name: "brewery-details",
       component: BreweryDetails,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       }
     },
     {
@@ -87,7 +95,8 @@ const router = new Router({
       name: 'beer-details',
       component: BeerDetails,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       }
     },
     {
@@ -95,9 +104,19 @@ const router = new Router({
       name: "reviews",
       component: Review,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
+        requiresAdmin: false
       },
     },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin,
+      meta: {
+        requiresAuth: true,
+        requiresAdmin: true
+      }
+    }
  
   ]
 })
@@ -105,11 +124,18 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // Determine if the route requires Authentication
   const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
+  const requiresAdmin = to.matched.some(x => x.meta.requiresAdmin)
 
   // If it does and they are not logged in, send the user to "/login"
-  if (requiresAuth && store.state.token === '') {
+  if ((requiresAuth || requiresAdmin) && store.state.token === '') {
     next("/login");
-  } else {
+  }else if (requiresAdmin && store.state.user.role != 'ROLE_ADMIN') {
+    alert (
+      "Sorry, but you don't have the privileges to view this page.",
+      "Please log in as an admin to proceed."
+    )
+    next("/")
+  }else {
     // Else let them go to their next destination
     next();
   }
