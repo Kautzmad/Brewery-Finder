@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <form v-if="this.$store.state.user.id > 0">
       <div  class="form-element">
         <label for="name">Title:</label>
         <input id="name" type="text" v-model="newReview.name" />
