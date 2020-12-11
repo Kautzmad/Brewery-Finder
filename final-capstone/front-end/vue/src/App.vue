@@ -30,7 +30,7 @@ ul {
   background-color: rgb(59, 64, 75);
   position: fixed;
   top: 1rem;
-  width: 50%;
+  width: 75%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }

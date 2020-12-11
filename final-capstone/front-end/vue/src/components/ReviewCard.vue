@@ -1,9 +1,9 @@
 <template>
     <div class = "card">
         <div class="header">
-            <h1>{{review.name}} Reviewed by: <span id="userName" v-if="review.userId">{{user.username}}</span>
-                <span id="userName" v-if="!review.userId">Anonymous</span>
-            </h1>
+            <h3>{{review.name}}  -  <span id="username" v-if="review.userId">{{user.username}}</span>
+                <span id="username" v-if="!review.userId">Anonymous</span>
+            </h3>
         </div>
         <div class="rating">
             <img
@@ -21,7 +21,10 @@
                 v-bind:key="n"
             />
         </div>
-        <h2>{{review.description}}</h2>
+        <div class="review-desc">
+        <img class ="mug" src='../assets/beermug.png'/>
+        <p class="desc">{{review.description}}</p>
+        </div>
     </div>
 </template>
 
@@ -95,6 +98,31 @@ div.rating {
 
 div.rating img {
   height: 100%;
+}
+
+.review-desc {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mug {
+    width: 75px;
+    border-radius: 50%;
+    margin-top: 50px; margin-right: 15px;
+}
+
+.desc {
+    width: 100%;
+    background-image: url('../assets/chat-bubble.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 150px;
+    padding: 50px;
+}
+
+#username {
+    color: rgb(0, 76, 190);
+    font-size: 10pt;
 }
 
 </style>

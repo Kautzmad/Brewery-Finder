@@ -97,6 +97,7 @@
                         <td><button type="button" class="deleteBtn" v-on:click="deleteUser(user)">Delete</button></td>
                         <!-- <td>{{getBreweryByUserId(user.id)}}<td/> -->
                     </tr>
+                    <p/>
                 </tbody>
             </table>
         </div>
@@ -177,19 +178,14 @@ created(){
 
 <style scoped>
 div#admin-page {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-table {
-    background-color: white;
-    margin: 25px;
-    padding: 15px;
-    border-radius: 2.5%;
-    border-collapse: collapse;
-}
+
 td {
     padding: 10px; 
     width: 150px;
@@ -215,5 +211,12 @@ th {
 }
 #user-table > tbody > tr > td {
     border-bottom-color: white;
+}
+table {
+    background-color: white;
+    margin: 25px;
+    padding: 15px;
+    border-radius: 2.5%;
+    border-collapse: collapse;
 }
 </style>
