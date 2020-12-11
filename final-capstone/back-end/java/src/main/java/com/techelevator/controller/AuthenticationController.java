@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
@@ -21,6 +22,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.techelevator.application.controller.NotAllowedException;
 import com.techelevator.security.dao.UserDAO;
 import com.techelevator.security.jwt.JWTFilter;
 import com.techelevator.security.jwt.TokenProvider;
@@ -84,6 +86,17 @@ public class AuthenticationController {
 	@RequestMapping(path="/users/{userId}", method = RequestMethod.GET)
 	public User getUserByID(@PathVariable Long userId) {
 		return userDAO.getUserById(userId);
+	}
+	
+	/****************************************
+	 * Request Mapping to delete a user
+	 *
+	 ***/
+	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@RequestMapping(path = "/users/{userId}", method = RequestMethod.DELETE)
+	public void deleteUser(@PathVariable Long userId) throws NotAllowedException{
+		userDAO.deleteUser(userId);
 	}
 
     /**

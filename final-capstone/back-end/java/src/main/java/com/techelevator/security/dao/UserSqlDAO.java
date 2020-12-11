@@ -52,6 +52,8 @@ public class UserSqlDAO implements UserDAO {
         return users;
     }
 
+    // FIND USER BY ID
+    
     @Override
     public User findByUsername(String username) throws UsernameNotFoundException {
         for (User user : this.findAll()) {
@@ -60,6 +62,14 @@ public class UserSqlDAO implements UserDAO {
             }
         }
         throw new UsernameNotFoundException("User " + username + " was not found.");
+    }
+    
+    // DELETE A USER
+    
+    @Override
+    public void deleteUser(Long userId) {
+    	String sqlDeleteAUser = "DELETE FROM users WHERE user_id = ?";
+    	jdbcTemplate.update(sqlDeleteAUser, userId);
     }
 
     @Override
