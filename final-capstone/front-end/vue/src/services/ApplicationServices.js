@@ -37,5 +37,8 @@ export default {
     },
     getBreweryByUserId(id){
         return http.get(`/users/${id}/breweries`)
+    },
+    deleteUser(id){
+        return http.delete(`/users/${id}`)
     }
 }
