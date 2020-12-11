@@ -27,7 +27,7 @@
           <div class="col-75">
             <textarea id="description" v-model="newReview.description"/>
           </div>
-          <button class="submitBtn" v-on:click.prevent="submitReview()" type="submit">Submit</button>
+          <button class="submitBtn" onclick="window.location.reload();" v-on:click.prevent="submitReview()" type="submit">Submit</button>
       </div>
       </div>
     </form>
@@ -103,8 +103,9 @@ label {
 }
 
 .form-element {
-  border-radius: 5px;
-  padding: 20px;
+  height: 220px;
+  background-color: #ffffff;
+  width: auto;
 }
 
 .col-75 {

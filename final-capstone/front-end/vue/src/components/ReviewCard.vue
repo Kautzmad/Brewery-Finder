@@ -1,8 +1,10 @@
 <template>
     <div class = "card">
-        <h1>{{review.name}} Reviewed by: <span id="userName" v-if="review.userId">{{user.username}}</span>
-        <span id="userName" v-if="!review.userId">Anonymous</span>
-        </h1>
+        <div class="header">
+            <h1>{{review.name}} Reviewed by: <span id="userName" v-if="review.userId">{{user.username}}</span>
+                <span id="userName" v-if="!review.userId">Anonymous</span>
+            </h1>
+        </div>
         <h2>{{review.rating}}/5</h2>
         <h2>{{review.description}}</h2>
     </div>
@@ -63,5 +65,9 @@ img.company-logo {
     background-color: #d3d3d3;
     margin-bottom: 2rem;
     border-radius: 5px;
+    margin-top: 10px;
 } 
+.header {
+    margin-top: 10px;
+}
 </style>
