@@ -40,7 +40,7 @@ public class breweryController {
 	}
 	
 	// Add a new brewery
-	// This needs to limited to just "Brewer" users
+	// This needs to limited to just "Admin" users
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(path = "/breweries", method = RequestMethod.POST)
 	public void addNewBrewery(@RequestBody Brewery aBrewery) throws NotAllowedException {

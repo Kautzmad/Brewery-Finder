@@ -129,7 +129,7 @@ router.beforeEach((to, from, next) => {
   // If it does and they are not logged in, send the user to "/login"
   if ((requiresAuth || requiresAdmin) && store.state.token === '') {
     next("/login");
-  }else if (requiresAdmin && store.state.user.role != 'ROLE_ADMIN') {
+  }else if (requiresAdmin && store.state.user.username !== 'admin') {
     alert (
       "Sorry, but you don't have the privileges to view this page.",
       "Please log in as an admin to proceed."
