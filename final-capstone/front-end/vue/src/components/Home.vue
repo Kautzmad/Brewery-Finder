@@ -6,6 +6,7 @@
             </div>
 
             <div id="body">
+
                 <h3 class="popular">Popular Breweries</h3>
                 <div class="loading" v-if="isLoading">
                 <img src="../img/beerClink.gif" />
@@ -96,4 +97,6 @@ div.loading {
     float: center;
     z-index: 998;
 }
+
+
 </style>

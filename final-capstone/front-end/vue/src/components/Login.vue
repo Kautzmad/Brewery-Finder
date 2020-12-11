@@ -97,7 +97,7 @@ export default {
 form.form-signin {
   position: absolute;
   right: 0;
-  margin: 20px;
+  margin: 5vh;
   max-width: 300px;
   padding: 16px;
   border-radius: 5px;
@@ -118,14 +118,14 @@ h1 {
 
 #username.form-control {
     font-size: 50;
-    margin-right: 1%;
-    margin-top: 5px;
+    margin-left: .5rem;
+    margin-top: 1rem;
 }
 
 #password.form-control {
   font-size: 50;
-  margin-right: 10%;
-  margin-top: 5px;
+  margin-left: .7rem;
+  margin-top: 1rem;
 }
 
 a.need-account {
@@ -152,5 +152,9 @@ a.need-account {
 .submit:hover {
   background-color: #311D00;
   color: white;
+}
+
+.alert {
+  margin-top: 1rem;
 }
 </style>
