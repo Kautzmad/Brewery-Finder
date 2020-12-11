@@ -8,4 +8,11 @@ To run:
 `chmod u+r+x create_capstone-db.sh`
 `./create_capstone-db.sh`
 
+above ^ works on MacOS 
 
+using Ubuntu you can run this by doing a 
+
+this might also work on the tech elevator laptops, 
+`sh ./create_capstone-db.sh`
+
+did not think this would be such a hassle
