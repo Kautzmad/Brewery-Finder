@@ -28,6 +28,9 @@ export default {
     },
     getUserByID(id){
         return http.get(`users/${id}`);
+    },
+    createNewBrewery(brewery){
+        return http.post(`/breweries`, brewery)
     }
 
 }
