@@ -49,5 +49,6 @@ img.company-logo {
     background-color: #d3d3d3;
     margin-bottom: 2rem;
     border-radius: 5px;
+     box-shadow: inset 0px 0px 10px #000;
 }
 </style>

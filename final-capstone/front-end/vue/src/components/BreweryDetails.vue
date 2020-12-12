@@ -148,6 +148,7 @@ span.beer-type {
 .card-space {
     border-radius: 15px;
     margin-bottom: 10vh;
+    box-shadow: inset 0px 0px 10px #000;
 }
 
 .card-space:nth-child(odd) {

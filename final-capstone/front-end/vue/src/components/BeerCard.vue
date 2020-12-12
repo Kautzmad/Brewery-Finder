@@ -46,6 +46,7 @@ img.company-logo {
 }
 div#card {
     margin-left: 150px; margin-right: 150px;
+   
 }
 span.beer-type {
     color:rgb(65, 65, 65);
@@ -65,7 +66,9 @@ a {
     color: inherit;
 }
 a:hover {
-    background-color: gray;
+    background-color: gray; 
+    box-shadow: inset 0px 0px 10px 10px #000;
+
 }
 
 .container {
