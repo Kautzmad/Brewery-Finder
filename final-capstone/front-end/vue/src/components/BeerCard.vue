@@ -77,8 +77,8 @@ a:hover {
 }
 
 .image {
-  width: 33%;
-  height: 33%;
+  width: 17%;
+  height: 17%;
   align-items: center;
 }
 

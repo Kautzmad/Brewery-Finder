@@ -1,6 +1,6 @@
 <template>
     <div id='admin-page'>
-        <h1>Please Input Brewery Information</h1>
+        <h1>New Brewery: Please Input Brewery Information</h1>
         <form>
             <table class='admin-table' id='brewery-add'>
                 <thead></thead>
@@ -101,6 +101,27 @@
                 </tbody>
             </table>
         </div>
+        <div>
+            <table class="admin-table" id="brewery-table">
+                <thead>
+                    <tr>
+                        <th>Brewery</th>
+                        <th>BreweryID</th>
+                        <th></th>
+                       <!--  <th>Number of breweries</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="brewery in breweries" v-bind:key="brewery.id" v-bind:brewery="brewery">
+                        <td>{{brewery.name}}</td>
+                        <td>{{brewery.breweryId}}</td>
+                        <td><button type="button" class="deleteBtn" v-on:click="deleteBrewery(brewery)">Delete</button></td>
+                        <!-- <td>{{getBreweryByUserId(user.id)}}<td/> -->
+                    </tr>
+                    <p/>
+                </tbody>
+            </table>
+        </div>
     </div>
 </template>
 
@@ -119,6 +140,7 @@ export default {
 data(){
     return{
     users: [],
+    breweries: [],
     newBrewery: {
       name: "",
       address: "",
@@ -165,14 +187,25 @@ methods:{
                 window.location.reload();
             })
         }
+    },
+    deleteBrewery(brewery){
+        if (confirm(`Are you sure you want to delete ${brewery.name}?`)) {
+            appServices.deleteBrewery(brewery.breweryId).then(response => {
+                console.log(response)
+                window.location.reload();
+            })
+        }
     }
 },
 created(){
     appServices.getAllUsers().then(response=> {
         this.users = response.data;
-        })
+        }),
+
+    appServices.getBreweries().then(response => {
+         this.breweries = response.data;
+     })
      }
-    
 }
 </script>
 
@@ -213,6 +246,13 @@ th {
     border-bottom-color: white;
 }
 table {
+    background-color: white;
+    margin: 25px;
+    padding: 15px;
+    border-radius: 2.5%;
+    border-collapse: collapse;
+}
+h1 {
     background-color: white;
     margin: 25px;
     padding: 15px;

@@ -40,5 +40,8 @@ export default {
     },
     deleteUser(id){
         return http.delete(`/users/${id}`)
+    },
+    deleteBrewery(id){
+        return http.delete(`breweries/${id}`)
     }
 }
