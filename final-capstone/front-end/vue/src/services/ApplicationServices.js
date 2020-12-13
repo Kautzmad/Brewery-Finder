@@ -43,5 +43,17 @@ export default {
     },
     deleteBrewery(id){
         return http.delete(`breweries/${id}`)
+    },
+    addNewBeer(beer){
+        return http.post(`/beers`, beer)
+    },
+    deleteBeer(id){
+        return http.delete(`beers/${id}`)
+    },
+    updateBeer(beer){
+        return http.put(`/beers`, beer)
+    },
+    updateBrewery(brewery){
+        return http.put(`/breweries`, brewery)
     }
 }
