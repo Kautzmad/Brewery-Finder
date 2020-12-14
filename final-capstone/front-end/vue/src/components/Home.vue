@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="brewery-list">
-                <brewery-card class="card-space" v-for="brewery in randomBreweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
+                <brewery-card class="card-space" v-for="brewery in randomBreweries" v-bind:key="brewery.breweryId" v-bind:brewery="brewery"/>
                 </div>
 
             </div>
@@ -49,7 +49,9 @@ export default {
                 applicationServices.getBreweryByID(this.randomBrewery()).then(response => {
                     let random = response.data
                     console.log(random)
-                    if (this.randomBreweries.some(e => e['breweryId'] != random.breweryId) || random.breweryId != null){
+                    if (this.randomBreweries.some(e => e['breweryId'] == random.breweryId) || random.breweryId == null){
+                        i--
+                    }else {
                         this.randomBreweries.push(random)
                     }
                 })
