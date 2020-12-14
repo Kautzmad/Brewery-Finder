@@ -1,4 +1,5 @@
 <template>
+<div>
 <router-link v-bind:to="{ name: 'brewery-details', params:{id: this.brewery.breweryId} }">
     <div id="card" data-aos="fade-down">
         <img class="company-logo" v-bind:src="this.brewery.breweryLogoUrl"/>
@@ -6,8 +7,13 @@
         <a href="#" class="btn">{{this.brewery.name}}</a>
     </div>
 </router-link>
+    
+</div>
 </template>
+
 <script>
+//import applicationServices from '../services/ApplicationServices'
+
 export default {
     props: ["brewery"], 
 }
