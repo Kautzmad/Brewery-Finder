@@ -176,6 +176,15 @@ export default {
     border-radius: 15px;
     box-shadow: inset 0px 0px 10px #000;
 }
+@keyframes logo{
+   0%{opacity: 0%; width: 0%;}
+   20%{opacity: 20%; width: 20%;}
+   40%{opacity: 40%; width: 40%;}
+   60%{opacity: 60%; width: 60%;}
+   80%{opacity: 80%; width: 80%;}
+   100%{opacity: 100%; width: 100;}
+}
+
 
 img.company-logo {
     grid-column: 1/2;
@@ -186,6 +195,9 @@ img.company-logo {
     justify-self: center;
     align-self: center;
     margin-top: 2vh;
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
 
 .brewery-name {
@@ -299,5 +311,6 @@ input[type=submit]:hover {
   border-radius: 4px;
   cursor: pointer;
 }
+
 
 </style>
