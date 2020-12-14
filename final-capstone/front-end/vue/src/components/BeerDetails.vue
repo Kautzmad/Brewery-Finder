@@ -17,6 +17,35 @@
             <review/>    
     </div>
     </div>
+    <div>
+    <form>
+        <label for="beerName">Name</label>
+        <input type="text" id="beerName" name="firstname" placeholder="Name of the beer..">
+
+        <label for="ABV">ABV</label>
+        <input type="text" id="ABV" name="lastname" placeholder="ABV..">
+
+        <label for="IBU">IBU</label>
+        <input type="text" id="IBU" name="lastname" placeholder="IBU..">
+
+        <label for="Type">Type</label>
+        <input type="text" id="type" name="lastname" placeholder="Type..">
+
+        <label for="Type">Info</label>
+        <input type="text" id="Info" placeholder="Info..">
+
+        <label for="acitve">Active Status</label>
+        <select id="active" name="active">
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+        </select>
+
+        <label for="Type">Brewery id</label>
+        <input type="text" id="Info" placeholder="Brewery ID..">
+    
+        <input type="submit" value="Submit">
+    </form>
+    </div>
 </div>
 </template>
 <script>
@@ -78,10 +107,6 @@ img.company-logo, img.beer-logo, img.beer-logo-404 {
     border-radius: 5%;
     width: 200px;
     box-shadow: inset 0px 0px 10px #000;
-    transition: 300ms;
-}
-img.company-logo:hover{
-    width: 225px;
 }
 span.beer-type {
     color:rgb(65, 65, 65);
@@ -93,4 +118,36 @@ div#beer-info {
 h2.beer-desc {
     align-items: center;
 }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 </style>
