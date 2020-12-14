@@ -33,7 +33,6 @@ const router = new Router({
       component: Home,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       }
     },
     {
@@ -42,7 +41,6 @@ const router = new Router({
       component: Login,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       }
     },
     {
@@ -51,7 +49,6 @@ const router = new Router({
       component: Logout,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       }
     },
     {
@@ -60,7 +57,6 @@ const router = new Router({
       component: Register,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       }
     },
     {
@@ -69,7 +65,6 @@ const router = new Router({
     component: Breweries,
     meta: {
       requiresAuth: false,
-      requiresAdmin: false
     },
     },
     {
@@ -78,7 +73,6 @@ const router = new Router({
       component: Beers,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       },
     },
     {
@@ -87,7 +81,6 @@ const router = new Router({
       component: BreweryDetails,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       }
     },
     {
@@ -96,7 +89,6 @@ const router = new Router({
       component: BeerDetails,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       }
     },
     {
@@ -105,16 +97,25 @@ const router = new Router({
       component: Review,
       meta: {
         requiresAuth: false,
-        requiresAdmin: false
       },
     },
     {
       path: '/admin',
       name: 'admin',
       component: Admin,
+      beforeEnter: (to, from, next) =>{
+        if (store.state.user.authorities.some(e => e['name'] === 'ROLE_ADMIN')){
+          next()
+        } else{
+          alert (
+            "Sorry, but you don't have the privileges to view this page.",
+            "Please log in as an admin to proceed."
+          )
+          next(from)
+        }
+      },
       meta: {
         requiresAuth: true,
-        requiresAdmin: true
       }
     }
  
@@ -124,17 +125,10 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // Determine if the route requires Authentication
   const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
-  const requiresAdmin = to.matched.some(x => x.meta.requiresAdmin)
 
   // If it does and they are not logged in, send the user to "/login"
-  if ((requiresAuth || requiresAdmin) && store.state.token === '') {
+  if ((requiresAuth) && store.state.token === '') {
     next("/login");
-  }else if (requiresAdmin && store.state.user.username !== 'admin') {
-    alert (
-      "Sorry, but you don't have the privileges to view this page.",
-      "Please log in as an admin to proceed."
-    )
-    next("/")
   }else {
     // Else let them go to their next destination
     next();
@@ -142,3 +136,4 @@ router.beforeEach((to, from, next) => {
 });
 
 export default router;
+
