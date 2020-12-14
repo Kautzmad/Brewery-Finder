@@ -20,8 +20,12 @@
         </div>
 
         <div>
-            <button type="submit" class="submitBtn" onclick="window.location.reload();"
+            <button type="submit" class="addBtn" onclick="window.location.reload();"
             v-on:click.prevent="addNewBeer(beer)" >Add Beer</button>
+        </div>
+        <div>
+            <button type="submit" class="updateBtn" onclick="window.location.reload();"
+            v-on:click.prevent="updateBeer(beer)" >Update Beer</button>
         </div>
         
         <div class="subheading">
@@ -57,13 +61,20 @@ export default {
     },
     methods: {
         addNewBeer(){
-            appServices.addNewBeer(this.newBeer).then(response=>{
+            applicationServices.addNewBeer(this.newBeer).then(response=>{
             if(response.status === 201){
             alert("Beer successfully added");
             }  
             })
         }
     },
+    updateBeer(beer){
+            applicationServices.updateBeer(this.beer).then(response=>{
+            if(response.status === 201){
+            alert("Beer successfully updated");
+            }  
+            })
+        },
     created() {
         applicationServices.getBreweryByID(this.$route.params.id).then(response => {
             this.brewery = response.data
