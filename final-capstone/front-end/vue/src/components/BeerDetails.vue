@@ -37,37 +37,8 @@
             <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
         </div>
     </div>
-    <div class="newBeerForm">
-         <h1 class="brewery-name">New Beer Form</h1>
-    <form>
-        <label for="beerName">Name</label>
-        <input type="text" id="beerName" name="firstname" placeholder="Name of the beer..">
-
-        <label for="ABV">ABV</label>
-        <input type="text" id="ABV" name="lastname" placeholder="ABV..">
-
-        <label for="IBU">IBU</label>
-        <input type="text" id="IBU" name="lastname" placeholder="IBU..">
-
-        <label for="Type">Type</label>
-        <input type="text" id="type" name="lastname" placeholder="Type..">
-
-        <label for="Type">Info</label>
-        <input type="text" id="Info" placeholder="Info..">
-
-        <label for="acitve">Active Status</label>
-        <select id="active" name="active">
-        <option value="True">Yes</option>
-        <option value="False">No</option>
-        </select>
-
-        <label for="Type">Brewery id</label>
-        <input type="text" id="Info" placeholder="Brewery ID..">
-    
-        <input type="submit" value="Submit">
-    </form>
     </div>
-</div>
+    
 </template>
 <script>
 import applicationServices from '../services/ApplicationServices'
@@ -228,39 +199,6 @@ span.beer-type {
     background-color: rgb(139, 139, 139);
 }
 
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.newBeerForm {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.newBeerForm h1 {
-    text-align: center;
-}
 
 </style>
