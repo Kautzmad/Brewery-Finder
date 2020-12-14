@@ -7,13 +7,13 @@
             <label for="name">Title:</label>
           </div>
           <div class="col-75">
-            <input id="name" type="text" v-model="newReview.name" />
+            <input id="name" type="text" v-model="newReview.name" required/>
           </div>
           <div class="col-25">
             <label for="rating">Rating:</label>
           </div>
           <div class="col-75">
-          <select id="rating" v-model.number="newReview.rating">
+          <select id="rating" v-model.number="newReview.rating" required>
             <option value="1">1 Beer</option>
             <option value="2">2 Beers</option>
             <option value="3">3 Beers</option>
@@ -25,7 +25,7 @@
             <label for="description">Review: </label>
           </div>
           <div class="col-75">
-            <textarea id="description" v-model="newReview.description"/>
+            <textarea id="description" v-model="newReview.description" required/>
           </div>
           <button class="submitBtn" onclick="window.location.reload();" v-on:click.prevent="submitReview()" type="submit">Submit</button>
       </div>

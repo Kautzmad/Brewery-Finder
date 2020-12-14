@@ -7,13 +7,13 @@
 
             <div id="body">
 
-                <h3 class="popular">Popular Breweries</h3>
+                <h3 class="popular">Recommended Breweries</h3>
                 <div class="loading" v-if="isLoading">
                 <img src="../img/beerClink.gif" />
                 </div>
 
                 <div class="brewery-list">
-                <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
+                <brewery-card class="card-space" v-for="brewery in randomBreweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
                 </div>
 
             </div>
@@ -31,13 +31,29 @@ export default {
     data() {
         return {
             breweries: [],
+            randomBreweries: [],
             isLoading: true
+        }
+    },
+    methods: {
+        randomBrewery(){
+            return Math.floor(Math.random() * Math.floor(this.breweries.length-1))
         }
     },
     created() {
         applicationServices.getBreweries().then(response => {
             this.breweries = response.data
             this.isLoading = false;
+            console.log('new')
+            while(this.randomBreweries.length <= 6) {
+                applicationServices.getBreweryByID(this.randomBrewery()).then(response => {
+                    let random = response.data
+                    console.log(random)
+                    if (this.randomBreweries.some(e => e['breweryId'] != random.breweryId) || random.breweryId != null){
+                        this.randomBreweries.push(random)
+                    }
+                })
+            }
     })
     }
 }
