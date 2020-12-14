@@ -18,6 +18,11 @@
                 <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
             </div>
         </div>
+
+        <div>
+            <button type="submit" class="submitBtn" onclick="window.location.reload();"
+            v-on:click.prevent="addNewBeer(beer)" >Add Beer</button>
+        </div>
         
         <div class="subheading">
             <h3>Beers from {{brewery.name}}</h3>
@@ -50,6 +55,15 @@ export default {
 
         } 
     },
+    methods: {
+        addNewBeer(){
+            appServices.addNewBeer(this.newBeer).then(response=>{
+            if(response.status === 201){
+            alert("Beer successfully added");
+            }  
+            })
+        }
+    },
     created() {
         applicationServices.getBreweryByID(this.$route.params.id).then(response => {
             this.brewery = response.data
@@ -75,6 +89,11 @@ export default {
     background-color: #C0C0C0;
     margin: 15vh 20vw 0 20vw;
     border-radius: 15px;
+}
+
+.submitBtn {
+    text-align: center;
+    margin: 15px;
 }
 
 .subheading {

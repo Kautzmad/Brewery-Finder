@@ -41,6 +41,7 @@ export default {
 }
 </script>
 <style scoped>
+
 img.company-logo {
     width: 200px;
 }
