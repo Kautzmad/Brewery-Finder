@@ -14,6 +14,19 @@
         <h4 class="beer-info" v-if="beer.info != 'No description'" > {{this.beer.info}} </h4>
         <h4 class="beer-info" v-if="beer.info == 'No description'" > {{noDesc}} </h4>
     </router-link>
+    <div class="tooltip" v-if="this.$store.state.userId === this.brewery.usedId">
+        <button type="submit" class="brewerButton" v-on:click.prevent="deleteBeer(this.beer.id)"
+                onclick="window.location.reload();" >
+                <span class="tooltiptext">Delete Beer</span>
+                <img src="../assets/delete-icon.png" id="deleteButton"/>
+        </button>
+    </div>
+    <div class="tooltip" v-if="this.$store.state.userId === this.brewery.usedId">
+        <button type="submit" class="brewerButton">
+            <span class="tooltiptext">Update Beer</span>
+            <img src="../assets/edit-icon.png" id="editButton"/>
+        </button>
+    </div>
 </div>
 </template>
 <script>
@@ -32,6 +45,24 @@ export default {
             },
             noDesc: 'We can\'t find any info on this beer, but we\'re sure it\'s great!'
         }
+    },
+    methods:{
+        updateBeer(beer){
+            applicationServices.updateBeer(beer).then(response=>{
+            if(response.status === 201){
+            alert("Beer successfully updated");
+            }  
+            })
+        },
+        deleteBeer(id){
+            if(confirm(`Are you sure you want to delete this beer?`)){
+            applicationServices.deleteBeer(id).then(response =>{
+                if(response.status === 201){
+                    alert("Beer deleted")
+                }
+            })
+        }
+     }
     },
     created() {
         applicationServices.getBreweryByID(this.beer.breweryId).then(response => {
@@ -101,5 +132,37 @@ div.card:nth-child(even) {
     background-color: rgb(221, 221, 221);
 }
 
+#deleteButton, #editButton{
+    border-radius: 50%;
+    width: 5%;
+    height: 5%;
+}
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 </style>
+
