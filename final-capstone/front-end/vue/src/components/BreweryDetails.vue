@@ -18,25 +18,9 @@
                 <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
             </div>
         </div>
-
-        
-
-        <div>
-            <button type="submit" class="addBtn" onclick="window.location.reload();"
-            v-on:click.prevent="addNewBeer(beer)" >Add Beer</button>
-            
-        </div>
-        <div>
-            <button type="submit" class="updateBtn" onclick="window.location.reload();"
-            v-on:click.prevent="updateBeer(beer)" >Update Beer</button>
-        </div>
         
         <div class="subheading">
             <h3>Beers from {{brewery.name}}</h3>
-        </div>
-
-        <div id="beer-list">
-            <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
         </div>
 
         <div class="show-form-button">
@@ -44,7 +28,7 @@
                     id="show-form-button"
                     href="#"
                     v-on:click.prevent="showForm = true"
-                    v-if="showForm === false"
+                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId"
                     >
                     Show Form
                 </button>
@@ -91,6 +75,10 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+
+        <div id="beer-list">
+            <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
+        </div>
 </div>
 </template>
 <script>
@@ -104,6 +92,14 @@ export default {
     data() {
         return {
             brewery: {
+                id: 0,
+                name: '',
+                userId: 0,
+                description: '',
+                breweryLogoUrl: '',
+                websiteUrl: ''
+            },
+            newBeer: {
                 id: 0,
                 name: '',
                 description: '',
@@ -301,6 +297,8 @@ input[type=submit]:hover {
 }
 
 .show-form-button button {
+  padding-right: 15px;
+  padding-left: 15px;
   width: 100%;
   background-color: #7c83c4;
   float: middle;
