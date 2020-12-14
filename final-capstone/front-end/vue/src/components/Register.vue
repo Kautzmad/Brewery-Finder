@@ -159,16 +159,12 @@ form.form-register {
   color: #FF3C00;
 }
 
-/* .brewer {
-  display: inline-block;
-} */
-
-.brewer-label, .brewer-checkbox, .yes {
-
-  margin-top: -.5rem;
-  margin-left: -.5rem;
+.brewer {
+  display: inline;
 }
-
+.checkbox {
+  display: inline-block;
+}
 
 .have-account:hover {
   color: #311D00;
