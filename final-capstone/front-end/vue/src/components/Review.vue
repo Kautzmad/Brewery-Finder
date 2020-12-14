@@ -106,12 +106,16 @@ label {
   height: 220px;
   background-color: #ffffff;
   width: auto;
+  
+  
 }
 
 .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
+  box-shadow: inset 0px 0px 10px #000;
+  
 }
 
 .col-25 {
@@ -126,6 +130,7 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  
 }
 
 .submitBtn {
@@ -137,6 +142,7 @@ input[type=text], select, textarea {
   cursor: pointer;
   float: right;
   margin-bottom: 10px;
+  box-shadow: inset 0px 0px 8px #000;
 }
 
 .reviews {
@@ -149,6 +155,11 @@ input[type=text], select, textarea {
     width: 100%;
     margin-top: 0;
   }
+
+
+
+
+
 }
 
 </style>

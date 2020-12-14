@@ -65,6 +65,7 @@ export default {
   padding: 0;
   margin-bottom: -10vh;
   box-sizing: border-box;
+  
 }
 
 .heading {
@@ -75,6 +76,7 @@ export default {
     background-color: #C0C0C0;
     margin: 15vh 20vw 0 20vw;
     border-radius: 15px;
+    box-shadow: inset 0px 0px 10px #000;
 }
 
 .subheading {
@@ -85,6 +87,7 @@ export default {
     background-position: center;
     margin: 8% 28% 5% 28%;
     border-radius: 15px;
+    box-shadow: inset 0px 0px 10px #000;
 }
 
 img.company-logo {

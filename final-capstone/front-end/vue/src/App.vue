@@ -33,6 +33,7 @@ ul {
   width: 75%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  box-shadow: inset 0px 0px 10px #000;
 }
 
 div#app {
@@ -80,6 +81,7 @@ a:hover, a:visited, a:link, a:active {
 
 li a:hover {
   background-color: #111;
+  box-shadow: inset 0px 0px 5px white;
 }
 
 #logo { 
