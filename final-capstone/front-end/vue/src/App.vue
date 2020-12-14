@@ -77,6 +77,7 @@ div#app {
   justify-content: flex-end;
   background-color: transparent;
   margin-top: -3rem;
+  z-index: 1;
 }
 
 .nav-links {

@@ -17,16 +17,22 @@
         <div class="subheading">
             <h3>Beers from {{brewery.name}}</h3>
         </div>
-        <div class="show-form-button">
-                <button
-                    id="show-form-button"
-                    href="#"
+        <!-- <div id="show-form">
+                    <img src='../assets/add-icon.png' id="show-form-button"
                     v-on:click.prevent="showForm = true"
-                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId"
-                    >
-                    Show Form
-                </button>
-        </div>
+                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId"/>
+        </div> -->
+<div id="beer-list">
+        <div class="tooltip show-form" v-if="this.$store.state.user.id === this.brewery.userId">
+
+        <button class="brewerButton" id="show-form-button"
+                v-on:click.prevent="showForm = true"
+                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId">
+            <span class="tooltiptext">Add New Beer</span>
+            <img src="../assets/add-icon.png" id="addButton"/>
+        </button>
+
+    </div>
         <div class="newBeerForm" v-if="showForm === true">
             <h1 class="brewery-name">New Beer Form</h1>
         <form>
@@ -60,7 +66,7 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-        <div id="beer-list">
+        
             <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
         </div>
 </div>
@@ -254,17 +260,47 @@ input[type=submit]:hover {
 .newBeerForm h1 {
     text-align: center;
 }
-.show-form-button button {
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
-  background-color: #7C83C4;
-  float: middle;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+#addButton {
+  width: 50px;
+  border-radius: 50%;
+  justify-content: center;
+}
+#addButton:hover {
+    width: 60px;
+    transition: 0.25s ease;
+    margin: -5px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+    margin-left: 50px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+
+}
+.brewerButton {
+    text-align: center;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.brewerButton {
+    border-radius: 50%;
+    border-color: transparent;
+    background-color:transparent;
 }
 </style>

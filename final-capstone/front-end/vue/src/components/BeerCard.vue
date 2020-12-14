@@ -213,15 +213,20 @@ div.card:nth-child(even) {
 
 #deleteButton, #editButton{
     border-radius: 50%;
-    width: 5%;
-    height: 5%;
+    width: 50px;
+}
+#deleteButton:hover, #editButton:hover {
+    width: 60px;
+    transition: 0.25s ease;
+    margin: -5px;
 }
 
 /* Tooltip container */
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
@@ -233,7 +238,7 @@ div.card:nth-child(even) {
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
- 
+    margin-left: 50px;
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -277,6 +282,11 @@ input[type=text], select {
 
 .updateBeerForm h1 {
     text-align: center;
+}
+.brewerButton {
+    border-radius: 50%;
+    border-color: transparent;
+    background-color:transparent;
 }
 </style>
 
