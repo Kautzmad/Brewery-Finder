@@ -55,10 +55,10 @@
             <input type="text" id="IBU" value="beer.name" v-model="updatedBeer.ibu"/>
 
             <label for="Type">Type</label>
-            <input type="text" id="type" value="beer.name" v-model="updatedBeer.type"/>
+            <input type="text" id="type" value="beer.name" v-model="updatedBeer.type" required/>
 
             <label for="Type">Info</label>
-            <input type="text" id="Info" value="beer.name" v-model="updatedBeer.info"/> 
+            <input type="text" id="Info" value="beer.name" v-model="updatedBeer.info" required/> 
 
             <label for="Type">Beer Image</label>
             <input type="text" id="Info" value="beer.name" v-model="updatedBeer.imgUrl"/>
