@@ -19,9 +19,12 @@
             </div>
         </div>
 
+        
+
         <div>
             <button type="submit" class="addBtn" onclick="window.location.reload();"
             v-on:click.prevent="addNewBeer(beer)" >Add Beer</button>
+            
         </div>
         <div>
             <button type="submit" class="updateBtn" onclick="window.location.reload();"
@@ -35,35 +38,58 @@
         <div id="beer-list">
             <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
         </div>
-        <div class="newBeerForm">
-         <h1 class="brewery-name">New Beer Form</h1>
-    <form>
-        <label for="beerName">Name</label>
-        <input type="text" id="beerName" name="firstname" placeholder="Name of the beer..">
 
-        <label for="ABV">ABV</label>
-        <input type="text" id="ABV" name="lastname" placeholder="ABV..">
+        <div class="show-form-button">
+                <button
+                    id="show-form-button"
+                    href="#"
+                    v-on:click.prevent="showForm = true"
+                    v-if="showForm === false"
+                    >
+                    Show Form
+                </button>
+        </div>
+        
+        <div class="newBeerForm" v-if="showForm === true">
+            <h1 class="brewery-name">New Beer Form</h1>
+             
+        <form>
+            <label for="beerName">Name</label>
+            <input type="text" id="beerName" name="firstname" placeholder="Name of the beer..">
 
-        <label for="IBU">IBU</label>
-        <input type="text" id="IBU" name="lastname" placeholder="IBU..">
+            <label for="ABV">ABV</label>
+            <input type="text" id="ABV" name="lastname" placeholder="ABV..">
 
-        <label for="Type">Type</label>
-        <input type="text" id="type" name="lastname" placeholder="Type..">
+            <label for="IBU">IBU</label>
+            <input type="text" id="IBU" name="lastname" placeholder="IBU..">
 
-        <label for="Type">Info</label>
-        <input type="text" id="Info" placeholder="Info..">
+            <label for="Type">Type</label>
+            <input type="text" id="type" name="lastname" placeholder="Type..">
 
-        <label for="acitve">Active Status</label>
-        <select id="active" name="active">
-        <option value="True">Yes</option>
-        <option value="False">No</option>
-        </select>
+            <label for="Type">Info</label>
+            <input type="text" id="Info" placeholder="Info..">
 
-        <label for="Type">Brewery id</label>
-        <input type="text" id="Info" placeholder="Brewery ID..">
-    
-        <input type="submit" value="Submit">
-    </form>
+            <label for="acitve">Active Status</label>
+            <select id="active" name="active">
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+            </select>
+
+            <label for="Type">Brewery id</label>
+            <input type="text" id="Info" placeholder="Brewery ID..">
+        
+            <div  class="show-form-button">
+                <button
+                    id="show-form-button"
+                    href="#"
+                    v-on:click.prevent="showForm = false"
+                    v-if="showForm === true"
+                    >
+                    Hide Form
+                </button>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 </div>
 </template>
@@ -84,6 +110,7 @@ export default {
                 breweryLogoUrl: '',
                 websiteUrl: ''
             },
+            showForm: false,
             beers: [],
             noDescReplacement: "We can't find a description of this brewery, but we're sure they're really great!"
 
@@ -259,6 +286,18 @@ input[type=submit]:hover {
 
 .newBeerForm h1 {
     text-align: center;
+}
+
+.show-form-button button {
+  width: 100%;
+  background-color: #7c83c4;
+  float: middle;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 </style>
