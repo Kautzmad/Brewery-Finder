@@ -78,6 +78,10 @@ img.company-logo, img.beer-logo, img.beer-logo-404 {
     border-radius: 5%;
     width: 200px;
     box-shadow: inset 0px 0px 10px #000;
+    transition: 300ms;
+}
+img.company-logo:hover{
+    width: 225px;
 }
 span.beer-type {
     color:rgb(65, 65, 65);
