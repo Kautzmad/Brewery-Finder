@@ -69,7 +69,7 @@ export default {
         }
     },
     updateBeer(beer){
-            applicationServices.updateBeer(this.beer).then(response=>{
+            applicationServices.updateBeer(beer).then(response=>{
             if(response.status === 201){
             alert("Beer successfully updated");
             }  
