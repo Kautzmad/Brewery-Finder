@@ -18,36 +18,18 @@
                 <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
             </div>
         </div>
-
-        
-
-        <div>
-            <button type="submit" class="addBtn" onclick="window.location.reload();"
-            v-on:click.prevent="addNewBeer(beer)" >Add Beer</button>
-            
-        </div>
-        <div>
-            <button type="submit" class="updateBtn" onclick="window.location.reload();"
-            v-on:click.prevent="updateBeer(beer)" >Update Beer</button>
-        </div>
         
         <div class="subheading">
+
             <h3>Beers from {{brewery.name}}</h3>
         </div>
 
         <div id="beer-list">
-            <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
-        </div>
-
-        <div class="show-form-button">
-                <button
-                    id="show-form-button"
-                    href="#"
+            <div class="show-form-button">
+                    <img src="../assets/add-icon.png" id="addBeerButton" 
                     v-on:click.prevent="showForm = true"
-                    v-if="showForm === false"
+                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId"
                     >
-                    Show Form
-                </button>
         </div>
         
         <div class="newBeerForm" v-if="showForm === true">
@@ -55,19 +37,19 @@
              
         <form>
             <label for="beerName">Name</label>
-            <input type="text" id="beerName" name="firstname" placeholder="Name of the beer..">
+            <input type="text" id="beerName" name="firstname" placeholder="Name of the beer.." >
 
             <label for="ABV">ABV</label>
-            <input type="text" id="ABV" name="lastname" placeholder="ABV..">
+            <input type="text" id="ABV" name="lastname" placeholder="ABV.." >
 
             <label for="IBU">IBU</label>
-            <input type="text" id="IBU" name="lastname" placeholder="IBU..">
+            <input type="text" id="IBU" name="lastname" placeholder="IBU.." >
 
             <label for="Type">Type</label>
-            <input type="text" id="type" name="lastname" placeholder="Type..">
+            <input type="text" id="type" name="lastname" placeholder="Type.." >
 
             <label for="Type">Info</label>
-            <input type="text" id="Info" placeholder="Info..">
+            <input type="text" id="Info" placeholder="Info.." >
 
             <label for="acitve">Active Status</label>
             <select id="active" name="active">
@@ -90,7 +72,11 @@
             </div>
             <input type="submit" value="Submit">
         </form>
-    </div>
+        </div>
+            <beer-card class="card-space" v-for="beer in beers" v-bind:key="beer.name" v-bind:beer="beer"/>
+        </div>
+
+        
 </div>
 </template>
 <script>
@@ -105,11 +91,23 @@ export default {
         return {
             brewery: {
                 id: 0,
+                userId: 0,
                 name: '',
                 description: '',
                 breweryLogoUrl: '',
                 websiteUrl: ''
             },
+            /* newBeer:{
+                id: this.beer.id,
+                name: "",
+                abv: 0,
+                ibu: 0,
+                type: "",
+                info: "",
+                imgUrl: "",
+                isActive: true,
+                breweryId: this.brewery.id
+            }, */
             showForm: false,
             beers: [],
             noDescReplacement: "We can't find a description of this brewery, but we're sure they're really great!"
@@ -301,7 +299,7 @@ input[type=submit]:hover {
 }
 
 .show-form-button button {
-  width: 100%;
+  width: 25%;
   background-color: #7c83c4;
   float: middle;
   color: white;

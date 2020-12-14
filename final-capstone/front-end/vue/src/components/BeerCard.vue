@@ -19,7 +19,7 @@
         <h4 class="beer-info" v-if="beer.info == 'No description'" > {{noDesc}} </h4>
     </router-link>
 
-    <div class="tooltip" v-if="this.$store.state.userId === this.brewery.usedId">
+    <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
 
         <button type="submit" class="brewerButton" v-on:click.prevent="deleteBeer(this.beer.id)"
                 onclick="window.location.reload();" >
@@ -29,7 +29,7 @@
 
     </div>
 
-    <div class="tooltip" v-if="this.$store.state.userId === this.brewery.usedId">
+    <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
 
         <button type="submit" class="brewerButton" id="show-update-beer-form"
                 v-on:click.prevent="showForm = true" v-if="showForm === false">
@@ -46,7 +46,7 @@
         <form>
 
             <label for="beerName">Name</label>
-            <input type="text" id="beerName" value="beer.name" v-model="updatedBeer.name" required/>
+            <input type="text" id="beerName" value="this.beer.name" v-model="updatedBeer.name" required/>
                                 <!-- use value to display the current information -->
             <label for="ABV">ABV</label>
             <input type="text" id="ABV" value="beer.name" v-model="updatedBeer.abv"/>
@@ -64,10 +64,12 @@
             <input type="text" id="Info" value="beer.name" v-model="updatedBeer.imgUrl"/>
 
             <label for="acitve">Active Status</label>   <!-- where does the v-model go? -->
-            <select id="active" name="active" >
-            <option value="True">Yes</option>
-            <option value="False">No</option>
-            </select>
+           
+                <select id="active" name="active">
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+                </select>
+            
         
             <div  class="show-form-button">
                 <button
@@ -103,6 +105,7 @@ export default {
             showForm: false,
             brewery: {
                 id: 0,
+                userId: 0,
                 name: '',
                 description: '',
                 breweryLogoUrl: '',
