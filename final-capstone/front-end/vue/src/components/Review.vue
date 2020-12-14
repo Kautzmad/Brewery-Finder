@@ -145,12 +145,14 @@ input[type=text], select, textarea {
   box-shadow: inset 0px 0px 8px #000;
   font-size: 14px;
   text-shadow: 2px 2px 3px black;
+  transition: 300ms;
 }
 .submitBtn:hover{
     box-shadow: inset 0px 0px 10px #000;
     border-radius: 6px;
     background-color: red;
     font-size: 18px;
+
 }
 
 .reviews {
