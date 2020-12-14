@@ -69,6 +69,7 @@ div#details {
     background-color: white;
     margin-left: 65px; margin-right: 65px;
     padding-top: 15px; padding-bottom: 15px; padding-left: 150px; padding-right: 150px;
+    border-radius: 20px;
 }
 
 img.company-logo, img.beer-logo, img.beer-logo-404 {

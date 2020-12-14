@@ -92,6 +92,7 @@ export default {
 
 #login {
   height: 87vh;
+ 
 }
 
 form.form-signin {
@@ -114,6 +115,7 @@ h1 {
   background-position: center;
   background-size: 100vh;
   backdrop-filter: blur(5px);
+  box-shadow: inset 0px 0px 10px #000;
 }
 
 #username.form-control {
