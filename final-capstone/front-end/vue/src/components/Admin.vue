@@ -240,6 +240,7 @@ th {
 .deleteBtn {
     background-color: rgb(197, 19, 19);
     color: white;
+    
 }
 #user-table > tbody > tr:nth-child(even) {
     background-color: rgb(231, 231, 231);
