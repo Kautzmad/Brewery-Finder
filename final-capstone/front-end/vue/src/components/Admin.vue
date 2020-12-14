@@ -217,6 +217,7 @@ div#admin-page {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
 
 td {
@@ -225,6 +226,7 @@ td {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: rgb(201, 201, 201);
+    
 }
 th {
     border-bottom-style: solid;
@@ -251,6 +253,7 @@ table {
     padding: 15px;
     border-radius: 2.5%;
     border-collapse: collapse;
+    box-shadow: inset 0px 0px 10px #000;
 }
 h1 {
     background-color: white;
@@ -258,5 +261,7 @@ h1 {
     padding: 15px;
     border-radius: 2.5%;
     border-collapse: collapse;
+    box-shadow: inset 0px 0px 10px #000;
+
 }
 </style>

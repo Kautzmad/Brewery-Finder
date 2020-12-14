@@ -114,7 +114,7 @@ label {
   float: left;
   width: 75%;
   margin-top: 6px;
-  box-shadow: inset 0px 0px 10px #000;
+  
   
 }
 
@@ -148,6 +148,15 @@ input[type=text], select, textarea {
 .reviews {
   margin-top: 15px;
 }
+#name{
+  box-shadow: inset 0px 0px 3px #000;
+}
+#rating{
+  box-shadow: inset 0px 0px 3px #000;
+}
+#description{
+  box-shadow: inset 0px 0px 3px #000;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -155,10 +164,6 @@ input[type=text], select, textarea {
     width: 100%;
     margin-top: 0;
   }
-
-
-
-
 
 }
 

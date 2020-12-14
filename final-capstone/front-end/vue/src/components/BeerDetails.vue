@@ -70,12 +70,14 @@ div#details {
     margin-left: 65px; margin-right: 65px;
     padding-top: 15px; padding-bottom: 15px; padding-left: 150px; padding-right: 150px;
     border-radius: 20px;
+    box-shadow: inset 0px 0px 10px #000;
 }
 
 img.company-logo, img.beer-logo, img.beer-logo-404 {
     background-color: rgb(209, 209, 209);
     border-radius: 5%;
     width: 200px;
+    box-shadow: inset 0px 0px 10px #000;
 }
 span.beer-type {
     color:rgb(65, 65, 65);
