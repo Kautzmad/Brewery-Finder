@@ -45,7 +45,7 @@ export default {
             this.breweries = response.data
             this.isLoading = false;
             console.log('new')
-            while(this.randomBreweries.length <= 6) {
+            for(let i = 0; i < 6; i++){
                 applicationServices.getBreweryByID(this.randomBrewery()).then(response => {
                     let random = response.data
                     console.log(random)
