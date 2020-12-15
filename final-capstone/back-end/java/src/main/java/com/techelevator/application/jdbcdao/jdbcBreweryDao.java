@@ -28,7 +28,7 @@ public class jdbcBreweryDao implements breweryDao{
 	@Override
 	public List<Brewery> getAllBreweries(){
 		List<Brewery> allBreweries = new ArrayList<>();
-		String sqlGetAllBreweries = "SELECT * FROM breweries";
+		String sqlGetAllBreweries = "SELECT * FROM breweries ORDER BY name ASC";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllBreweries);
 		
 		while(results.next()) {
