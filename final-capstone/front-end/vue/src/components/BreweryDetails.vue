@@ -65,7 +65,7 @@
                 </button>
             </div>
             <input type="submit" value="Submit" onclick="window.location.reload();"
-                 v-on:click.prevent="addNewBeer(this.newBeer)">
+                 v-on:click.prevent="addNewBeer()">
         </form>
     </div>
         
@@ -108,8 +108,8 @@ export default {
         }
     },
     methods: {
-        addNewBeer(beer){
-            applicationServices.addNewBeer(beer).then(response=>{
+        addNewBeer(){
+            applicationServices.addNewBeer(this.newBeer).then(response=>{
             if(response.status === 201){
             alert("Beer successfully added");
             }

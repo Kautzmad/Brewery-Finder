@@ -21,8 +21,7 @@
 
     <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
 
-        <button type="submit" class="brewerButton" v-on:click.prevent="deleteBeer(this.beer.id)"
-                onclick="window.location.reload();" >
+        <button type="submit" class="brewerButton" v-on:click.prevent="deleteBeer(beer.id)">
                 <span class="tooltiptext">Delete Beer</span>
                 <img src="../assets/delete-icon.png" id="deleteButton"/>
         </button>
@@ -138,6 +137,7 @@ export default {
             applicationServices.deleteBeer(id).then(response =>{
                 if(response.status === 201){
                     alert("Beer deleted")
+                    window.location.reload();
                 }
             })
         }
