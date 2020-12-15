@@ -45,27 +45,27 @@
 
         <form>
 
-            <label for="beerName">Name</label>
-            <input type="text" id="beerName" value="this.beer.name" v-model="updatedBeer.name" required/>
+            <!-- <label for="beerName">Name</label>
+            <input type="text" id="beerName"  v-model="updatedBeer.name" required/> -->
                                 <!-- use value to display the current information -->
             <label for="ABV">ABV</label>
-            <input type="text" id="ABV" value="beer.name" v-model="updatedBeer.abv"/>
+            <input type="text" id="ABV"  v-model="updatedBeer.abv"/>
 
             <label for="IBU">IBU</label>
-            <input type="text" id="IBU" value="beer.name" v-model="updatedBeer.ibu"/>
+            <input type="text" id="IBU"  v-model="updatedBeer.ibu"/>
 
             <label for="Type">Type</label>
-            <input type="text" id="type" value="beer.name" v-model="updatedBeer.type" required/>
+            <input type="text" id="type" v-model="updatedBeer.type" required/>
 
             <label for="Type">Info</label>
-            <input type="text" id="Info" value="beer.name" v-model="updatedBeer.info" required/> 
+            <input type="text" id="Info" v-model="updatedBeer.info" required/> 
 
             <label for="Type">Beer Image</label>
-            <input type="text" id="Info" value="beer.name" v-model="updatedBeer.imgUrl"/>
+            <input type="text" id="Info"  v-model="updatedBeer.imgUrl"/>
 
-            <label for="acitve">Active Status</label>   <!-- where does the v-model go? -->
+            <label for="acitve">Active Status</label>   
            
-                <select id="active" name="active">
+                <select id="active" name="active" v-model="updatedBeer.isActive">
                 <option value="True">Yes</option>
                 <option value="False">No</option>
                 </select>
@@ -84,7 +84,7 @@
 
             <div class="submit-update-button">
                 <button type="submit" id="submitButton" onclick="window.location.reload();"
-                 v-on:click.prevent="updateBeer(updatedBeer)">Submit Beer Update</button>
+                 v-on:click.prevent="updateBeer()">Submit Beer Update</button>
             </div>
 
         </form>
@@ -126,8 +126,8 @@ export default {
         }
     },
     methods: {
-        updateBeer(beer){
-            applicationServices.updateBeer(beer).then(response=>{
+        updateBeer(){
+            applicationServices.updateBeer(this.updatedBeer).then(response=>{
             if(response.status === 201){
             alert("Beer successfully updated");
             }  
@@ -147,7 +147,8 @@ export default {
     created() {
         applicationServices.getBreweryByID(this.beer.breweryId).then(response => {
             this.brewery = response.data
-        })
+        }),
+        this.updatedBeer = this.beer;
     }
 }
 </script>
