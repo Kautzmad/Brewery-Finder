@@ -10,7 +10,7 @@
             </div>
 
             <div class="brewery-list">
-                <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.name" v-bind:brewery="brewery"/>
+                <brewery-card class="card-space" v-for="brewery in breweries" v-bind:key="brewery.breweryId" v-bind:brewery="brewery"/>
             </div>
 
         </div>
