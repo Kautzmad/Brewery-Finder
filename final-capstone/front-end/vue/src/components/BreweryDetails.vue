@@ -238,6 +238,7 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+   box-shadow: inset 0px 0px 3.5px #000;
 }
 input[type=submit] {
   width: 100%;
@@ -248,14 +249,19 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: inset 0px 0px 3.5px #000;
+  text-shadow: 2px 2px 5px #000;
 }
 input[type=submit]:hover {
   background-color: #45A049;
+  box-shadow: inset 0px 0px 10px #000;
+  text-shadow: 4px 4px 5px #000;
 }
 .newBeerForm {
   border-radius: 5px;
   background-color: #F2F2F2;
   padding: 20px;
+   box-shadow: inset 0px 0px 10px #000;
 }
 .newBeerForm h1 {
     text-align: center;

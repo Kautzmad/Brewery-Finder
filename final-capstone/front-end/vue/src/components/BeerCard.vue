@@ -278,6 +278,8 @@ input[type=text], select {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+   box-shadow: inset 0px 0px 10px #000;
+
 }
 
 .updateBeerForm h1 {
