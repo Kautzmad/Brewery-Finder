@@ -190,10 +190,17 @@ methods:{
     },
     deleteBrewery(brewery){
         if (confirm(`Are you sure you want to delete ${brewery.name}?`)) {
-            appServices.deleteBrewery(brewery.breweryId).then(response => {
+            appServices.getBeerByBreweryID(brewery.breweryId).then(response => {
+                let beersToDelete = response.data
+                beersToDelete.forEach((beer) => {
+                    appServices.deleteBeer(beer.id)
+                })
+                appServices.deleteBrewery(brewery.breweryId).then(response => {
                 console.log(response)
                 window.location.reload();
             })
+            })
+            
         }
     }
 },

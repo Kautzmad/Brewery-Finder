@@ -72,7 +72,7 @@
 
             <div class="submit-update-button">
                 <button type="submit" id="submitButton" onclick="window.location.reload();"
-                 v-on:click.prevent="updateBrewery()">Submit Brewery Update</button>
+                 v-on:click.prevent="updateBrewery(updatedBrewery)">Submit Brewery Update</button>
             </div>
 
         </form>
@@ -151,10 +151,9 @@ export default {
     },
     data() {
         return {
-            brewery: {
-               
-            },
+            brewery: {},
             updatedBrewery: {
+                id: this.$route.params.id,
                 name: "",
                 address: "",
                 city: "",
@@ -191,8 +190,7 @@ export default {
             alert("Beer successfully added");
             }
             })
-        }
-    },
+        },
     updateBeer(beer){
             applicationServices.updateBeer(beer).then(response=>{
             if(response.status === 201){
@@ -207,14 +205,16 @@ export default {
             }
             })
         },
+    },
     created() {
         applicationServices.getBreweryByID(this.$route.params.id).then(response => {
             this.brewery = response.data
-        }),
+            this.updatedBrewery = response.data
+        })
         applicationServices.getBeerByBreweryID(this.$route.params.id).then(response => {
             this.beers = response.data
-        }),
-        this.updatedBrewery = this.brewery;
+        })
+        
     }
 }
 </script>
