@@ -66,6 +66,22 @@ public class jdbcBeerDao implements beerDao {
 	}
 	
 	/****************************************
+	 * search beer by name
+	 *
+	 ***/
+	
+	@Override
+	public Beer searchForBeerByName(String name) {
+		Beer aBeer = new Beer();
+		String sqlSelectBeerByName = "SELECT * FROM beers WHERE name =?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectBeerByName, name);
+		while(results.next()) {
+			aBeer = mapRowToBeer(results);
+		}
+		return aBeer;
+	}
+	
+	/****************************************
 	 * Delete a beer
 	 *
 	 ***/
@@ -82,8 +98,8 @@ public class jdbcBeerDao implements beerDao {
 	
 	@Override
 	public void saveBeer(Beer newBeer) {
-		jdbcTemplate.update("INSERT INTO beers(name, abv, ibu, type, info, img_url, brewery_id, is_active) VALUES (?,?,?,?,?,?,?,?)",
-				newBeer.getName(), newBeer.getAbv(), newBeer.getIbu(), newBeer.getType(), newBeer.getInfo(), newBeer.getImgUrl(), newBeer.getBreweryId(), newBeer.isActive());
+		String sqlAddBeer = "INSERT INTO beers(name, abv, ibu, type, info, img_url, brewery_id, is_active) VALUES (?,?,?,?,?,?,?,?)";
+		jdbcTemplate.update(sqlAddBeer, newBeer.getName(), newBeer.getAbv(), newBeer.getIbu(), newBeer.getType(), newBeer.getInfo(), newBeer.getImgUrl(), newBeer.getBreweryId(), newBeer.isActive());
 	}
 	
 	/****************************************

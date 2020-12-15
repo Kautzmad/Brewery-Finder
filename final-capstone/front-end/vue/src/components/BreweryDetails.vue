@@ -37,22 +37,23 @@
             <h1 class="brewery-name">New Beer Form</h1>
         <form>
             <label for="beerName">Name</label>
-            <input type="text" id="beerName" name="firstname" placeholder="Name of the beer..">
+            <input type="text" id="beerName" placeholder="Name of the beer.." v-model="newBeer.name">
             <label for="ABV">ABV</label>
-            <input type="text" id="ABV" name="lastname" placeholder="ABV..">
+            <input type="text" id="ABV" placeholder="ABV.." v-model="newBeer.abv">
             <label for="IBU">IBU</label>
-            <input type="text" id="IBU" name="lastname" placeholder="IBU..">
+            <input type="text" id="IBU" placeholder="IBU.." v-model="newBeer.ibu">
             <label for="Type">Type</label>
-            <input type="text" id="type" name="lastname" placeholder="Type..">
+            <input type="text" id="type" placeholder="Type.." v-model="newBeer.type">
             <label for="Type">Info</label>
-            <input type="text" id="Info" placeholder="Info..">
+            <input type="text" id="Info" placeholder="Info.." v-model="newBeer.info">
+
             <label for="acitve">Active Status</label>
-            <select id="active" name="active">
+            <select id="active" name="active" v-model="newBeer.isActive">
             <option value="True">Yes</option>
             <option value="False">No</option>
             </select>
-            <label for="Type">Brewery id</label>
-            <input type="text" id="Info" placeholder="Brewery ID..">
+            <label for="Type">Image URL</label>
+            <input type="text" id="Info" placeholder="Image URL" v-model="newBeer.imgUrl">
             <div  class="show-form-button">
                 <button
                     id="show-form-button"
@@ -63,7 +64,8 @@
                     Hide Form
                 </button>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="window.location.reload();"
+                 v-on:click.prevent="addNewBeer(this.newBeer)">
         </form>
     </div>
         
@@ -74,6 +76,7 @@
 <script>
 import applicationServices from '../services/ApplicationServices'
 import BeerCard from './BeerCard'
+
 export default {
     name: "brewery-details",
     components: {
@@ -82,19 +85,22 @@ export default {
     data() {
         return {
             brewery: {
-                id: 0,
+               /*  id: 0,
                 name: '',
                 userId: 0,
                 description: '',
                 breweryLogoUrl: '',
-                websiteUrl: ''
+                websiteUrl: '' */
             },
             newBeer: {
-                id: 0,
                 name: '',
-                description: '',
-                breweryLogoUrl: '',
-                websiteUrl: ''
+                abv: 0,
+                ibu: 0,
+                type: "",
+                info: '',
+                imgUrl: '',
+                isActive: true,
+                breweryId: this.$route.params.id
             },
             showForm: false,
             beers: [],
@@ -102,8 +108,8 @@ export default {
         }
     },
     methods: {
-        addNewBeer(){
-            applicationServices.addNewBeer(this.newBeer).then(response=>{
+        addNewBeer(beer){
+            applicationServices.addNewBeer(beer).then(response=>{
             if(response.status === 201){
             alert("Beer successfully added");
             }

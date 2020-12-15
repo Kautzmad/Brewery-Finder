@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -73,13 +74,16 @@ public class BeerController {
 	
 	/****************************************
 	 * Request Mapping, add Beer
+	 * @return 
 	 *
 	 ***/
 	
 	//@PreAuthorize("hasRole('ROLE_BREWER')")
-	@RequestMapping(path="/addBeer", method=RequestMethod.GET)
-	public String showAddBeer() throws NotAllowedException {
-		return "addBeer";
+	@RequestMapping(path="/beers", method=RequestMethod.POST)
+	public void addNewBeer(@RequestBody Beer newBeer) throws NotAllowedException {
+		
+			beerDAO.saveBeer(newBeer);
+			
 	}
 	
 	/****************************************

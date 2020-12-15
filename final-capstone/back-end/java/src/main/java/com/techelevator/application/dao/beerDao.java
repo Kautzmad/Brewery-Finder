@@ -17,5 +17,9 @@ public interface beerDao {
 	List <Beer> getBeerByBreweryID(Long breweryId);
 
 	void updateBeer(Beer aBeer);
+
+	Beer searchForBeerByName(String name);
+
+	
 	
 }
