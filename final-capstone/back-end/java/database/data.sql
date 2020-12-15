@@ -1198,5 +1198,6 @@ INSERT INTO reviews (name, description, rating, create_date, beer_id) VALUES
 'This is one of the most unique beers I have had, it tastes great too',
 4,now(),70);
 
+DELETE FROM breweries WHERE brewery_id = 10;
 
 COMMIT;
