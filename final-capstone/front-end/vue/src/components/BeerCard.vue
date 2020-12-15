@@ -44,7 +44,6 @@
         <h1>Update Beer Form</h1>
 
         <form>
-
             <!-- <label for="beerName">Name</label>
             <input type="text" id="beerName"  v-model="updatedBeer.name" required/> -->
                                 <!-- use value to display the current information -->

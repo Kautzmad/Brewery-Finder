@@ -12,8 +12,75 @@
             <div class="description">
                 <h2 class="brewery-desc">{{brewery.description}}</h2>
                 <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
+
+                <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
+                <button type="submit" class="brewerButton" id="show-update-brewery-form"
+                v-on:click.prevent="showUpdateBreweryForm = true" v-if="showUpdateBreweryForm === false">
+                <span class="tooltiptext">Update Brewery Form</span>
+                <img src="../assets/edit-icon.png" id="editButton"/>
+                </button>
+
             </div>
-        </div>
+    </div>
+            
+    <div class="updateBreweryForm" v-if="showUpdateBreweryForm === true">
+
+        <h1>Update Brewery Form</h1>
+
+        <form>
+            
+            <label for="ABV">Brewery Name:</label>
+            <input type="text" id="name"  v-model="updatedBrewery.name" required/>
+
+            <label for="IBU">Brewery Address:</label>
+            <input id="address" type="text" v-model="updatedBrewery.address" required/>
+
+            <label for="Type">City:</label>
+            <input id="city" type="text" v-model="updatedBrewery.city" required/>
+
+            <label for="Type">Zipcode:</label>
+            <input type="text" id="Info" v-model="updatedBrewery.zipcode" required/> 
+
+            <label for="Type">Description:</label>
+            <textarea id="description" v-model="updatedBrewery.description" required/>
+            
+            <label for="logo-url">Logo URL:</label>
+            <input id="logo-url" type="text" v-model="updatedBrewery.breweryLogoUrl"/>
+
+            <label for="web-url">Website URL:</label>
+            <input id="web-url" type="text" v-model="updatedBrewery.websiteUrl"/>
+
+            <label for="hours">Hours of Operation:</label>
+            <input id="hours" type="text" v-model="updatedBrewery.hours"/>
+
+            <label for="lat">Lattitude:</label>
+            <input id="lat" type="text" v-model="updatedBrewery.lat"/>
+
+            <label for="long">Longitude:</label>
+            <input id="long" type="text" v-model="updatedBrewery.lon"/>
+
+            <div  class="show-form-button">
+                <button
+                    id="show-form-button"
+                    href="#"
+                    v-on:click.prevent="showUpdateBreweryForm = false"
+                    v-if="showUpdateBreweryForm === true"
+                    >
+                    Hide Form
+                </button>
+            </div>
+
+            <div class="submit-update-button">
+                <button type="submit" id="submitButton" onclick="window.location.reload();"
+                 v-on:click.prevent="updateBrewery()">Submit Brewery Update</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    </div>
+
         <div class="subheading">
             <h3>Beers from {{brewery.name}}</h3>
         </div>
@@ -85,12 +152,21 @@ export default {
     data() {
         return {
             brewery: {
-               /*  id: 0,
-                name: '',
+               
+            },
+            updatedBrewery: {
+                name: "",
+                address: "",
+                city: "",
+                zipcode: "",
+                phoneNumber: "",
+                description: "",
+                websiteUrl: "",
+                breweryLogoUrl: "",
                 userId: 0,
-                description: '',
-                breweryLogoUrl: '',
-                websiteUrl: '' */
+                hours: "",
+                lat: "",
+                lng: ""
             },
             newBeer: {
                 name: '',
@@ -103,6 +179,7 @@ export default {
                 breweryId: this.$route.params.id
             },
             showForm: false,
+            showUpdateBreweryForm: false,
             beers: [],
             noDescReplacement: "We can't find a description of this brewery, but we're sure they're really great!"
         }
@@ -123,13 +200,21 @@ export default {
             }
             })
         },
+    updateBrewery(brewery){
+            applicationServices.updateBrewery(brewery).then(response=>{
+            if(response.status === 201){
+            alert("Beer successfully updated");
+            }
+            })
+        },
     created() {
         applicationServices.getBreweryByID(this.$route.params.id).then(response => {
             this.brewery = response.data
-        })
+        }),
         applicationServices.getBeerByBreweryID(this.$route.params.id).then(response => {
             this.beers = response.data
-        })
+        }),
+        this.updatedBrewery = this.brewery;
     }
 }
 </script>
@@ -314,5 +399,42 @@ input[type=submit]:hover {
     border-radius: 50%;
     border-color: transparent;
     background-color:transparent;
+}
+
+.updateBreweryForm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+   box-shadow: inset 0px 0px 10px #000;
+
+}
+
+.updateBreweryForm h1 {
+    text-align: center;
+}
+
+#submitButton {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  background-color: #45a049;
+}
+
+#deleteButton, #editButton{
+    border-radius: 50%;
+    width: 50px;
+}
+#deleteButton:hover, #editButton:hover {
+    width: 60px;
+    transition: 0.25s ease;
+    margin: -5px;
 }
 </style>
