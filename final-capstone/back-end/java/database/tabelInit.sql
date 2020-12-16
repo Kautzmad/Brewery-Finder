@@ -22,7 +22,7 @@ CREATE TABLE breweries (
     lat varchar(20),
     lng varchar(20),
     CONSTRAINT pk_breweries_brewery_id PRIMARY KEY (brewery_id),
-    CONSTRAINT fk_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
+    CONSTRAINT fk_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)  ON DELETE CASCADE
 );
 
 
@@ -37,7 +37,7 @@ CREATE TABLE beers (
     is_active boolean,
     brewery_id integer,
     CONSTRAINT pk_beers_beer_id PRIMARY KEY (beer_id),
-    CONSTRAINT fk_breweries_brewery_id FOREIGN KEY (brewery_id) REFERENCES breweries(brewery_id)
+    CONSTRAINT fk_breweries_brewery_id FOREIGN KEY (brewery_id) REFERENCES breweries(brewery_id)  ON DELETE CASCADE
 );
 
 CREATE TABLE brewery_beer (
@@ -55,8 +55,8 @@ CREATE TABLE reviews (
     rating int NOT NULL,
     create_date timestamp DEFAULT NOW(),
     CONSTRAINT pk_reviews_review_id PRIMARY KEY (reviews_id),
-    CONSTRAINT fk_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id), 
-    CONSTRAINT fk_beers_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id)
+    CONSTRAINT fk_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)  ON DELETE CASCADE, 
+    CONSTRAINT fk_beers_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id)  ON DELETE CASCADE
 );
 
 COMMIT;
