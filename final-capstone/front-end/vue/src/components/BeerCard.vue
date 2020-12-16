@@ -157,6 +157,7 @@ img.company-logo {
     width: 200px;
 }
 div#card {
+    margin-bottom: 5vh;
     margin-left: 150px; margin-right: 150px;
    
 }
@@ -232,17 +233,17 @@ div.card:nth-child(even) {
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
     margin-left: 50px;
   /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
+    position: absolute;
+    z-index: 1;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */

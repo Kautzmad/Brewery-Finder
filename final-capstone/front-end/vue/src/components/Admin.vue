@@ -228,7 +228,7 @@ div#admin-page {
 }
 
 td {
-    padding: 10px; 
+    padding: 12px; 
     width: 150px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -236,6 +236,7 @@ td {
     
 }
 th {
+    padding: 12px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: rgb(201, 201, 201);
@@ -249,17 +250,15 @@ th {
     color: white;
     
 }
-#user-table > tbody > tr:nth-child(even) {
-    background-color: rgb(231, 231, 231);
-}
+
 #user-table > tbody > tr > td {
-    border-bottom-color: white;
+    border-bottom-color: rgb(201, 201, 201);
 }
 table {
     background-color: white;
     margin: 25px;
     padding: 15px;
-    border-radius: 2.5%;
+    border-radius: 5px;
     border-collapse: collapse;
     box-shadow: inset 0px 0px 10px #000;
 }
@@ -267,7 +266,7 @@ h1 {
     background-color: white;
     margin: 25px;
     padding: 15px;
-    border-radius: 2.5%;
+    border-radius: 5px;
     border-collapse: collapse;
     box-shadow: inset 0px 0px 10px #000;
 

@@ -43,7 +43,7 @@
 
             <label for="Type">Description:</label>
             <textarea id="description" v-model="updatedBrewery.description" required/>
-            
+            <br>
             <label for="logo-url">Logo URL:</label>
             <input id="logo-url" type="text" v-model="updatedBrewery.breweryLogoUrl"/>
 
@@ -402,11 +402,14 @@ input[type=submit]:hover {
 }
 
 .updateBreweryForm {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-   box-shadow: inset 0px 0px 10px #000;
-
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10vh;
+    margin-left: 12vw;
+    box-shadow: inset 0px 0px 10px #000;
+    width: 100%;
 }
 
 .updateBreweryForm h1 {
@@ -436,5 +439,10 @@ input[type=submit]:hover {
     width: 60px;
     transition: 0.25s ease;
     margin: -5px;
+}
+
+#description {
+    margin-top: 2vh;
+    padding-bottom: 10vh;
 }
 </style>
