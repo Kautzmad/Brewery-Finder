@@ -32,7 +32,7 @@
     <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
 
         <button type="submit" class="brewerButton" id="show-update-beer-form"
-                v-on:click.prevent="showForm = true" v-if="showForm === false">
+                v-on:click="showForm = true" v-if="showForm === false">
             <span class="tooltiptext">Update Beer Form</span>
             <img src="../assets/edit-icon.png" id="editButton"/>
         </button>
