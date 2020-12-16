@@ -196,8 +196,15 @@ methods:{
                     appServices.deleteBeer(beer.id)
                 })
                 appServices.deleteBrewery(brewery.breweryId).then(response => {
-                console.log(response)
-                window.location.reload();
+                    if(response.status == 500){
+                        alert(
+                            "You must delete the beers attached from this brewery first!"
+                        )
+                    }else {
+                        console.log(response.status)
+                        window.location.reload();    
+                    }
+                
             })
             })
             
