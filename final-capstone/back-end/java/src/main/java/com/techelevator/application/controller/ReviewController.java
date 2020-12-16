@@ -47,6 +47,16 @@ public class ReviewController {
 	}
 	
 	/****************************************
+	 * Request Mapping to delete a review
+	 *
+	 ***/
+	
+	@RequestMapping(path = "/reviews/{beerId}", method = RequestMethod.DELETE)
+	public void deleteAReview(@PathVariable Long beerId) throws NotAllowedException {
+		reviewDAO.deleteReview(beerId);
+	}
+	
+	/****************************************
 	 * Request Mapping to add a review for a beer by id
 	 *
 	 ***/

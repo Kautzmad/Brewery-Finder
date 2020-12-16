@@ -17,4 +17,6 @@ public interface reviewDao {
 
 	List<Review> searchReviewsByBeerId(long beerId);
 
+	void deleteReview(Long beerId);
+
 }
