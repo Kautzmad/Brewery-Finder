@@ -13,7 +13,7 @@
                 <h2 class="brewery-desc">{{brewery.description}}</h2>
                 <h2 class="brewery-desc" v-if="!brewery.description">{{noDescReplacement}}</h2>
 
-                <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
+                <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId || this.$store.state.user.id === 2">
                 <button type="submit" class="brewerButton" id="show-update-brewery-form"
                 v-on:click.prevent="showUpdateBreweryForm = true" v-if="showUpdateBreweryForm === false">
                 <span class="tooltiptext">Update Brewery Form</span>
@@ -90,11 +90,11 @@
                     v-if="showForm === false && this.$store.state.user.id === this.brewery.userId"/>
         </div> -->
 <div id="beer-list">
-        <div class="tooltip show-form" v-if="this.$store.state.user.id === this.brewery.userId">
+        <div class="tooltip show-form" v-if="this.$store.state.user.id === this.brewery.userId  || this.$store.state.user.id === 2">
 
         <button class="brewerButton" id="show-form-button"
                 v-on:click.prevent="showForm = true"
-                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId">
+                    v-if="showForm === false && this.$store.state.user.id === this.brewery.userId  || this.$store.state.user.id === 2">
             <span class="tooltiptext">Add New Beer</span>
             <img src="../assets/add-icon.png" id="addButton"/>
         </button>

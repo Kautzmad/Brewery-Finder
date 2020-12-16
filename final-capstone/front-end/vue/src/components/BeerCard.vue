@@ -19,7 +19,7 @@
         <h4 class="beer-info" v-if="beer.info == 'No description'" > {{noDesc}} </h4>
     </router-link>
 
-    <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
+    <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId || this.$store.state.user.id === 2">
 
         <button type="submit" class="brewerButton" v-on:click.prevent="deleteBeer(beer.id)"
             onclick="window.location.reload();">
@@ -29,7 +29,7 @@
 
     </div>
 
-    <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId">
+    <div class="tooltip" v-if="this.$store.state.user.id === this.brewery.userId  || this.$store.state.user.id === 2">
 
         <button type="submit" class="brewerButton" id="show-update-beer-form"
                 v-on:click.prevent="showForm = true" v-if="showForm === false">
@@ -134,12 +134,19 @@ export default {
         },
         deleteBeer(id){
             if(confirm(`Are you sure you want to delete this beer?`)){
-            applicationServices.deleteBeer(id).then(response =>{
+                applicationServices.getReviewsByBeerID(id).then(response => {
+                    let reviewsToDelete = response.data
+                    reviewsToDelete.forEach((review) => {
+                        applicationServices.deleteReview(review.id)
+                    })
+                  applicationServices.deleteBeer(id).then(response =>{
                 if(response.status === 201){
                     alert("Beer deleted")
                     window.location.reload();
-                }
+                    }
+                })  
             })
+            
         }
      }
     },
