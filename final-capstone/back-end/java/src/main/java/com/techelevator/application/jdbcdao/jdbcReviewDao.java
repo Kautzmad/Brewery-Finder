@@ -74,9 +74,9 @@ public class jdbcReviewDao implements reviewDao{
 	// DELETE A REVIEW
 	
 	@Override
-	public void deleteReview(Long beerId) {
-		String sqlDeleteAReview = "DELETE FROM beers WHERE beer_id = ?";
-		jdbcTemplate.update(sqlDeleteAReview, beerId);
+	public void deleteReview(Long reviewId) {
+		String sqlDeleteAReview = "DELETE FROM reviews WHERE reviews_id = ?";
+		jdbcTemplate.update(sqlDeleteAReview, reviewId);
 	}
 	
 	//MAP ROW TO REVIEW
