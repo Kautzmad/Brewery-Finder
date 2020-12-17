@@ -134,18 +134,13 @@ export default {
         },
         deleteBeer(id){
             if(confirm(`Are you sure you want to delete this beer?`)){
-                applicationServices.getReviewsByBeerID(id).then(response => {
-                    let reviewsToDelete = response.data
-                    reviewsToDelete.forEach((review) => {
-                        applicationServices.deleteReview(review.id)
-                    })
                   applicationServices.deleteBeer(id).then(response =>{
                 if(response.status === 201){
                     alert("Beer deleted")
                     window.location.reload();
                     }
                 })  
-            })
+            
             
         }
      }
