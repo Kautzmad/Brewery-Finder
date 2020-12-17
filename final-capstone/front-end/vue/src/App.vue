@@ -9,7 +9,7 @@
         <li><a :href="$router.resolve({name: 'beer-details', params: {id: randomBeer()}}).href">Random Beer</a></li>
         <li><router-link id="logout-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link></li>
         <li><router-link id="login-link" v-bind:to="{ name: 'login' }" v-if="$store.state.token === ''">Login</router-link></li>
-        <li id="username" v-if="$store.state.token !== ''">Welcome Back,<br>{{this.$store.state.user.username}}</li>
+        <li id="username" v-if="$store.state.token !== ''"><span id="welcome">Welcome Back,</span><br>{{this.$store.state.user.username}}</li>
 
       </ul>
     </nav>
@@ -121,5 +121,9 @@ li {
 #username {
   font-size: 1.25em;
   color: #FF3C00;
+}
+
+#welcome {
+  color: white;
 }
 </style>
